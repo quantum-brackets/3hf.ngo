@@ -2,12 +2,21 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hearts and hands</title>
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    <title> {% block title %}  Hearts and hands {% endblock title %}</title>
 </head>
+
 <body>
-    <h3>Hearts and Hands</h3>
+    <h3 class="">Hearts and Hands</h3>
+
+    {% block content %}
+
+
+    {% endblock content %}
 </body>
+
 </html>
