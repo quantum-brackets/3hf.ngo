@@ -616,6 +616,10 @@ video {
   text-align: center;
 }
 
+.font-inter {
+  font-family: Inter, sans-serif;
+}
+
 .font-\[650\] {
   font-weight: 650;
 }
