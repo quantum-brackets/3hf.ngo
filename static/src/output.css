@@ -556,12 +556,48 @@ video {
   display: block;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
 
 .w-\[35px\] {
   width: 35px;
+}
+
+.w-\[5px\] {
+  width: 5px;
+}
+
+.w-\[8px\] {
+  width: 8px;
+}
+
+.w-\[6px\] {
+  width: 6px;
+}
+
+.w-\[7px\] {
+  width: 7px;
+}
+
+.w-\[17px\] {
+  width: 17px;
+}
+
+.w-\[25px\] {
+  width: 25px;
+}
+
+.w-\[20px\] {
+  width: 20px;
+}
+
+.w-\[21\.5px\] {
+  width: 21.5px;
 }
 
 .basis-\[30\%\] {
@@ -580,6 +616,14 @@ video {
   flex-basis: 65%;
 }
 
+.basis-\[45\%\] {
+  flex-basis: 45%;
+}
+
+.basis-\[15\%\] {
+  flex-basis: 15%;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -594,8 +638,58 @@ video {
   margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.divide-black > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-divide-opacity));
+}
+
+.rounded-\[9px\] {
+  border-radius: 9px;
+}
+
+.rounded-\[25\%\] {
+  border-radius: 25%;
+}
+
+.rounded-\[50\%\] {
+  border-radius: 50%;
+}
+
+.rounded-\[15\%\] {
+  border-radius: 15%;
+}
+
+.rounded-\[40px\] {
+  border-radius: 40px;
+}
+
 .border {
   border-width: 1px;
+}
+
+.border-\[1px\] {
+  border-width: 1px;
+}
+
+.border-\[3px\] {
+  border-width: 3px;
+}
+
+.border-\[7px\] {
+  border-width: 7px;
+}
+
+.border-\[2px\] {
+  border-width: 2px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-\[\#FCF7CC\] {
@@ -603,9 +697,44 @@ video {
   background-color: rgb(252 247 204 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.px-\[16px\] {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.py-\[32px\] {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.px-\[32px\] {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.py-\[16px\] {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.px-\[28px\] {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.py-\[12px\] {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .pt-0 {
