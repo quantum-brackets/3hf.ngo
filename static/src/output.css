@@ -695,12 +695,46 @@ video {
   margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
 
+.space-y-\[1\.4rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.4rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.4rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[1\.9rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.9rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.9rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[1\.7rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.7rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.7rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[1\.3rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.3rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.3rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[1rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .rounded-\[40px\] {
   border-radius: 40px;
 }
 
 .rounded-\[16px\] {
   border-radius: 16px;
+}
+
+.rounded-\[8px\] {
+  border-radius: 8px;
 }
 
 .border {
@@ -752,6 +786,10 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[076ABB\] {
+  background-color: 076ABB;
 }
 
 .px-16 {
@@ -943,6 +981,22 @@ video {
   font-weight: 600;
 }
 
+.font-\[500\] {
+  font-weight: 500;
+}
+
+.font-\[0\.4rem\] {
+  font-weight: 0.4rem;
+}
+
+.font-\[10\.4rem\] {
+  font-weight: 10.4rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -957,6 +1011,14 @@ video {
 
 .leading-\[4\.4rem\] {
   line-height: 4.4rem;
+}
+
+.leading-\[2rem\] {
+  line-height: 2rem;
+}
+
+.leading-\[22rem\] {
+  line-height: 22rem;
 }
 
 .text-\[\#076ABB\] {
@@ -977,4 +1039,12 @@ video {
 .text-text-color {
   --tw-text-opacity: 1;
   color: rgb(109 109 109 / var(--tw-text-opacity));
+}
+
+.text-\[500\] {
+  color: 500;
+}
+
+.text-\[\#00000\] {
+  color: #00000;
 }
