@@ -1,0 +1,32 @@
+{% load static %}
+
+{% block content %}
+<main class="bg-[#04355E] py-[3.7rem] px-[7rem] space-y-[3rem]" styl="border: 4px solid red;">
+    <section class="flex justify-between  font-inter">
+        <div class="space-y-[1rem]" styl="border: 2px solid yellow;">
+            <div class="flex space-x-[0.8rem]">
+                <img src="{% static '/heartsandhands/media/3hf_logo.png' %}" alt="">
+                <h3 class="text-white text-[1.3rem] block font-bold">3HFoundation</h3>
+            </div>
+
+
+            <p class="text-[#EAECF0]">Helping hands since 1805</p>
+        </div>
+
+        <div 
+        class="text-[#EAECF0] font-bold basis-[40%] flex justify-around 
+        gap-[0rem]" 
+        styl="border: 2px solid white;">
+            <a href="" class="capitalize">about us</a>
+            <a href="" class="capitalize">events</a>
+            <a href="" class="capitalize">donations</a>
+            <a href="" class="capitalize">contact us</a>
+        </div>
+    </section>
+
+    <section class="border-t-[2px] border-solid border-[#3083C6] pt-[1.8rem]">
+        <p class="text-[#EAECF0]">©2024 3HFoundation. All rights reserved.</p>
+    </section>
+</main>
+
+{% endblock content %}
