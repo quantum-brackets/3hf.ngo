@@ -9,7 +9,7 @@
         <div class="basis-[45%] pl-[10rem] pt-[2.4rem] space-y-[2rem]" styl="border: 3px solid blue;">
             <h2 class="capitalize font-bold text-[2.7rem] leading-[3.3rem]">Lorem ipsum dolor sit amet</h2>
 
-            <p class="mt-[1rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus rhoncus neque, eget
+            <p class="mt-[1rem] leading-[1.9rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus rhoncus neque, eget
                 dapibus risus
                 rhoncus
                 et. Donec sodales eros est, in auctor orci sagittis non. Nulla congue interdum diam, sed maximus nunc
@@ -67,10 +67,8 @@
         </div>
     </section>
 
-    <section 
-        class="flex justify-between h-max bg-[#EEF7FE] pt-[5rem]  pb-[11rem] font-inter" 
-        styl="border: 6px solid blue;"
-    >
+    <section class="flex justify-between h-max bg-[#EEF7FE] pt-[5rem]  pb-[11rem] font-inter"
+        styl="border: 6px solid blue;">
         <div class="basis-[40%] relative h-max" styl="border: 5px solid black;">
             <img src="{% static '/heartsandhands/media/home/rectangle_5745.png' %}" alt="">
             <img src="{% static '/heartsandhands/media/home/rectangle_5744.png' %}" alt="faces of children"
@@ -95,7 +93,79 @@
         </div>
 
     </section>
+
+
+    <section class="pt-[3rem] pb-[5rem] font-inter space-y-[3rem]">
+        <div class="text-center">
+            <h2 class="text-[64px] font-bold">How to Support</h2>
+            <p class="text-text-color">
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Ut luctus rhoncus neque, eget dapibus risus rhoncus
+            </p>
+        </div>
+
+        <div class="flex justify-between px-[5rem] gap-[3rem]" styl="border: 2px solid red;">
+                <div class=" volunteer px-[2rem] py-[16px] space-y-[1.3rem] border-[0.5px] border-[#C4C4C4] rounded-[16px]" >
+                    <img src="{% static '/heartsandhands/media/home/handshake.png' %}" alt="">
+                    <h4 class="text-[32px] font-[700]">Volunteer</h4>
+
+                    <p class="text-text-color leading-[2rem]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus rhoncus neque, eget dapibus
+                        risus
+                        rhoncus et. Donec sodales eros est, in auctor orci sagittis non. Nulla congue interdum diam, sed
+                        maximus nunc eleifend a. Curabitur viverra egestas metus vel
+                    </p>
+
+                    <a 
+                    href="" 
+                    class="block border-[0.5px] border-[#C4C4C4] rounded-[8px] text-center font-[500] text-#00000 py-[16px]">
+                        Sign up to Volunteer
+                    </a>
+                </div>
+
+                <div class="donations px-[2rem] py-[16px] space-y-[1.3rem] border-[0.5px] border-[#C4C4C4] rounded-[16px]">
+                    <img src="{% static '/heartsandhands/media/home/donate.png' %}" alt="">
+
+                    <h4 class="text-[32px] font-[700]">Donations</h4>
+
+                    <p class="text-text-color leading-[2rem]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus rhoncus neque, eget dapibus
+                        risus
+                        rhoncus et. Donec sodales eros est, in auctor orci sagittis non. Nulla congue interdum diam, sed
+                        maximus nunc eleifend a. Curabitur viverra egestas metus vel
+                    </p>
+                    
+                    <a 
+                    href="" 
+                    class="block bg-[#076ABB] border-[0.5px] border-[#C4C4C4] rounded-[8px] text-center font-[500] 
+                    text-#00000 text-white py-[16px]">
+                        Donate
+                    </a>
+                </div>
+
+                <div class="volunteer px-[2rem] py-[16px] space-y-[1.3rem] border-[0.5px] border-[#C4C4C4] rounded-[16px]">
+                    <img src="{% static '/heartsandhands/media/home/share.png' %}" alt="">
+
+                    <h4 class="text-[32px] font-[700]">Share with friends</h4>
+
+                    <p class="text-text-color leading-[2rem]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus rhoncus neque, eget dapibus
+                        risus
+                        rhoncus et. Donec sodales eros est, in auctor orci sagittis non. Nulla congue interdum diam, sed
+                        maximus nunc eleifend a. Curabitur viverra egestas metus vel
+                    </p>
+
+                    <a 
+                    href="" 
+                    class="block border-[0.5px] border-[#C4C4C4] rounded-[8px] text-center font-[500] text-#00000 py-[16px]">
+                        Share
+                    </a>
+                </div>
+        </div>
+    </section>
 </main>
 
+
+{% include '_footer.html' %}
 
 {% endblock content %}
