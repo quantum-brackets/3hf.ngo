@@ -1021,6 +1021,14 @@ video {
   line-height: 22rem;
 }
 
+.leading-\[1\.7rem\] {
+  line-height: 1.7rem;
+}
+
+.leading-\[1\.9rem\] {
+  line-height: 1.9rem;
+}
+
 .text-\[\#076ABB\] {
   --tw-text-opacity: 1;
   color: rgb(7 106 187 / var(--tw-text-opacity));
