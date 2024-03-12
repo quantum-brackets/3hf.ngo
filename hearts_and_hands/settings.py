@@ -19,7 +19,7 @@ SECRET_KEY = 'django-insecure-%j6(p4+my8+$9akwa-%_n$o$q6zg&akgxl03#rucde!*-i-$-c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["hnhhfoundation.org"]
+ALLOWED_HOSTS = ["hnhhfoundation.org", "www.hnhhfoundation.org", "127.0.0.1"]
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -128,6 +129,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
