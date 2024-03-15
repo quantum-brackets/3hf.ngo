@@ -5,8 +5,8 @@
 {% block content %}
 
 
-<main class="my-[7rem]">
-    <section class="space-y-[4rem]">
+<main class="my-[7rem] flex" style="border: 2px solid red;">
+    <section class="space-y-[4rem]" style="border: 2px solid black;">
         <div class="space-y-[1rem]">
             <h3 class="font-bold text-[32px]">Reach Out</h3>
 
@@ -19,45 +19,74 @@
         <form action="">
             <div class="">
                 <label for="" class="block">Full name</label>
-                <input type="text" class="border-[1px] border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px]" name="fullName"
-                    placeholder="Full name">
+                <input type="text" class="border-[1px] border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px]"
+                    name="fullName" placeholder="Full name">
 
             </div>
 
             <div class="">
                 <label for="" class="block">Email</label>
-                <input 
-                type="text" 
-                class="border-[1px] border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px]" 
-                name="email" 
-                placeholder="Example@xyz.com">
+                <input type="text" class="border-[1px] border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px]" name="email"
+                    placeholder="Example@xyz.com">
 
             </div>
 
             <div class="">
                 <label for="" class="block">Phone number</label>
-                <input 
-                type="text" 
-                class="border-[1px] border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px]"
-                name="phoneNumber" 
-                placeholder="+234 70 4589 751">
+                <input type="text" class="border-[1px] border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px]"
+                    name="phoneNumber" placeholder="+234 70 4589 751">
 
             </div>
 
             <div class="">
                 <label for="" class="block">Message</label>
-                <textarea 
-                class="border-[1px] border-[#D0D5DD] rounded-[8px]"
-                name="" id="" 
-                cols="30" 
-                rows="10" 
-                placeholder="Leave us a message">
+                <textarea class="border-[1px] border-[#D0D5DD] rounded-[8px]" name="" id="" cols="30" rows="10"
+                    placeholder="Leave us a message">
             </textarea>
 
             </div>
 
             <button type="submit">send message</button>
         </form>
+    </section>
+
+    <section class="bg-[#06589C] space-y-[2rem]" style="border: 3px dashed gray;">
+        <div class="space-y-[1.2rem] font-inter">
+            <h3 class="text-white text-[24px]">Pay us a Visit</h3>
+
+            <p class="text-[#ACCDE8] text-[18px]">We'd love to hear from you. Our friendly team is always here to chat.</p>
+        </div>
+
+        <ul class="space-y-[2rem] font-inter">
+            <li>
+                <img 
+                    src="{% static '/heartsandhands/media/contact_us/message-chat-circle.png' %}"
+                    alt="mail image"
+                >
+                <h5 class="text-white text-[20px]">Send us a mail</h5>
+                <a href="mailto:example@example.com" class="text-white text-[18px]">hello@3hf.com</a>
+            </li>
+
+            <li>
+                <img 
+                    src="{% static '/heartsandhands/media/contact_us/office_icon.png' %}" 
+                    alt="office image"
+                >
+                <h5 class="text-white text-[20px]">Office</h5>
+                <p class="text-[#ACCDE8]">Come say hello at our office.</p>
+                <p class="text-white">123, Adeola Odeku Street,Victoria Island,Lagos, Nigeria.</p>
+            </li>
+
+            <li>
+                <img 
+                src="{% static '/heartsandhands/media/contact_us/phone_icon.png' %}" 
+                    alt="phone icon"
+                >
+                <h5 class="text-white text-[20px]">Phone</h5>
+                <p class="text-[#ACCDE8]">Mon-Fri from 8am to 5pm.</p>
+                <a href="tel:+123456789" class="text-white">+234 70 4553 8901</a>
+            </li>
+        </ul>
     </section>
 </main>
 
