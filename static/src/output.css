@@ -675,6 +675,14 @@ video {
   flex-basis: 60%;
 }
 
+.resize-none {
+  resize: none;
+}
+
+.resize {
+  resize: both;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -954,6 +962,16 @@ video {
 .py-\[0rem\] {
   padding-top: 0rem;
   padding-bottom: 0rem;
+}
+
+.px-\[20px\] {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.py-\[20px\] {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .pb-\[11rem\] {
