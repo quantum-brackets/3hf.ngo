@@ -41,48 +41,63 @@
 
                 <div class="space-y-[0.6rem]">
                     <label for="" class="block text-[#344054] text-[22px]">Message</label>
-                    <textarea class="w-full border-[1px] border-[#D0D5DD] rounded-[8px] resize-none"
-                     name="" id="" cols="30"
-                        rows="10" placeholder="Leave us a message">
+                    <textarea class="w-full border-[1px] border-[#D0D5DD] rounded-[8px] resize-none" name="" id=""
+                        cols="30" rows="7" placeholder="Leave us a message">
             </textarea>
                 </div>
 
-                <button 
-                type="submit" 
-                class="bg-[#076ABB] w-full px-[20px] py-[12px] text-white font-bold rounded-[8px]">
+                <button type="submit"
+                    class="bg-[#076ABB] w-full px-[20px] py-[12px] text-white font-bold rounded-[8px]">
                     Send Message</button>
             </form>
         </div>
 
     </section>
 
-    <section class="bg-[#06589C] space-y-[2rem] basis-[35%]" style="border: 3px dashed gray;">
-        <div class="space-y-[1.2rem] font-inter">
-            <h3 class="text-white text-[24px]">Pay us a Visit</h3>
+    <section class="bg-[#06589C] space-y-[2rem] basis-[35%] pl-[3rem] pr-[5rem] font-inter"
+        style="border: 3px dashed gray;">
+        <div class="space-y-[1.2rem]">
+            <h3 class="text-white text-[24px] font-bold">Pay us a Visit</h3>
 
             <p class="text-[#ACCDE8] text-[18px]">We'd love to hear from you. Our friendly team is always here to chat.
             </p>
         </div>
 
-        <ul class="space-y-[2rem] font-inter">
-            <li>
-                <img src="{% static '/heartsandhands/media/contact_us/message-chat-circle.png' %}" alt="mail image">
-                <h5 class="text-white text-[20px]">Send us a mail</h5>
-                <a href="mailto:example@example.com" class="text-white text-[18px]">hello@3hf.com</a>
+        <ul class="space-y-[2.6rem] font-inter">
+            <li class="space-y-[1rem]">
+                <div class="flex gap-[11px]" styl="border: 2px dotted red;">
+                    <img src="{% static '/heartsandhands/media/contact_us/message-chat-circle.png' %}" class=""
+                        alt="message">
+                    <h5 class="text-white text-[20px] font-bold">Send us a mail</h5>
+                </div>
+
+                <a href="mailto:example@example.com" class="text-white text-[18px] font-bold block ml-[2.3rem]">
+                    hello@3hf.com</a>
             </li>
 
-            <li>
-                <img src="{% static '/heartsandhands/media/contact_us/office_icon.png' %}" alt="office image">
-                <h5 class="text-white text-[20px]">Office</h5>
+            <li class="space-y-[1rem]">
+                <div class="flex gap-[11px]">
+                    <img src="{% static '/heartsandhands/media/contact_us/office_icon.png' %}" alt="office image">
+                    <h5 class="text-white text-[20px] font-bold">Office</h5>
+                </div>
+
+                <div class="space-y-[1rem] pl-[2.3rem]">
                 <p class="text-[#ACCDE8]">Come say hello at our office.</p>
-                <p class="text-white">123, Adeola Odeku Street,Victoria Island,Lagos, Nigeria.</p>
+                <p class="text-white font-bold">123, Adeola Odeku Street,Victoria Island,Lagos, Nigeria.</p>
+                </div>
             </li>
 
-            <li>
-                <img src="{% static '/heartsandhands/media/contact_us/phone_icon.png' %}" alt="phone icon">
-                <h5 class="text-white text-[20px]">Phone</h5>
-                <p class="text-[#ACCDE8]">Mon-Fri from 8am to 5pm.</p>
-                <a href="tel:+123456789" class="text-white">+234 70 4553 8901</a>
+            <li class="space-y-[1rem]">
+                <div class="flex gap-[11px]">
+                    <img src="{% static '/heartsandhands/media/contact_us/phone_icon.png' %}" alt="phone icon">
+                    <h5 class="text-white text-[20px] font-bold">Phone</h5>
+                </div>
+
+                <div class="space-y-[1rem] pl-[2.3rem]">
+                    <p class="text-[#ACCDE8]">Mon-Fri from 8am to 5pm.</p>
+                <a href="tel:+123456789" class="text-white block font-bold">+234 70 4553 8901</a>
+                </div>
+                
             </li>
         </ul>
     </section>
