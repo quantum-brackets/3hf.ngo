@@ -594,6 +594,10 @@ video {
   margin-left: 2.3rem;
 }
 
+.mt-\[23rem\] {
+  margin-top: 23rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -741,6 +745,10 @@ video {
 
 .gap-\[11px\] {
   gap: 11px;
+}
+
+.gap-\[2rem\] {
+  gap: 2rem;
 }
 
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
