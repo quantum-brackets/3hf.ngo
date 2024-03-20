@@ -622,8 +622,8 @@ video {
   width: 21.5px;
 }
 
-.w-\[35px\] {
-  width: 35px;
+.w-\[45px\] {
+  width: 45px;
 }
 
 .w-\[70\%\] {
@@ -640,6 +640,18 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[345px\] {
+  width: 345px;
+}
+
+.w-\[35px\] {
+  width: 35px;
+}
+
+.w-\[55px\] {
+  width: 55px;
 }
 
 .max-w-\[700px\] {
@@ -790,6 +802,36 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[1\.4rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.4rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.4rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[0\.7rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.7rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.7rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[0\.55rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.55rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.55rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[0\.8rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.8rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.8rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[0\.45rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.45rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.45rem * var(--tw-space-y-reverse));
 }
 
 .rounded-\[16px\] {
@@ -1017,6 +1059,10 @@ video {
   padding-top: 7rem;
 }
 
+.pt-\[50\%\] {
+  padding-top: 50%;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1115,6 +1161,26 @@ video {
 
 .leading-\[4\.4rem\] {
   line-height: 4.4rem;
+}
+
+.leading-\[50\%\] {
+  line-height: 50%;
+}
+
+.leading-\[150\%\] {
+  line-height: 150%;
+}
+
+.leading-\[350\%\] {
+  line-height: 350%;
+}
+
+.leading-\[250\%\] {
+  line-height: 250%;
+}
+
+.leading-\[3rem\] {
+  line-height: 3rem;
 }
 
 .text-\[\#076ABB\] {
