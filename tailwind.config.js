@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+        delaGothic: ["Dela Gothic One", "sans-serif"],
       },
       colors: {
         'text-color': '#6D6D6D',
