@@ -28,3 +28,7 @@ class AboutUsView(TemplateView):
         context['bg_color'] = '#FFFFFF'
         return context
 
+class DonateView(TemplateView):
+    template_name = "heartsandhands/donate.html"
+
+    
