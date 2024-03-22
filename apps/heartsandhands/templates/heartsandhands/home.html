@@ -4,9 +4,14 @@
 
 {% block content %}
 
-<main class="pt-[6rem]" styl="border: 2px dashed orange;">
-    <section class="flex justify-between font-inter" styl="border: 2px dashed black;">
-        <div class="basis-[45%] pl-[10rem] pt-[2.4rem] space-y-[2rem]" styl="border: 3px solid blue;">
+<main class="pt-[2rem] md:pt-[6rem]" styl="border: 2px dashed orange;">
+    <section class="md:flex justify-between font-inter" styl="border: 2px dashed black;">
+        <div class="div-1 basis-[50%] order-last" styl="border: 3px solid red;">
+            <img src="{% static '/heartsandhands/media/home/faces_of_children.png' %}" alt="faces of children"
+                class="w-full md:max-w-[700px] md:h-[510px] md:float-right">
+        </div>
+
+        <div class="div-2 basis-[45%] md:pl-[10rem] px-[1.5rem] md:pr-0 pt-[2.4rem] space-y-[2rem]" styl="border: 3px solid blue;">
             <h2 class="capitaliz font-[400] text-[2.7rem] leading-[3.3rem] font-delaGothic">
                 Lorem ipsum dolor sit amet
             </h2>
@@ -24,10 +29,7 @@
                 style="border: 1px dotted green;">Make a donation</a>
         </div>
 
-        <div class="basis-[50%] " styl="border: 3px solid red;">
-            <img src="{% static '/heartsandhands/media/home/faces_of_children.png' %}" alt="faces of children"
-                class="max-w-[700px] h-[510px] float-right">
-        </div>
+        
     </section>
 
     <section class="py-[4.4rem] px-16 space-y-8" styl="border: 3px dotted gray;">
