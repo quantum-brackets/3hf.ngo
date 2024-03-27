@@ -14,6 +14,9 @@ module.exports = {
       colors: {
         'text-color': '#6D6D6D',
       },
+      screens:{
+        mdLg: "954px"
+      }
     },
   },
   plugins: [],

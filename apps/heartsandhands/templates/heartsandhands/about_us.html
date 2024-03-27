@@ -5,34 +5,23 @@
 {% block content %}
 
 <main>
-    <!-- <section style="background-image: url('{% static '/heartsandhands/media/about_us/about_us.png' %} ')" ;
-        class="bg-cover bg-cente bg-no-repeat h-[20rem] text-center">
-        <div class="d">
-            <h2>About Us</h2>
-
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error aliquid quidem
-                ex temporibus quas nisi enim aspernatur? Voluptatum dolorum deleniti expedita placeat hic,
-                natus molestias ea, voluptatem, recusandae accusamus nostrum.
-            </p>
-        </div>
-    </section> -->
-
     <section class="relative" styl="border: 3px solid red;">
-        <img src="{% static '/heartsandhands/media/about_us/about_us.png' %}" class="w-full" alt="">
+        <img src="{% static '/heartsandhands/media/about_us/about_us.png' %}"
+            class="w-full h-[404px] md:h[350px] md:h-auto object-cover" alt="" styl="border: 6px solid hotpink;">
 
-        <div class="absolute top-[30%] left-[25%] w-[50%] space-y-[1rem]" styl="border: 2px dotted beige;">
-            <h2 class="text-center text-[#FFFFFF] text-[64px] font-delaGothic">About Us</h2>
+        <div class="absolute top-[20%] mdLg:top-[10%] xl:top-[30%] left-[7%] mdLg:left-[25%] w-[90%] mdLg:w-[50%] space-y-[1rem]"
+            styl="border: 4px dotted beige;">
+            <h2 class="text-center text-[#FFFFFF] text-[40px] mdLg:text-[64px] font-delaGothic">About Us</h2>
 
-            <p class="text-[20px] text-[#FFFFFF] font-inter">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error aliquid quidem
-                ex temporibus quas nisi enim aspernatur? Voluptatum dolorum deleniti expedita placeat hic,
-                natus molestias ea, voluptatem, recusandae accusamus nostrum.
+            <p class="font-inter text-[16px] mdLg:text-[20px] text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus rhoncus neque, eget dapibus risus
+                rhoncus et. Donec sodales eros est, in auctor orci sagittis non
             </p>
+
         </div>
     </section>
 
-    <section class="flex justify-around py-[6rem] pr-[5rem]" style="border: 4px solid yellow;">
+    <section class="flex justify-around py-[6rem] pr-[5rem]" styl="border: 4px solid yellow;">
         <div class="basis-[45%] space-y-[2.3rem] pl-[4rem]" styl="border: 4px dotted gray;">
             <h3 class="font-delaGothic font-[400] text-[32px]">Why we do what we do</h3>
 
