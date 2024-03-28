@@ -15,7 +15,8 @@ module.exports = {
         'text-color': '#6D6D6D',
       },
       screens:{
-        mdLg: "954px"
+        mdLg: "954px",
+        lgXl: "1200px"
       }
     },
   },

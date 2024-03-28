@@ -820,12 +820,6 @@ video {
   margin-bottom: calc(2.2rem * var(--tw-space-y-reverse));
 }
 
-.space-y-\[2\.3rem\] > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2.3rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2.3rem * var(--tw-space-y-reverse));
-}
-
 .space-y-\[2\.6rem\] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.6rem * calc(1 - var(--tw-space-y-reverse)));
@@ -953,23 +947,9 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-cover {
-  background-size: cover;
-}
-
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.object-fill {
-  -o-object-fit: fill;
-     object-fit: fill;
 }
 
 .px-\[0\.9rem\] {
@@ -1042,14 +1022,14 @@ video {
   padding-bottom: 3.7rem;
 }
 
+.py-\[3rem\] {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .py-\[4rem\] {
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.py-\[6rem\] {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
 }
 
 .pb-0 {
@@ -1084,16 +1064,8 @@ video {
   padding-left: 2.3rem;
 }
 
-.pl-\[4rem\] {
-  padding-left: 4rem;
-}
-
 .pr-\[2rem\] {
   padding-right: 2rem;
-}
-
-.pr-\[5rem\] {
-  padding-right: 5rem;
 }
 
 .pt-0 {
@@ -1130,10 +1102,6 @@ video {
 
 .text-center {
   text-align: center;
-}
-
-.text-justify {
-  text-align: justify;
 }
 
 .font-delaGothic {
@@ -1292,10 +1260,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-\[16p\] {
-  color: 16p;
-}
-
 .bg-\[\#FCF7CC\] {
   background-color: rgba(252, 247, 204, 1);
 }
@@ -1337,10 +1301,6 @@ video {
     height: auto;
   }
 
-  .md\:h-\[350px\] {
-    height: 350px;
-  }
-
   .md\:w-\[251px\] {
     width: 251px;
   }
@@ -1355,6 +1315,10 @@ video {
 
   .md\:basis-\[40\%\] {
     flex-basis: 40%;
+  }
+
+  .md\:basis-\[45\%\] {
+    flex-basis: 45%;
   }
 
   .md\:basis-\[50\%\] {
@@ -1383,6 +1347,12 @@ video {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.9rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.9rem * var(--tw-space-y-reverse));
+  }
+
+  .md\:space-y-\[2\.3rem\] > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2.3rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2.3rem * var(--tw-space-y-reverse));
   }
 
   .md\:px-16 {
@@ -1417,12 +1387,20 @@ video {
     padding-left: 10rem;
   }
 
+  .md\:pl-\[4rem\] {
+    padding-left: 4rem;
+  }
+
   .md\:pl-\[5rem\] {
     padding-left: 5rem;
   }
 
   .md\:pr-0 {
     padding-right: 0px;
+  }
+
+  .md\:pr-\[5rem\] {
+    padding-right: 5rem;
   }
 
   .md\:pr-\[8rem\] {
@@ -1467,50 +1445,34 @@ video {
     left: 25%;
   }
 
-  .mdLg\:top-\[30\%\] {
-    top: 30%;
-  }
-
   .mdLg\:top-\[10\%\] {
     top: 10%;
-  }
-
-  .mdLg\:h-auto {
-    height: auto;
   }
 
   .mdLg\:w-\[50\%\] {
     width: 50%;
   }
 
-  .mdLg\:w-\[60\%\] {
-    width: 60%;
+  .mdLg\:text-\[20px\] {
+    font-size: 20px;
+  }
+
+  .mdLg\:text-\[32px\] {
+    font-size: 32px;
   }
 
   .mdLg\:text-\[64px\] {
     font-size: 64px;
   }
-
-  .mdLg\:text-\[20px\] {
-    font-size: 20px;
-  }
 }
 
 @media (min-width: 1024px) {
-  .lg\:top-\[40\%\] {
-    top: 40%;
-  }
-
-  .lg\:top-\[20\%\] {
-    top: 20%;
-  }
-
-  .lg\:top-\[30\%\] {
-    top: 30%;
-  }
-
   .lg\:order-last {
     order: 9999;
+  }
+
+  .lg\:block {
+    display: block;
   }
 
   .lg\:flex {
@@ -1533,6 +1495,10 @@ video {
     justify-content: space-between;
   }
 
+  .lg\:justify-around {
+    justify-content: space-around;
+  }
+
   .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -1542,6 +1508,11 @@ video {
   .lg\:px-\[7rem\] {
     padding-left: 7rem;
     padding-right: 7rem;
+  }
+
+  .lg\:py-\[6rem\] {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .lg\:pb-0 {
@@ -1571,6 +1542,28 @@ video {
   .lg\:pt-\[7rem\] {
     padding-top: 7rem;
   }
+
+  .lg\:text-left {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .lgXl\:block {
+    display: block;
+  }
+
+  .lgXl\:flex {
+    display: flex;
+  }
+
+  .lgXl\:justify-around {
+    justify-content: space-around;
+  }
+
+  .lgXl\:text-left {
+    text-align: left;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -1580,10 +1573,6 @@ video {
 
   .xl\:flex {
     display: flex;
-  }
-
-  .xl\:w-\[70\%\] {
-    width: 70%;
   }
 
   .xl\:justify-around {
