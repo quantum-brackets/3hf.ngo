@@ -1222,6 +1222,26 @@ input:checked + .toggle-bg {
   margin-top: 3rem;
 }
 
+.mr-\[1\.6rem\] {
+  margin-right: 1.6rem;
+}
+
+.mr-\[21\.6rem\] {
+  margin-right: 21.6rem;
+}
+
+.mr-\[2\.6rem\] {
+  margin-right: 2.6rem;
+}
+
+.mr-\[2rem\] {
+  margin-right: 2rem;
+}
+
+.mr-\[1rem\] {
+  margin-right: 1rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -2527,6 +2547,10 @@ input:checked + .toggle-bg {
 
   .md\:ml-\[6rem\] {
     margin-left: 6rem;
+  }
+
+  .md\:ml-\[2rem\] {
+    margin-left: 2rem;
   }
 
   .md\:block {
