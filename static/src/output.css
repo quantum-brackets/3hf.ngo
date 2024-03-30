@@ -1810,6 +1810,11 @@ input:checked + .toggle-bg {
   background-color: rgb(255 255 255 / 0.5);
 }
 
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -2599,6 +2604,26 @@ input:checked + .toggle-bg {
     margin-bottom: calc(3rem * var(--tw-space-y-reverse));
   }
 
+  .md\:object-contain {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+
+  .md\:object-cover {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .md\:object-fill {
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+
+  .md\:object-scale-down {
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+  }
+
   .md\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -2796,6 +2821,10 @@ input:checked + .toggle-bg {
     width: 70%;
   }
 
+  .lg\:w-\[500px\] {
+    width: 500px;
+  }
+
   .lg\:max-w-\[700px\] {
     max-width: 700px;
   }
@@ -2820,6 +2849,11 @@ input:checked + .toggle-bg {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .lg\:object-fill {
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 
   .lg\:px-\[7rem\] {
@@ -2886,6 +2920,10 @@ input:checked + .toggle-bg {
     padding-right: 0px;
   }
 
+  .lg\:pl-\[2rem\] {
+    padding-left: 2rem;
+  }
+
   .lg\:text-\[54px\] {
     font-size: 54px;
   }
@@ -2930,8 +2968,21 @@ input:checked + .toggle-bg {
     display: flex;
   }
 
+  .xl\:w-\[700px\] {
+    width: 700px;
+  }
+
+  .xl\:max-w-\[700px\] {
+    max-width: 700px;
+  }
+
   .xl\:justify-around {
     justify-content: space-around;
+  }
+
+  .xl\:object-cover {
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .xl\:pl-\[10rem\] {
