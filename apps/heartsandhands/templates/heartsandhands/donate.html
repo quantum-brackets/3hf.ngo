@@ -4,11 +4,13 @@
 {% block content %}
 
 <main>
-    <section class="flex relative pl-[10rem] py-[4rem] bg-[#F2F2F2]" styl="border: 4px solid yellowgreen;">
+    <section class="lg:flex relative px-[1rem] md:px-[3rem] lg:pl-[1.5rem] xl:pl-[10rem] 
+    py-[3rem] md:py-[4rem] bg-[#F2F2F2] space-y-[3.8rem]" 
+    styl="border: 4px solid yellowgreen;">
 
-        <div class="basis-[45%]  space-y-[1.2rem]" styl="border: 2px dashed black;">
+        <div class="lg:basis-[45%]  space-y-[1.2rem]" styl="border: 2px dashed black;">
 
-            <h2 class="text-[54px] font-delaGothic font-[400] leading-[4rem]">Donate to Support Our Mission</h2>
+            <h2 class="text-[40px] lg:text-[54px] font-delaGothic font-[400] leading-[2.9rem] lg:leading-[4rem]">Donate to Support Our Mission</h2>
 
             <p class="text-text-color text-[18px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus rhoncus neque, eget dapibus risus
                 rhoncus
@@ -18,7 +20,8 @@
         </div>
 
 
-        <div class="absolute right-[11rem] h-[296.16px] ww-[589px] bottom-[-2rem] basis-[40%] bg-[#FFFFFF] border-[1px] border-soli border-[#D9D9D9] rounded-[16px] px-[2rem]" 
+        <div class="lg:absolute lg:right-[1.5rem] xl:right-[7rem] lg:bottom-[-2rem] h-[296.16px]
+         lg:w-[589px] basis-[40%] bg-[#FFFFFF] border-[1px] border-soli border-[#D9D9D9] rounded-[16px] px-[2rem] py-[2.3rem]" 
         styl="border: 3px solid saddlebrown;">
             <form action="">
                 <input type="text" placeholder="Enter amount">
@@ -27,7 +30,7 @@
 
     </section>
 
-    <img src="{% static '/heartsandhands/media/donate/kids.png' %}" class="w-full" alt="">
+    <img src="{% static '/heartsandhands/media/donate/kids.png' %}" class="hidden lg:block w-full" alt="">
 
 </main>
 
