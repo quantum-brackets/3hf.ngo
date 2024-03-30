@@ -1157,6 +1157,14 @@ input:checked + .toggle-bg {
   top: 12rem;
 }
 
+.bottom-\[-2rem\] {
+  bottom: -2rem;
+}
+
+.right-\[11rem\] {
+  right: 11rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -2025,6 +2033,10 @@ input:checked + .toggle-bg {
   padding-top: 4rem;
 }
 
+.pl-\[10rem\] {
+  padding-left: 10rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -2569,6 +2581,24 @@ input:checked + .toggle-bg {
     margin-bottom: calc(2.3rem * var(--tw-space-y-reverse));
   }
 
+  .md\:space-y-\[2rem\] > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+  }
+
+  .md\:space-y-\[6rem\] > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(6rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(6rem * var(--tw-space-y-reverse));
+  }
+
+  .md\:space-y-\[3rem\] > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+  }
+
   .md\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -2607,6 +2637,11 @@ input:checked + .toggle-bg {
   .md\:py-\[4rem\] {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .md\:px-\[4rem\] {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .md\:pb-\[11rem\] {
@@ -2733,6 +2768,10 @@ input:checked + .toggle-bg {
     order: 9999;
   }
 
+  .lg\:float-right {
+    float: right;
+  }
+
   .lg\:ml-\[6rem\] {
     margin-left: 6rem;
   }
@@ -2745,12 +2784,20 @@ input:checked + .toggle-bg {
     display: flex;
   }
 
+  .lg\:h-\[510px\] {
+    height: 510px;
+  }
+
   .lg\:w-\[589px\] {
     width: 589px;
   }
 
   .lg\:w-\[70\%\] {
     width: 70%;
+  }
+
+  .lg\:max-w-\[700px\] {
+    max-width: 700px;
   }
 
   .lg\:basis-\[35\%\] {
@@ -2829,6 +2876,14 @@ input:checked + .toggle-bg {
 
   .lg\:pl-\[2\.5rem\] {
     padding-left: 2.5rem;
+  }
+
+  .lg\:pl-\[10rem\] {
+    padding-left: 10rem;
+  }
+
+  .lg\:pr-0 {
+    padding-right: 0px;
   }
 
   .lg\:text-\[54px\] {

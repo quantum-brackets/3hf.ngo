@@ -5,13 +5,14 @@
 {% block content %}
 
 <main class="pt-[2rem] md:pt-[6rem]" styl="border: 2px dashed orange;">
-    <section class="md:flex justify-between font-inter" styl="border: 2px dashed black;">
+    <section class="lg:flex lg:justify-between font-inter md:space-y-[2.3rem] lg:space-y-0" 
+    styl="border: 2px dashed black;">
         <div class="div-1 basis-[50%] order-last" styl="border: 3px solid red;">
             <img src="{% static '/heartsandhands/media/home/faces_of_children.png' %}" alt="faces of children"
-                class="w-full md:max-w-[700px] md:h-[510px] md:float-right">
+                class="w-full lg:max-w-[700px] lg:h-[510px] lg:float-right">
         </div>
 
-        <div class="div-2 basis-[45%] md:pl-[10rem] px-[1.5rem] md:pr-0 pt-[2.4rem] space-y-[2rem]"
+        <div class="div-2 lg:basis-[45%] md:px-[4rem] lg:pr-0 lg:pl-[10rem] px-[1.5rem] pt-[2.4rem] space-y-[2rem]"
             styl="border: 3px solid blue;">
             <h2 class="capitaliz font-[400] text-[2.7rem] leading-[3.3rem] font-delaGothic">
                 Lorem ipsum dolor sit amet
@@ -25,11 +26,11 @@
                 eleifend a. Curabitur viverra egestas metus vel congue.
             </p>
 
-            <a href=""
-                class="block bg-[#076ABB] text-white text-center font-[600] mt[1.2rem] rounded-[40px] w-[200px] py-[1rem]"
+            <a href="{% url 'donate' %}"
+                class="block bg-[#076ABB] text-white text-center font-[600] mt[1.2rem]
+                 rounded-[40px] w-[200px] py-[1rem]"
                 style="border: 1px dotted green;">Make a donation</a>
         </div>
-
 
     </section>
 
