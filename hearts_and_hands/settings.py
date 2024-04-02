@@ -19,7 +19,7 @@ SECRET_KEY = 'django-insecure-%j6(p4+my8+$9akwa-%_n$o$q6zg&akgxl03#rucde!*-i-$-c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["3hf.ngo.org", "www.3hf.ngo", "127.0.0.1"]
+ALLOWED_HOSTS = ["3hf.ngo", "www.3hf.ngo", "127.0.0.1"]
 
 
 # Application definition
