@@ -1791,6 +1791,10 @@ input:checked + .toggle-bg {
   padding: 1rem;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1976,6 +1980,14 @@ input:checked + .toggle-bg {
 
 .pt-\[4rem\] {
   padding-top: 4rem;
+}
+
+.pl-0 {
+  padding-left: 0px;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
 }
 
 .text-center {
