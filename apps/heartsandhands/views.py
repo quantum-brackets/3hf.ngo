@@ -81,12 +81,11 @@ class DonateView(TemplateView):
 
     def post(self, request, *args, **kwargs):
         stripe.api_key = settings.STRIPE_SECRET_KEY
-        YOUR_DOMAIN = settings.DOMAIN
+        DOMAIN = settings.DOMAIN
         if request.POST.get("amount") == "" or request.POST.get("amount") == None:
             return HttpResponseBadRequest("amount cannot be empty")
 
         amount = int(request.POST.get('amount'))
-        print({amount})
 
 
         try:
@@ -104,9 +103,13 @@ class DonateView(TemplateView):
                     },
                 ],
                 mode='payment',
-                success_url=YOUR_DOMAIN + '/success',  # Make sure to include the trailing slash
-                cancel_url=YOUR_DOMAIN + '/cancel',  # Reverse to get the URL name
+                success_url=DOMAIN + '/donation-successful',
+                cancel_url=DOMAIN + '/donate',
             )
             return redirect(checkout_session.url)
         except Exception as e:
             return HttpResponseBadRequest(str(e))
+        
+class DonationSuccessFul(TemplateView): 
+    template_name = "heartsandhands/donation_success.html"
+
