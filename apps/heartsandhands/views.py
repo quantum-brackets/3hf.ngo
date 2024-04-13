@@ -1,4 +1,10 @@
 from django.views.generic import TemplateView
+from django.http import HttpResponseBadRequest, HttpResponseRedirect
+from django.urls import reverse
+from django.conf import settings
+
+import stripe
+
 from .forms import ContactUsForm
 
 from django.shortcuts import render, redirect
@@ -72,5 +78,41 @@ class AboutUsView(TemplateView):
 
 class DonateView(TemplateView):
     template_name = "heartsandhands/donate.html"
+
+    def post(self, request, *args, **kwargs):
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        YOUR_DOMAIN = settings.DOMAIN
+        if request.POST.get("amount") == "" or request.POST.get("amount") == None:
+            return HttpResponseBadRequest("amount cannot be empty")
+
+        amount = int(request.POST.get('amount'))
+        print({amount})
+
+
+        try:
+            checkout_session = stripe.checkout.Session.create(
+                line_items=[
+                    {
+                          'price_data': {
+                    'currency': 'usd',
+                    'unit_amount': amount * 100,
+                    'product_data': {
+                        'name': 'Donation',
+                    }
+                },
+                'quantity': 1,
+                    },
+                ],
+                mode='payment',
+                success_url=YOUR_DOMAIN + '/success',  # Make sure to include the trailing slash
+                cancel_url=YOUR_DOMAIN + '/cancel',  # Reverse to get the URL name
+            )
+            return redirect(checkout_session.url)
+        except Exception as e:
+            return HttpResponseBadRequest(str(e))
+
+    # def get(self, request, *args, **kwargs):
+    #     # Handle GET request here if needed
+    #     return HttpResponseBadRequest("Method not allowed!")
 
     
