@@ -110,9 +110,3 @@ class DonateView(TemplateView):
             return redirect(checkout_session.url)
         except Exception as e:
             return HttpResponseBadRequest(str(e))
-
-    # def get(self, request, *args, **kwargs):
-    #     # Handle GET request here if needed
-    #     return HttpResponseBadRequest("Method not allowed!")
-
-    
