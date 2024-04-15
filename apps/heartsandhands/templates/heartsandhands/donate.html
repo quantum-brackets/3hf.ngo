@@ -23,7 +23,11 @@
         <div class="lg:absolute lg:right-[1.5rem] xl:right-[7rem] lg:bottom-[-2rem] h-[296.16px]
          lg:w-[589px] basis-[40%] bg-[#FFFFFF] border-[1px] border-soli border-[#D9D9D9] rounded-[16px] px-[2rem] py-[2.3rem]"
             styl="border: 3px solid saddlebrown;">
-           
+        {% if error %}
+        {{ error }}
+
+        {% endif %}
+
             <button type="button" class="w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[22px] py-[16px]"
             onclick="showPaystackForm()">
                 Donate with  
@@ -44,16 +48,16 @@
                 {% csrf_token %}
 
                 <div class="" id="">
+                    <input type="radio" id="payment_gateway" name="payment_gateway" value="paystack" checked
+                        class="hidden"
+                        >
                     <input type="text" name="amount" id="amount" placeholder="Enter amount" required>
-
-                    <div id="" class="">
                         <input type="email" name="email" id="email" class="block" placeholder="Your email" required>
 
                         <select name="currency" id="" class="block">
                             <option value="NGN" selected>Naira</option>
                             <option value="GHS">Cedis</option>
                         </select>
-                    </div>
                 </div>
                 
                 <button type="submit" id="checkout-button"
@@ -66,6 +70,8 @@
             <form action="{% url 'donate' %}" id="stripe-form" method="post" class="hidden">
                 {% csrf_token %}
                 <input type="text" name="amount" id="amount" placeholder="Enter amount" required>
+                <input type="radio" id="payment_gateway" name="payment_gateway" value="stripe" checked
+                class="hidden">
                
                 <button type="submit" id="checkout-button"
                 class="w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[32px] py-[16px]">

@@ -1,15 +1,13 @@
 from django.views.generic import TemplateView
-from django.http import HttpResponseBadRequest, HttpResponseRedirect
-from django.urls import reverse
+from django.http import HttpResponseBadRequest
 from django.conf import settings
+from django.shortcuts import render, redirect
 
 import stripe
 
 from .forms import ContactUsForm
-
-from django.shortcuts import render, redirect
-# from utils.email.utils import send_contact_message
 from utils.email_utils import send_contact_message
+
 
 class HomeView(TemplateView):
     template_name = 'heartsandhands/home.html'
@@ -21,7 +19,6 @@ class HomeView(TemplateView):
         context["form"] = ContactUsForm()
         return context
 
-    
     def post(self, request, *args, **kwargs):
         form = ContactUsForm(request.POST)
         if form.is_valid():
@@ -31,7 +28,7 @@ class HomeView(TemplateView):
             message = form.cleaned_data['message']
 
             send_contact_message(name, email, phone_number, message)
-            
+
             return redirect('home')
         else:
             # If the form is not valid, re-render the page with the form and errors
@@ -58,7 +55,7 @@ class ContactUsView(TemplateView):
             message = form.cleaned_data['message']
 
             send_contact_message(name, email, phone_number, message)
-            
+
             return redirect('contact_us')
         else:
             # If the form is not valid, re-render the page with the form and errors
@@ -87,29 +84,43 @@ class DonateView(TemplateView):
 
         amount = int(request.POST.get('amount'))
 
+        payment_gateway = request.POST.get('payment_gateway')
 
-        try:
-            checkout_session = stripe.checkout.Session.create(
-                line_items=[
-                    {
-                          'price_data': {
-                    'currency': 'usd',
-                    'unit_amount': amount * 100,
-                    'product_data': {
-                        'name': 'Donation',
-                    }
-                },
-                'quantity': 1,
-                    },
-                ],
-                mode='payment',
-                success_url=DOMAIN + '/donation-successful',
-                cancel_url=DOMAIN + '/donate',
-            )
-            return redirect(checkout_session.url)
-        except Exception as e:
-            return HttpResponseBadRequest(str(e))
-        
-class DonationSuccessFul(TemplateView): 
+        if payment_gateway == 'stripe':
+            print("Payment Gateway is stripe")
+            try:
+                checkout_session = stripe.checkout.Session.create(
+                    line_items=[
+                        {
+                            'price_data': {
+                                'currency': 'usd',
+                                'unit_amount': amount * 100,
+                                'product_data': {
+                                    'name': 'Donation',
+                                }
+                            },
+                            'quantity': 1,
+                        },
+                    ],
+                    mode='payment',
+                    success_url=DOMAIN + '/donation-successful',
+                    cancel_url=DOMAIN + '/donate',
+                )
+                return redirect(checkout_session.url)
+            except Exception as e:
+                return HttpResponseBadRequest(str(e))
+          
+        elif payment_gateway == 'paystack':
+            print("Payment Gateway is paystack")
+            # Handle Paystack payment logic
+            # ... (your Paystack implementation)
+            # return render(request, 'donation_success.html')  # Or handle errors
+        else:
+            # Handle invalid gateway choice
+            return render(request, 'heartsandhands/donate.html', {'error': 'Invalid payment gateway'})
+
+       
+
+
+class DonationSuccessFul(TemplateView):
     template_name = "heartsandhands/donation_success.html"
-
