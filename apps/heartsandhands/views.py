@@ -1,5 +1,7 @@
+from typing import Any
+from django.http.response import HttpResponse as HttpResponse
 from django.views.generic import TemplateView
-from django.http import HttpResponseBadRequest
+from django.http import HttpRequest, HttpResponseBadRequest
 from django.conf import settings
 from django.shortcuts import render, redirect
 
@@ -103,7 +105,7 @@ class DonateView(TemplateView):
                         },
                     ],
                     mode='payment',
-                    success_url=DOMAIN + '/donation-successful',
+                    success_url=DOMAIN + '/donation-successful?session_id={CHECKOUT_SESSION_ID}',
                     cancel_url=DOMAIN + '/donate',
                 )
                 return redirect(checkout_session.url)
@@ -124,3 +126,16 @@ class DonateView(TemplateView):
 
 class DonationSuccessFul(TemplateView):
     template_name = "heartsandhands/donation_success.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        session_id = self.request.GET.get('session_id')
+        session = stripe.checkout.Session.retrieve(session_id)
+        # customer = stripe.Customer.retrieve(session)
+        customer = session.customer_details
+
+        context['session'] = session
+        context['customer'] = customer
+
+        return context
+
