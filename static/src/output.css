@@ -1657,6 +1657,18 @@ input:checked + .toggle-bg {
   border-width: 1px;
 }
 
+.border-\[2px\] {
+  border-width: 2px;
+}
+
+.border-\[4px\] {
+  border-width: 4px;
+}
+
+.border-\[3px\] {
+  border-width: 3px;
+}
+
 .border-t-\[2px\] {
   border-top-width: 2px;
 }
@@ -1713,6 +1725,11 @@ input:checked + .toggle-bg {
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.border-\[\#2b599c\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(43 89 156 / var(--tw-border-opacity));
 }
 
 .bg-\[\#04355E\] {

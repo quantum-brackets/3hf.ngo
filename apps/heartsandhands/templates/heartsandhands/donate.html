@@ -23,23 +23,24 @@
         <div class="lg:absolute lg:right-[1.5rem] xl:right-[7rem] lg:bottom-[-2rem] h-[296.16px]
          lg:w-[589px] basis-[40%] bg-[#FFFFFF] border-[1px] border-soli border-[#D9D9D9] rounded-[16px] px-[2rem] py-[2.3rem]"
             styl="border: 3px solid saddlebrown;">
-        {% if error %}
-        {{ error }}
+            {% if error %}
+            {{ error }}
 
-        {% endif %}
+            {% endif %}
 
-            <button type="button" class="w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[22px] py-[16px]"
-            onclick="showPaystackForm()">
-                Donate with  
+            <button type="button" id="show-paystack-form"
+                class="w-[254px] border-[1px] border-[#2b599c] rounded-[8px] px-[22px] py-[16px]"
+                onclick="showPaystackForm()">
+                Donate with
                 <img class="inline" src="{% static '/heartsandhands/media/donate/paystack_logo.png' %}"
-                alt="paystack logo">
+                    alt="paystack logo">
 
                 <img src="{% static '/heartsandhands/media/donate/paystack.png' %}" class="inline" alt="">
-                <!-- <span class="text-[#011B33] w-[88.36px]"> paystack </span> -->
             </button>
 
-            <button type="button" class="w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[32px] py-[16px]"
-            onclick="showStripeForm()">
+            <button type="button" id="show-stripe-form"
+                class="w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[32px] py-[16px]"
+                onclick="showStripeForm()">
                 Donate with <img class="inline" src="{% static '/heartsandhands/media/donate/stripe_logo.png' %}"
                     alt="stripe logo">
             </button>
@@ -49,34 +50,32 @@
 
                 <div class="" id="">
                     <input type="radio" id="payment_gateway" name="payment_gateway" value="paystack" checked
-                        class="hidden"
-                        >
+                        class="hidden">
                     <input type="text" name="amount" id="amount" placeholder="Enter amount" required>
-                        <input type="email" name="email" id="email" class="block" placeholder="Your email" required>
+                    <input type="email" name="email" id="email" class="block" placeholder="Your email" required>
 
-                        <select name="currency" id="" class="block">
-                            <option value="NGN" selected>Naira</option>
-                            <option value="GHS">Cedis</option>
-                        </select>
+                    <select name="currency" id="" class="block">
+                        <option value="NGN" selected>Naira</option>
+                        <option value="GHS">Cedis</option>
+                    </select>
                 </div>
-                
+
                 <button type="submit" id="checkout-button"
                     class="w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[32px] py-[16px]">
                     Proceed
                 </button>
             </form>
-          
+
 
             <form action="{% url 'donate' %}" id="stripe-form" method="post" class="hidden">
                 {% csrf_token %}
                 <input type="text" name="amount" id="amount" placeholder="Enter amount" required>
-                <input type="radio" id="payment_gateway" name="payment_gateway" value="stripe" checked
-                class="hidden">
-               
+                <input type="radio" id="payment_gateway" name="payment_gateway" value="stripe" checked class="hidden">
+
                 <button type="submit" id="checkout-button"
-                class="w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[32px] py-[16px]">
-                Proceed
-            </button>
+                    class="w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[32px] py-[16px]">
+                    Proceed
+                </button>
             </form>
         </div>
     </section>
