@@ -34,16 +34,16 @@ paymentForm.addEventListener("submit", payWithPaystack, false);
 
 function payWithPaystack() {
   var handler = PaystackPop.setup({
-    key: "pk_test_a6f071d81735bf046577b42fa9ffaaaced47f1db", // Replace with your public key
+    key: "pk_test_a6f071d81735bf046577b42fa9ffaaaced47f1db",
     email: document.getElementById("email").value,
     amount: document.getElementById("amount").value * 100, // the amount value is multiplied by 100 to convert to the lowest currency unit
-    currency: document.getElementById("currency"), // the amount value is multiplied by 100 to convert to the lowest currency unit
+    currency: document.getElementById("currency").value,
     ref: generateReference, 
     callback: function (response) {
       //this happens after the payment is completed successfully
       var reference = response.reference;
       alert("Payment complete! Reference: " + reference);
-      console.log({responseReference: response.reference});
+      console.log({ response});
 
       if (response.status === "success") {
         // Payment successful, submit donation data (server-side processing)
@@ -55,13 +55,13 @@ function payWithPaystack() {
             // Display success message or redirect to a confirmation page
             alert("Donation successful! Thank you.");
           } 
-          // else {
-          //   console.error(
-          //     "Error submitting donation data:",
-          //     response.statusText
-          //   );
-          //   alert("An error occurred. Please try again later.");
-          // }
+          else {
+            console.error(
+              "Error submitting donation data:",
+              response.statusText
+            );
+            alert("An error occurred. Please try again later.");
+          }
         });
       } else {
         alert("Payment failed. Please try again.");
