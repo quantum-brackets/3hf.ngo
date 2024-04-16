@@ -1,4 +1,3 @@
-from typing import Any
 from django.http.response import HttpResponse as HttpResponse
 from django.views.generic import TemplateView
 from django.http import HttpRequest, HttpResponseBadRequest
@@ -114,6 +113,7 @@ class DonateView(TemplateView):
           
         elif payment_gateway == 'paystack':
             print("Payment Gateway is paystack")
+            
             # Handle Paystack payment logic
             # ... (your Paystack implementation)
             # return render(request, 'donation_success.html')  # Or handle errors

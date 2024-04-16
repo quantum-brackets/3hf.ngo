@@ -45,7 +45,7 @@
                     alt="stripe logo">
             </button>
 
-            <form id="paystack-form" action="{% url 'donate' %}" method="post" class="">
+            <form id="paystack-form" method="post"  class="">
                 {% csrf_token %}
 
                 <div class="" id="">
@@ -54,14 +54,16 @@
                     <input type="text" name="amount" id="amount" placeholder="Enter amount" required>
                     <input type="email" name="email" id="email" class="block" placeholder="Your email" required>
 
-                    <select name="currency" id="" class="block">
+                    <select name="currency" id="currency" class="block">
                         <option value="NGN" selected>Naira</option>
                         <option value="GHS">Cedis</option>
                     </select>
                 </div>
 
                 <button type="submit" id="checkout-button"
-                    class="w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[32px] py-[16px]">
+                    class="w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[32px] py-[16px]"
+                    onclick="event.preventDefault(); payWithPaystack()"
+                    >
                     Proceed
                 </button>
             </form>
@@ -86,5 +88,6 @@
 
 {% include '_footer.html' %}
 <script src="/static/js/donation.js"></script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
 
 {% endblock content %}
