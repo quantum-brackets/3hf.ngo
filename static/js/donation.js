@@ -5,8 +5,6 @@ const showPaystackFormButton = document.getElementById("show-paystack-form");
 
 const showStripeFormButton = document.getElementById("show-stripe-form");
 
-console.log(showPaystackFormButton);
-console.log(showPaystackFormButton);
 
 function showPaystackForm() {
   console.log("testing");
@@ -40,16 +38,16 @@ function payWithPaystack() {
     email: document.getElementById("email").value,
     amount: document.getElementById("amount").value * 100, // the amount value is multiplied by 100 to convert to the lowest currency unit
     currency: document.getElementById("currency"), // the amount value is multiplied by 100 to convert to the lowest currency unit
-    ref: "12jfw34416", // Replace with a reference you generated
+    ref: generateReference, 
     callback: function (response) {
       //this happens after the payment is completed successfully
       var reference = response.reference;
       alert("Payment complete! Reference: " + reference);
-      console.log({response});
+      console.log({responseReference: response.reference});
 
       if (response.status === "success") {
         // Payment successful, submit donation data (server-side processing)
-        fetch("/http://127.0.0.1:8000/", {
+        fetch("/donation-successful/", {
           method: "POST",
           body: JSON.stringify({ reference: response.reference }),
         }).then((response) => {
@@ -75,4 +73,23 @@ function payWithPaystack() {
     },
   });
   handler.openIframe();
+}
+
+
+async function generateReference () {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let reference = '';
+
+  // Generate reference with a combination of numbers and letters
+  for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      reference += characters.charAt(randomIndex);
+  }
+
+  // Add current timestamp to the reference
+  const timestamp = new Date().getTime().toString();
+  reference += timestamp;
+  console.log({reference})
+
+  return reference;
 }
