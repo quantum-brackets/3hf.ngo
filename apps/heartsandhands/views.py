@@ -7,7 +7,8 @@ from django.shortcuts import render, redirect
 import stripe
 
 from .forms import ContactUsForm
-from utils.email_utils import send_contact_message
+# from utils.email_utils import send_contact_message
+from utils import email_utils, payment_utils
 
 
 class HomeView(TemplateView):
@@ -28,7 +29,7 @@ class HomeView(TemplateView):
             phone_number = form.cleaned_data['phone_number']
             message = form.cleaned_data['message']
 
-            send_contact_message(name, email, phone_number, message)
+            email_utils.send_contact_message(name, email, phone_number, message)
 
             return redirect('home')
         else:
@@ -55,7 +56,7 @@ class ContactUsView(TemplateView):
             phone_number = form.cleaned_data['phone_number']
             message = form.cleaned_data['message']
 
-            send_contact_message(name, email, phone_number, message)
+            email_utils.send_contact_message(name, email, phone_number, message)
 
             return redirect('contact_us')
         else:
@@ -90,24 +91,8 @@ class DonateView(TemplateView):
         if payment_gateway == 'stripe':
             print("Payment Gateway is stripe")
             try:
-                checkout_session = stripe.checkout.Session.create(
-                    line_items=[
-                        {
-                            'price_data': {
-                                'currency': 'usd',
-                                'unit_amount': amount * 100,
-                                'product_data': {
-                                    'name': 'Donation',
-                                }
-                            },
-                            'quantity': 1,
-                        },
-                    ],
-                    mode='payment',
-                    success_url=DOMAIN + '/donation-successful?session_id={CHECKOUT_SESSION_ID}',
-                    cancel_url=DOMAIN + '/donate',
-                )
-                return redirect(checkout_session.url)
+                checkout_url = payment_utils.create_stripe_checkout_session(amount, DOMAIN)
+                return redirect(checkout_url)
             except Exception as e:
                 return HttpResponseBadRequest(str(e))
           
