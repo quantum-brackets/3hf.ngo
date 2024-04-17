@@ -40,40 +40,7 @@ function payWithPaystack() {
     currency: document.getElementById("currency").value,
     // csrfmiddlewaretoken: document.getElementsByName('csrfmiddlewaretoken')[0].value
     ref: generateReference, 
-    callback: function (response) {
-      //this happens after the payment is completed successfully
-      var reference = response.reference;
-      alert("Payment complete! Reference: " + reference);
-      console.log({ reference: response.reference});
-
-      if (response.status === "success") {
-        // Payment successful, submit donation data (server-side processing)
-        fetch("/verify-paystack-payment/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-CSRFToken": document.getElementsByName('csrfmiddlewaretoken')[0].value // Access by name
-        },
-          body: JSON.stringify({ reference }),
-        }).then((response) => {
-          if (response.ok) {
-            console.log({"Server response": response})
-            // window.location.href = "/donation-successful/";
-            // Display success message or redirect to a confirmation page
-            alert("Donation successful! Thank you.");
-          } 
-          else {
-            console.error(
-              "Error submitting donation data:",
-              response.statusText
-            );
-            alert("An error occurred. Please try again later.");
-          }
-        });
-      } else {
-        alert("Payment failed. Please try again.");
-      }
-    },
+    callback: handlePaymentCallback,
     onClose: function () {
       alert("Transaction was not completed, window closed.");
     },
@@ -81,6 +48,37 @@ function payWithPaystack() {
   handler.openIframe();
 }
 
+function handlePaymentCallback(response) {
+  var reference = response.reference;
+  alert("Payment complete! Reference: " + reference);
+  console.log({ reference: response.reference });
+
+  if (response.status === "success") {
+    paystackForm.reset();
+    verifyPayment(reference);
+  } else {
+    alert("Payment failed. Please try again.");
+  }
+}
+
+function verifyPayment(reference) {
+  fetch("/verify-paystack-payment/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRFToken": document.getElementsByName('csrfmiddlewaretoken')[0].value,
+    },
+    body: JSON.stringify({ reference }),
+  }).then((response) => {
+    if (response.ok) {
+      console.log({"Server response": response});
+      alert("Donation successful! Thank you.");
+    } else {
+      console.error("Error submitting donation data:", response.statusText);
+      alert("An error occurred. Please try again later.");
+    }
+  });
+}
 
 async function generateReference () {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
