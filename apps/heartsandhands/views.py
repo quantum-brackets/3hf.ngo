@@ -1,8 +1,11 @@
+from django.http import JsonResponse
 from django.http.response import HttpResponse as HttpResponse
 from django.views.generic import TemplateView
 from django.http import HttpRequest, HttpResponseBadRequest
 from django.conf import settings
 from django.shortcuts import render, redirect
+import json
+import requests
 
 import stripe
 
@@ -29,7 +32,8 @@ class HomeView(TemplateView):
             phone_number = form.cleaned_data['phone_number']
             message = form.cleaned_data['message']
 
-            email_utils.send_contact_message(name, email, phone_number, message)
+            email_utils.send_contact_message(
+                name, email, phone_number, message)
 
             return redirect('home')
         else:
@@ -56,7 +60,8 @@ class ContactUsView(TemplateView):
             phone_number = form.cleaned_data['phone_number']
             message = form.cleaned_data['message']
 
-            email_utils.send_contact_message(name, email, phone_number, message)
+            email_utils.send_contact_message(
+                name, email, phone_number, message)
 
             return redirect('contact_us')
         else:
@@ -91,22 +96,21 @@ class DonateView(TemplateView):
         if payment_gateway == 'stripe':
             print("Payment Gateway is stripe")
             try:
-                checkout_url = payment_utils.create_stripe_checkout_session(amount, DOMAIN)
+                checkout_url = payment_utils.create_stripe_checkout_session(
+                    amount, DOMAIN)
                 return redirect(checkout_url)
             except Exception as e:
                 return HttpResponseBadRequest(str(e))
-          
+
         elif payment_gateway == 'paystack':
             print("Payment Gateway is paystack")
-            
+
             # Handle Paystack payment logic
             # ... (your Paystack implementation)
             # return render(request, 'donation_success.html')  # Or handle errors
         else:
             # Handle invalid gateway choice
             return render(request, 'heartsandhands/donate.html', {'error': 'Invalid payment gateway'})
-
-       
 
 
 class DonationSuccessFul(TemplateView):
@@ -124,3 +128,37 @@ class DonationSuccessFul(TemplateView):
 
         return context
 
+
+
+def verify_paystack_success(request):
+    if request.method == 'POST':
+        print("POST data:", request.POST)
+        try:
+            data = json.loads(request.body.decode('utf-8'))
+            reference = data.get('reference')
+            verification_url = f"https://api.paystack.co/transaction/verify/{reference}"
+            response = requests.get(verification_url, headers={
+                "Authorization": f"Bearer {settings.PAYSTACK_SECRET_KEY}"
+            })
+
+            if response.status_code == 200:
+                data = response.json()
+                if data["data"]['status'] == 'success':
+                    # Donation is successful, proceed with your logic
+                    print("succesfulpayment")
+                    # return "settled"
+                else:
+                    # Handle unsuccessful verification from Paystack
+                    # ... (handle unsuccessful verification)
+                    print("Unsuccessful")
+            else:
+                # Error during verification request
+                print(f"Error verifying transaction: {response.text}")
+                # ... (handle verification request error)
+
+            return JsonResponse({'message': 'Donation successful!'})
+        except Exception as e:
+            print(f'Error processing donation: {e}')
+            return JsonResponse({'error': 'An error occurred.'}, status=500)
+
+    return JsonResponse({'error': 'Invalid request method.'}, status=405)

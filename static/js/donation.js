@@ -38,20 +38,27 @@ function payWithPaystack() {
     email: document.getElementById("email").value,
     amount: document.getElementById("amount").value * 100, // the amount value is multiplied by 100 to convert to the lowest currency unit
     currency: document.getElementById("currency").value,
+    // csrfmiddlewaretoken: document.getElementsByName('csrfmiddlewaretoken')[0].value
     ref: generateReference, 
     callback: function (response) {
       //this happens after the payment is completed successfully
       var reference = response.reference;
       alert("Payment complete! Reference: " + reference);
-      console.log({ response});
+      console.log({ reference: response.reference});
 
       if (response.status === "success") {
         // Payment successful, submit donation data (server-side processing)
-        fetch("/donation-successful/", {
+        fetch("/verify-paystack-payment/", {
           method: "POST",
-          body: JSON.stringify({ reference: response.reference }),
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": document.getElementsByName('csrfmiddlewaretoken')[0].value // Access by name
+        },
+          body: JSON.stringify({ reference }),
         }).then((response) => {
           if (response.ok) {
+            console.log({"Server response": response})
+            // window.location.href = "/donation-successful/";
             // Display success message or redirect to a confirmation page
             alert("Donation successful! Thank you.");
           } 
@@ -66,7 +73,6 @@ function payWithPaystack() {
       } else {
         alert("Payment failed. Please try again.");
       }
-      // Make an AJAX call to your server with the reference to verify the transaction
     },
     onClose: function () {
       alert("Transaction was not completed, window closed.");
