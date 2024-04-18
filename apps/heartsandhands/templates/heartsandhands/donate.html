@@ -48,6 +48,7 @@
             <form id="paystack-form" method="post" class="space-y-[1rem] font-inter"
                 styl="border: 3px dotted rebeccapurple;">
                 {% csrf_token %}
+                <p id="paystack-form-error" class="text-red-600"></p>
 
                 <div class="space-y-[1.2rem]" id="">
                     <input type="radio" id="payment_gateway" name="payment_gateway" value="paystack" checked
@@ -68,7 +69,7 @@
 
                 <button type="submit" id="checkout-button" class="w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[32px] py-[10px] bg-[#3083C6]
                     text-white text-[1.4rem] font-[700] font-inter"
-                    onclick="event.preventDefault(); payWithPaystack()">
+                    onclick="event.preventDefault();  payWithPaystack()">
                     Proceed
                 </button>
             </form>

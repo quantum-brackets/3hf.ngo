@@ -29,10 +29,16 @@ function showStripeForm() {
   showStripeFormButton.classList.remove("border-[#DFDFDF]");
 }
 
+
 var paymentForm = document.getElementById("paystack-form");
 paymentForm.addEventListener("submit", payWithPaystack, false);
 
 function payWithPaystack() {
+  const validate =  validatePaystack();
+  if (validate === false){
+    return;
+  }
+
   var handler = PaystackPop.setup({
     key: "pk_test_a6f071d81735bf046577b42fa9ffaaaced47f1db",
     email: document.getElementById("email").value,
@@ -96,4 +102,17 @@ async function generateReference () {
   console.log({reference})
 
   return reference;
+}
+
+function validatePaystack() {
+  console.log('Performing validation')
+  const amount = document.getElementById('amount').value;
+  const email = document.getElementById('email').value;
+
+  if (!amount || !email) {
+      const error = document.getElementById("paystack-form-error");
+      error.innerHTML = 'Please fill in all required fields.';
+      return false;
+  }
+  return true
 }
