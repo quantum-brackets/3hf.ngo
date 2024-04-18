@@ -3,11 +3,10 @@
 
 {% block content %}
 <main>
-    <section class="lg:flex relative px-[1rem] md:px-[3rem] lg:pl-[1.5rem] xl:pl-[10rem] 
-    py-[3rem] md:py-[4rem] bg-[#F2F2F2] space-y-[3.8rem]" styl="border: 4px solid yellowgreen;">
+    <section class="lg:flex relative px-[1rem] md:px-[3rem] lg:pl-[1.5rem] xl:pl-[5rem] 
+    py-[3rem] md:py-[4rem] bg-[#F2F2F2]" styl="border: 4px solid yellowgreen;">
 
-        <div class="lg:basis-[45%]  space-y-[1.2rem]" styl="border: 2px dashed black;">
-
+        <div class="lg:basis-[45%] space-y-[1.2rem]" styl="border: 2px dashed black;">
             <h2 class="text-[40px] lg:text-[54px] font-delaGothic font-[400] leading-[2.9rem] lg:leading-[4rem]">Donate
                 to Support Our Mission</h2>
 
@@ -20,10 +19,9 @@
         </div>
 
 
-        <div class="lg:absolute lg:right-[1.5rem] lg:top-[3rem] xl:right-[7rem] lg:bottom-[-2rem] h-max 
-        space-y-[1rem] lg:w-[639px] basis-[49%] bg-[#FFFFFF] border-[1px] border-soli border-[#D9D9D9] 
-        rounded-[16px] px-[2rem] py-[2.3rem]"
-            style="border: 3px solid saddlebrown;">
+        <div class="lg:absolute lg:right-[1.5rem] lg:top-[4.7rem] xl:right-[4rem] lg:bottom-[-2rem] h-max 
+        space-y[1rem] lg:w-[609px] basis-[49%] bg-[#FFFFFF] border-[1px] border-[#D9D9D9] 
+        rounded-[16px] px-[2rem] py-[2.3rem]" styl="border: 3px solid saddlebrown;">
             {% if error %}
             {{ error }}
 
@@ -47,28 +45,28 @@
                 </button>
             </div>
 
-
-            <form id="paystack-form" method="post" class="space-y-[1.5rem] font-inter" styl="border: 3px dotted rebeccapurple;">
+            <form id="paystack-form" method="post" class="space-y-[1rem] font-inter"
+                styl="border: 3px dotted rebeccapurple;">
                 {% csrf_token %}
 
                 <div class="space-y-[1.2rem]" id="">
                     <input type="radio" id="payment_gateway" name="payment_gateway" value="paystack" checked
                         class="hidden">
-                    <input type="text" name="amount" id="amount" placeholder="Enter amount" required
-                    class="border-[1px] border-[#DFDFDF] w-full h-[62px] py-[16px] px-[32px] rounded-[8px]">
-                    <input type="email" name="email" id="email" placeholder="Your email" required
-                    class="border-[1px] border-[#DFDFDF] w-full h-[62px] py-[16px] px-[32px] rounded-[8px]"
-                    >
 
-                    <select name="currency" id="currency" class="border-[1px] border-[#DFDFDF] w-full h-[62px] py-[16px] px-[32px] rounded-[8px]"
-                    >
+                    <input type="text" name="amount" id="amount" placeholder="Enter amount" required
+                        class="border-[1px] border-[#DFDFDF] w-full h-[52px] py-[16px] px-[32px] rounded-[8px]">
+
+                    <input type="email" name="email" id="email" placeholder="Your email" required
+                        class="border-[1px] border-[#DFDFDF] w-full h-[52px] py-[16px] px-[32px] rounded-[8px]">
+
+                    <select name="currency" id="currency"
+                        class="border-[1px] border-[#DFDFDF] w-full h-[52px] py-[16px] px-[32px] rounded-[8px]">
                         <option value="NGN" selected>Naira</option>
                         <!-- <option value="GHS">Cedis</option> -->
                     </select>
                 </div>
 
-                <button type="submit" id="checkout-button"
-                    class="w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[32px] py-[16px] bg-[#3083C6]
+                <button type="submit" id="checkout-button" class="w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[32px] py-[10px] bg-[#3083C6]
                     text-white text-[1.4rem] font-[700] font-inter"
                     onclick="event.preventDefault(); payWithPaystack()">
                     Proceed
@@ -79,12 +77,11 @@
             <form action="{% url 'donate' %}" id="stripe-form" method="post" class="hidden space-y-[1.5rem]"
                 styl="border: 3px dotted rebeccapurple;">
                 {% csrf_token %}
-                <input type="text" name="amount" id="amount" placeholder="Enter amount" required
-                class="border-[1px] border-[#DFDFDF] w-full h-[62px] py-[16px] px-[32px] rounded-[8px]">
+                <input type="text" name="amount" id="amountt" placeholder="Enter amount" required
+                    class="border-[1px] border-[#DFDFDF] w-full h-[52px] py-[16px] px-[32px] rounded-[8px]">
                 <input type="radio" id="payment_gateway" name="payment_gateway" value="stripe" checked class="hidden">
 
-                <button type="submit" id="checkout-button"
-                class="w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[32px] py-[16px] bg-[#3083C6]
+                <button type="submit" id="checkout-button" class="w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[22px] py-[10px] bg-[#3083C6]
                 text-white text-[1.4rem] font-[700] font-inter">
                     Proceed
                 </button>
