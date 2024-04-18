@@ -108,11 +108,26 @@ function validatePaystack() {
   console.log('Performing validation')
   const amount = document.getElementById('amount').value;
   const email = document.getElementById('email').value;
+  const error = document.getElementById("paystack-form-error");
+
 
   if (!amount || !email) {
-      const error = document.getElementById("paystack-form-error");
       error.innerHTML = 'Please fill in all required fields.';
       return false;
+  }
+
+  const regex = /^[0-9]+$/;
+
+  if (!regex.test(amount)) {
+      error.innerHTML = 'Please enter only numbers in the amount field.';
+      // Clear the input field or prevent further input
+      amount.value = amount.replace(/[^0-9]/g, '');
+      return false
+  }
+
+  if(amount <= 0) {
+    error.textContent = "Amount must be greater than 0"
+    return false
   }
   return true
 }
