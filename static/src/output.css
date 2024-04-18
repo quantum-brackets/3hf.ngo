@@ -1206,6 +1206,26 @@ input:checked + .toggle-bg {
   margin-top: 12rem;
 }
 
+.mt-\[5rem\] {
+  margin-top: 5rem;
+}
+
+.mt-\[3rem\] {
+  margin-top: 3rem;
+}
+
+.mt-\[2\.3rem\] {
+  margin-top: 2.3rem;
+}
+
+.mt-\[1\.4rem\] {
+  margin-top: 1.4rem;
+}
+
+.mt-\[1\.55rem\] {
+  margin-top: 1.55rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1473,6 +1493,10 @@ input:checked + .toggle-bg {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1657,6 +1681,12 @@ input:checked + .toggle-bg {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[2re\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2re * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2re * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -2013,6 +2043,11 @@ input:checked + .toggle-bg {
 .px-\[2px\] {
   padding-left: 2px;
   padding-right: 2px;
+}
+
+.px-\[0\.7rem\] {
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
 }
 
 .pb-0 {
@@ -2687,6 +2722,16 @@ input:checked + .toggle-bg {
     width: 50%;
   }
 
+  .mdLg\:flex-row {
+    flex-direction: row;
+  }
+
+  .mdLg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
   .mdLg\:px-\[7rem\] {
     padding-left: 7rem;
     padding-right: 7rem;
@@ -2810,6 +2855,10 @@ input:checked + .toggle-bg {
     width: 609px;
   }
 
+  .lg\:w-\[254px\] {
+    width: 254px;
+  }
+
   .lg\:basis-\[35\%\] {
     flex-basis: 35%;
   }
@@ -2867,6 +2916,11 @@ input:checked + .toggle-bg {
   .lg\:py-\[6rem\] {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .lg\:px-\[2rem\] {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .lg\:pb-0 {
@@ -3001,6 +3055,10 @@ input:checked + .toggle-bg {
     padding-left: 5rem;
   }
 
+  .xl\:pl-\[2rem\] {
+    padding-left: 2rem;
+  }
+
   .xl\:text-\[64px\] {
     font-size: 64px;
   }
@@ -3031,6 +3089,10 @@ input:checked + .toggle-bg {
 
   .\32xl\:pr-\[8rem\] {
     padding-right: 8rem;
+  }
+
+  .\32xl\:pl-\[5rem\] {
+    padding-left: 5rem;
   }
 }
 
