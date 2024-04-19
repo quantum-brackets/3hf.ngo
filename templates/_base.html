@@ -20,10 +20,15 @@
         <div 
         class="flex flex-col md:flex-row md:justify-between basis-[100%] pl-[1rem] md:pl-0 space-y[8rem]" 
         styl="border: 3px dashed lawngreen;">
-            <a href="{% url 'home' %}" class="md:ml-[2rem] lg:ml-[6rem]  md:pt-[1rem] md:w-auto h- h-[72px]"
+            <a href="{% url 'home' %}" 
+            class="flex gap-[1rem] md:ml-[2rem] xl:ml-[6rem]  md:pt-[1rem] md:w-auto h- h-[72px]"
                 styl="border: 3px solid #000000;">
                 <img src="{% static '/heartsandhands/media/3hf_logo.png' %}" alt="3hf logo"
                     class="h-[58px] w-[68px]">
+                    <div class="hidden mdLg:block capitalize font-delaGothic font-[400] text-[1rem]">
+                        <span class="block">hearts & hands </span>
+                        <span class="block">humanitarian foundation</span>
+                    </div>
             </a>
 
             <div class="hidden md:flex justify-between md:basis-[80%] space-y-[-1.1rem]" id="navbar-list"
