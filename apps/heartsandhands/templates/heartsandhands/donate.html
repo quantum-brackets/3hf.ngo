@@ -47,11 +47,12 @@
                 </button>
             </div>
 
-            <div class="mt-[1.55rem]">
+            <div class="mt-[1.55rem] font-inter">
                 <form id="paystack-form" method="post" class="space-y-[1rem font-inter"
                     styl="border: 3px dotted rebeccapurple;">
                     {% csrf_token %}
-                    <p id="paystack-form-error" class="text-red-600"></p>
+                <p id="paystack-form-error" class="text-red-600"></p>
+
 
                     <div class="space-y-[1.2rem]" id="">
                         <input type="radio" id="payment_gateway" name="payment_gateway" value="paystack" checked
@@ -80,19 +81,27 @@
 
                 <form action="{% url 'donate' %}" id="stripe-form" method="post" class="hidden space-y-[1.5rem]"
                     styl="border: 3px dotted rebeccapurple;">
+                    <p id="stripe-form-error" class="text-red-600"></p>
                     {% csrf_token %}
-                    <input type="text" name="amount" id="amountt" placeholder="Enter amount" required
+                    <input type="text" name="amount" id="stripe-amount" placeholder="Enter amount" required
                         class="border-[1px] border-[#DFDFDF] w-full h-[52px] py-[16px] px-[32px] rounded-[8px]">
                     <input type="radio" id="payment_gateway" name="payment_gateway" value="stripe" checked
                         class="hidden">
 
                     <button type="submit" id="checkout-button" class="w-full lg:w-[254px] border-[1px] border-[#DFDFDF] rounded-[8px] px-[22px] py-[10px] bg-[#3083C6]
-                text-white text-[1.4rem] font-[700] font-inter">
+                text-white text-[1.4rem] font-[700] font-inter" onclick="validateStripeForm(event)">
                         Proceed
                     </button>
                 </form>
             </div>
+            <div class="text-center mt-[3rem] font-inter">
+                <img src="{% static '/heartsandhands/media/donate/shieldcheck.png' %}" alt=""
+                class="inline">
+                <span>Your information is protected</span>
+            </div>
         </div>
+
+       
     </section>
 
     <img src="{% static '/heartsandhands/media/donate/kids.png' %}" class="hidden lg:block w-full" alt="">
