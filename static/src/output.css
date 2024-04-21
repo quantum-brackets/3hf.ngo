@@ -1222,6 +1222,10 @@ input:checked + .toggle-bg {
   margin-top: 0.7rem;
 }
 
+.mt-0 {
+  margin-top: 0px;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -2496,6 +2500,10 @@ input:checked + .toggle-bg {
     margin-right: 2rem;
   }
 
+  .md\:mt-\[3rem\] {
+    margin-top: 3rem;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -2662,6 +2670,14 @@ input:checked + .toggle-bg {
 
   .mdLg\:top-\[10\%\] {
     top: 10%;
+  }
+
+  .mdLg\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .mdLg\:mt-\[1rem\] {
+    margin-top: 1rem;
   }
 
   .mdLg\:block {
