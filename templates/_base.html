@@ -18,10 +18,11 @@
 <body class="box-border">
     <header class="flex justify-between pt-[1rem] md:pt-0 md: pl[2rem] font-inter" styl="border: 2px solid gray">
         <div 
-        class="flex flex-col mdLg:flex-row mdLg:justify-between basis-[100%] pl-[1rem] mdLg:pl-0 space-y[8rem]" 
+        class="flex flex-col mdLg:flex-row mdLg:justify-between basis-[100%] pl-[0.7rem] md:pl-[3rem] 
+        mdLg:pl-[5rem] space-y[8rem]" 
         styl="border: 3px dashed lawngreen;">
             <a href="{% url 'home' %}" 
-            class="flex gap-[1rem] md:ml-[2rem] xl:ml-[6rem]  md:pt-[1rem] md:w-auto h- h-[72px]"
+            class="flex gap-[1rem] md:ml[2rem] xl:ml[6rem]  md:pt-[1rem] md:w-auto h- h-[72px]"
                 styl="border: 3px solid #000000;">
                 <img src="{% static '/heartsandhands/media/3hf_logo.png' %}" alt="3hf logo"
                     class="h-[58px] w-[68px]">
@@ -57,7 +58,7 @@
                 </ul>
 
                 <div class="basis-[43.7%] text-center py-9 bg-[{{bg_color}}] capitalize font-[650] mt[2rem]"
-                    styl="border: 2px solid #000000;">
+                    style="border: 2px dashed #000000;">
                     <a href="{% url 'donate' %}"
                         class="py-[12px] px-[32px] border-solid border-[1px] border-black 
                         rounded-[40px] bg-white w-full md:w-auto inline-block">
@@ -71,7 +72,7 @@
         </div>
 
         <button data-collapse-toggle="navbar-list" type="button"
-            class="inline-flex items-center mr-[1rem] mt-[1rem] md:mt-[1.7rem] p-2 w-10 h-10 justify-center text-sm text-gray-500 
+            class="inline-flex items-center mr-[0.7rem] md:mr-[2rem] mt-[0.7rem] md:mt-[1.7rem] p-2 w-10 h-10 justify-center text-sm text-gray-500 
             rounded-lg mdLg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="navbar-list" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
