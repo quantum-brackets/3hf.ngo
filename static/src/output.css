@@ -2743,6 +2743,10 @@ input:checked + .toggle-bg {
     display: flex;
   }
 
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:h-\[38rem\] {
     height: 38rem;
   }

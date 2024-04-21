@@ -8,7 +8,11 @@
     <section class="lg:flex lg:justify-between font-inter md:space-y-[2.3rem] lg:space-y-0"
         styl="border: 2px dashed black;">
         <div class="div-1 basis-[50%] order-last" styl="border: 3px solid red;">
-            <img src="{% static '/heartsandhands/media/home/faces_of_children.png' %}" alt="faces of children" class="w-full lg:w[500px] xl:w-[700px] lg:h-[510px] 
+            <img src="{% static '/heartsandhands/media/home/faces_of_children_cropped.png' %}" alt="faces of children" 
+            class="lg:hidden w-full lg:float-right">
+
+            <img src="{% static '/heartsandhands/media/home/faces_of_children.png' %}" alt="faces of children" 
+            class="hidden lg:block lg:w[500px] xl:w-[700px] lg:h-[510px] 
                 lg:float-right">
         </div>
 
@@ -131,7 +135,7 @@
                     maximus nunc eleifend a. Curabitur viverra egestas metus vel
                 </p>
 
-                <a href=""
+                <a href="{% url 'contact_us' %}"
                     class="block border-[0.5px] border-[#C4C4C4] rounded-[8px] text-center font-[500] text-#00000 py-[16px]">
                     Sign up to Volunteer
                 </a>
@@ -150,7 +154,7 @@
                     maximus nunc eleifend a. Curabitur viverra egestas metus vel
                 </p>
 
-                <a href="" class="block bg-[#076ABB] border-[0.5px] border-[#C4C4C4] rounded-[8px] text-center font-[500] 
+                <a href="{% url 'donate' %}" class="block bg-[#076ABB] border-[0.5px] border-[#C4C4C4] rounded-[8px] text-center font-[500] 
                     text-#00000 text-white py-[16px]">
                     Donate
                 </a>
