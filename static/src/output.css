@@ -1299,6 +1299,10 @@ input:checked + .toggle-bg {
   height: max-content;
 }
 
+.h-\[430px\] {
+  height: 430px;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1953,6 +1957,36 @@ input:checked + .toggle-bg {
 .py-\[3rem\] {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.px-\[4rem\] {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.px-\[8rem\] {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.px-\[12rem\] {
+  padding-left: 12rem;
+  padding-right: 12rem;
+}
+
+.px-\[16rem\] {
+  padding-left: 16rem;
+  padding-right: 16rem;
+}
+
+.px-\[13rem\] {
+  padding-left: 13rem;
+  padding-right: 13rem;
+}
+
+.py-\[16p\] {
+  padding-top: 16p;
+  padding-bottom: 16p;
 }
 
 .pb-0 {
@@ -2642,6 +2676,10 @@ input:checked + .toggle-bg {
 
   .mdLg\:block {
     display: block;
+  }
+
+  .mdLg\:inline {
+    display: inline;
   }
 
   .mdLg\:flex {
