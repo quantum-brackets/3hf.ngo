@@ -2103,8 +2103,20 @@ input:checked + .toggle-bg {
   padding-top: 4rem;
 }
 
+.pl-\[2rem\] {
+  padding-left: 2rem;
+}
+
+.pl-\[1rem\] {
+  padding-left: 1rem;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .font-delaGothic {
@@ -2811,6 +2823,11 @@ input:checked + .toggle-bg {
   .mdLg\:px-\[7rem\] {
     padding-left: 7rem;
     padding-right: 7rem;
+  }
+
+  .mdLg\:px-\[13rem\] {
+    padding-left: 13rem;
+    padding-right: 13rem;
   }
 
   .mdLg\:pl-\[5rem\] {
