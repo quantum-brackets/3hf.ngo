@@ -117,9 +117,9 @@
         </div>
 
         <div class="space-y-[3rem] md:space-y-0 px-[1.3rem] lg:px-[5rem] 2xl:px-[12rem] md:flex 
-        md:justify-between md:gap-[1.4rem] lg:gap-[3rem]" style="border: 2px solid red;">
-            <div class="volunteer px-[0.9rem] py-[16px] space-y-[1.3rem] border-[0.5px] border-[#C4C4C4] 
-                rounded-[16px] md:basis-[50%] xl:basis-[47%] h-[430px]">
+        md:justify-between md:gap-[1.4rem] lg:gap-[3rem]" styl="border: 2px solid red;">
+            <div class="volunteer md:relative px-[0.9rem] py-[16px] space-y-[1.3rem] border-[0.5px] border-[#C4C4C4] 
+                rounded-[16px] md:basis-[50%] xl:basis-[47%] md:h-[530px]  mdLg:h-[460px]">
                 <img src="{% static '/heartsandhands/media/home/handshake.png' %}" alt="">
                 <h4 class="text-[32px] font-[700]">Volunteer</h4>
 
@@ -131,13 +131,14 @@
                 </p>
 
                 <a href="{% url 'contact_us' %}"
-                    class="block border-[0.5px] border-[#C4C4C4] rounded-[8px] text-center font-[500] text-#00000 py-[16px]">
+                    class="block border-[0.5px] border-[#C4C4C4] rounded-[8px] text-center font-[500] text-#00000 py-[16px]
+                    md:absolute md:bottom-[30px] md:left-[20px] md:w-[92%]">
                     Sign up to Volunteer
                 </a>
             </div>
 
-            <div class="donations px-[0.9rem] py-[16px] space-y-[1.3rem] border-[0.5px] border-[#C4C4C4] rounded-[16px] 
-                md:basis-[50%] xl:basis-[47%]">
+            <div class="donations md:relative px-[0.9rem] py-[16px] space-y-[1.3rem] border-[0.5px] border-[#C4C4C4] rounded-[16px] 
+                md:basis-[50%] xl:basis-[47%] md:h-[530px] mdLg:h-[460px]">
                 <img src="{% static '/heartsandhands/media/home/donate.png' %}" alt="">
 
                 <h4 class="text-[32px] font-[700]">Donations</h4>
@@ -148,8 +149,9 @@
                     in need and create a lasting impact on their lives.
                 </p>
 
-                <a href="{% url 'donate' %}" class="block bg-[#076ABB] border-[0.5px] border-[#C4C4C4] rounded-[8px] text-center font-[500] 
-                    text-#00000 text-white py-[16px]">
+                <a href="{% url 'donate' %}" 
+                class="block bg-[#076ABB] border-[0.5px] border-[#C4C4C4] rounded-[8px] text-center font-[500] 
+                    text-#00000 text-white py-[16px] md:absolute md:bottom-[30px] md:left-[20px] md:w-[92%] ">
                     Donate
                 </a>
             </div>

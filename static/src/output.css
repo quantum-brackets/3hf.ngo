@@ -1137,6 +1137,26 @@ input:checked + .toggle-bg {
   top: 2rem;
 }
 
+.bottom-\[30px\] {
+  bottom: 30px;
+}
+
+.left-\[20px\] {
+  left: 20px;
+}
+
+.left-\[30px\] {
+  left: 30px;
+}
+
+.left-\[27px\] {
+  left: 27px;
+}
+
+.left-\[25px\] {
+  left: 25px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1216,6 +1236,14 @@ input:checked + .toggle-bg {
 
 .mt-\[3rem\] {
   margin-top: 3rem;
+}
+
+.mt-\[4px\] {
+  margin-top: 4px;
+}
+
+.mt-\[14px\] {
+  margin-top: 14px;
 }
 
 .box-border {
@@ -1303,6 +1331,10 @@ input:checked + .toggle-bg {
   height: 430px;
 }
 
+.h-\[567px\] {
+  height: 567px;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1353,6 +1385,10 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[92\%\] {
+  width: 92%;
 }
 
 .flex-1 {
@@ -1619,6 +1655,12 @@ input:checked + .toggle-bg {
   --tw-space-y-reverse: 0;
   margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[11\.3rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(11.3rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(11.3rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -2490,8 +2532,40 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 768px) {
+  .md\:absolute {
+    position: absolute;
+  }
+
+  .md\:relative {
+    position: relative;
+  }
+
   .md\:top-\[7rem\] {
     top: 7rem;
+  }
+
+  .md\:bottom-\[30px\] {
+    bottom: 30px;
+  }
+
+  .md\:left-\[25px\] {
+    left: 25px;
+  }
+
+  .md\:left-\[21px\] {
+    left: 21px;
+  }
+
+  .md\:left-\[20px\] {
+    left: 20px;
+  }
+
+  .md\:left-\[18px\] {
+    left: 18px;
+  }
+
+  .md\:left-\[19px\] {
+    left: 19px;
   }
 
   .md\:mr-\[2rem\] {
@@ -2514,6 +2588,14 @@ input:checked + .toggle-bg {
     height: auto;
   }
 
+  .md\:h-\[430px\] {
+    height: 430px;
+  }
+
+  .md\:h-\[530px\] {
+    height: 530px;
+  }
+
   .md\:w-\[251px\] {
     width: 251px;
   }
@@ -2524,6 +2606,10 @@ input:checked + .toggle-bg {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-\[92\%\] {
+    width: 92%;
   }
 
   .md\:basis-\[30\%\] {
@@ -2688,6 +2774,14 @@ input:checked + .toggle-bg {
 
   .mdLg\:hidden {
     display: none;
+  }
+
+  .mdLg\:h-\[430px\] {
+    height: 430px;
+  }
+
+  .mdLg\:h-\[460px\] {
+    height: 460px;
   }
 
   .mdLg\:w-\[50\%\] {
