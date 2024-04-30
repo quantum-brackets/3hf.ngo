@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     # Local apps
     "users.apps.UsersConfig",
     "heartsandhands.apps.HeartsandhandsConfig",
+    "events.apps.EventsConfig",
 
     # Default apps
     'django.contrib.admin',
