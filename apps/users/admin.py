@@ -2,7 +2,6 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth import get_user_model
 
-
 User = get_user_model()
 
 
@@ -28,8 +27,7 @@ class CustomUserAdmin(UserAdmin):
                     "is_superuser",
                 ],
                 "classes": ["collapse"],
-            },
-        ),
+            },        ),
 
         (
             'Important Dates',
@@ -55,7 +53,8 @@ class CustomUserAdmin(UserAdmin):
                     "first_name",
                     "last_name",
                     "phone_number",
-                    "password",
+                    "password1",
+                    "password2"
                 ),
             },
         ),
