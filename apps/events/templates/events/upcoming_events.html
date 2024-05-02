@@ -1,0 +1,10 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+{% for event in upcoming_events %}
+  <h2>{{ event.theme }}</h2>
+  <p>{{ event.description }}</p>
+{% endfor %}
+
+{% endblock content %}
