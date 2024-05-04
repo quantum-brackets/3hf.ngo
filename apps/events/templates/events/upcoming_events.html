@@ -1,32 +1,52 @@
 {% extends '_base.html' %}
+{% load static %}
 
 {% block content %}
 <main class="bg-[#F2F2F2] py-[4rem] px-[5rem] mt-[4rem]" styl="border: 14px solid red;">
+
+    <div class="hidden" id="event-details">
+        {{ event.theme}}
+        <div class="event-details">
+            <div class="">
+                <h2 id="event-theme"></h2>
+                <p id="event-description"></p>
+                <p id="event-time"></p>
+                <p id="event-date"></p>
+                <p id="event-location"></p>
+            </div>
+            
+            <div class="">
+                <img id="event-image" src="" alt="Event Image" class="w-[267px] h-[267px]">
+            </div>
+        </div>
+    </div>
 
     <div class="grid grid-cols-4 gap-[3rem]">
         {% for event in upcoming_events %}
         <div class=" rounded-[16px] border-[0.5px] border-[#CDE1F1]">
 
-            <div class="space-y-[0.7rem] w-[90%] mx-auto py-[1rem] font-inter">
-                <img src="{{ event.image.url }}" alt="Event Image" 
-                class="w-[267px] h-[267px]">
-                <h2 class="font-inter font-[700] text-[18px]">{{ event.theme }}</h2>
-        
-                <p class="text-text-color">{{ event.description }}</p>
-    
-                <p class="text-[#6D6D6D] font-[700]">{{ event.date }}</p>
+            <button type="button" class="cursor-pointer show-event-detail" id="show-event-detail" data-event-pk="{{ event.pk }}">
+                <div class="space-y-[0.7rem] w-[90%] mx-auto py-[1rem] font-inter">
+                    <img src="{{ event.image.url }}" alt="Event Image" class="w-[267px] h-[267px]">
+                    <h2 class="font-inter font-[700] text-[18px]">{{ event.theme }}</h2>
 
-            </div>
-    
-            
+                    <p class="text-text-color">{{ event.description }}</p>
+
+                    <p class="text-[#6D6D6D] font-[700]">{{ event.date }}</p>
+
+                </div>
+
+            </button>
         </div>
-    
+
         {% endfor %}
 
     </div>
-   
+
 
 </main>
+
+<script src="{% static 'js/eventDetails.js' %}"></script>
 
 {% include '_footer.html' %}
 {% endblock content %}
