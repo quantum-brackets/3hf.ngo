@@ -4,18 +4,41 @@
 {% block content %}
 <main class="mt-[2rem]" styl="border: 14px solid red;">
 
-    <section class="hidden px-[5rem] pb-[5rem]" id="event-details">
-        <div class="">
-            <div class="">
-                <h2 id="event-theme"></h2>
-                <p id="event-description"></p>
-                <p id="event-time"></p>
-                <p id="event-date"></p>
-                <p id="event-location"></p>
+    <section class="hidden px-[5rem] pb-[5rem] space-y-[1.5rem] mt-[4.2rem]" id="event-details">
+        <span class="border border-[#076ABB] rounded-[64px] px-[32px] py-[12px] font-inter
+         text-[#076ABB] text-[16px] inline-block">
+            Charity Event</span>
+
+        <div class="flex gap-[4rem]">
+            <div class="basis-[50%] space-y-[1.6rem]">
+                <h2 id="event-theme" class="font-delaGothic text-[56px] leading-[4rem] capitalize">
+                </h2>
+                <p id="event-description" class="font-inter text-[16px] text-[#6D6D6D]"></p>
+
+                <div class="text-[16px] text-[#6D6D6D] flex gap-[2rem]">
+                    <div class="flex gap-[0.5rem]">
+                        <img src="{% static '/heartsandhands/media/events/clock.png' %}" alt=""
+                        class="w-[32px] h-[32px]">
+                        <span id="event-time"></span>
+                    </div>
+
+                    <div class="flex gap-[0.5rem]">
+                        <img src="{% static '/heartsandhands/media/events/calendar.png' %}" alt=""
+                        class="w-[32px] h-[32px]">
+                        <span id="event-date"></span>
+                    </div>
+
+                    <div class="flex gap-[0.5rem]">
+                        <img src="{% static '/heartsandhands/media/events/location.png' %}" alt=""
+                        class="w-[32px] h-[32px]">
+                        <span id="event-location"></span>
+                    </div>
+                </div>
+
             </div>
 
             <div class="">
-                <img id="event-image" src="" alt="Event Image" class="w-[267px] h-[267px]">
+                <img id="event-image" src="" alt="Event Image" class="w-[540px] h-[414px] object-contain">
             </div>
         </div>
     </section>
