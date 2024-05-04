@@ -30,10 +30,7 @@ $(document).ready(function() {
 
             $("#event-details").removeClass("hidden");
 
-            var eventDetailsOffset = $('#event-details').offset().top;
-            $('html, body').animate({
-                scrollTop: eventDetailsOffset
-            }, 'slow');
+            scrollToEventDetail()
         },
         error: function(xhr, status, error) {
           console.error('Error', xhr.responseText);
@@ -41,3 +38,10 @@ $(document).ready(function() {
       });
     });
   });
+
+  function scrollToEventDetail() {
+    var eventDetailsOffset = $('#event-details').offset().top;
+    $('html, body').animate({
+        scrollTop: eventDetailsOffset
+    }, 'slow');
+  }

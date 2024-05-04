@@ -2,11 +2,10 @@
 {% load static %}
 
 {% block content %}
-<main class="bg-[#F2F2F2] py-[4rem] px-[5rem] mt-[4rem]" styl="border: 14px solid red;">
+<main class="mt-[2rem]" styl="border: 14px solid red;">
 
-    <div class="hidden" id="event-details">
-        {{ event.theme}}
-        <div class="event-details">
+    <section class="hidden px-[5rem] pb-[5rem]" id="event-details">
+        <div class="">
             <div class="">
                 <h2 id="event-theme"></h2>
                 <p id="event-description"></p>
@@ -14,34 +13,40 @@
                 <p id="event-date"></p>
                 <p id="event-location"></p>
             </div>
-            
+
             <div class="">
                 <img id="event-image" src="" alt="Event Image" class="w-[267px] h-[267px]">
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="grid grid-cols-4 gap-[3rem]">
-        {% for event in upcoming_events %}
-        <div class=" rounded-[16px] border-[0.5px] border-[#CDE1F1]">
+    <section class="bg-[#F2F2F2] py-[4rem] px-[5rem] space-y-[2rem]">
+        <h2 class="text-[#06589C] text-[28px] font-inter font-[700]">Upcoming events</h2>
 
-            <button type="button" class="cursor-pointer show-event-detail" id="show-event-detail" data-event-pk="{{ event.pk }}">
-                <div class="space-y-[0.7rem] w-[90%] mx-auto py-[1rem] font-inter">
-                    <img src="{{ event.image.url }}" alt="Event Image" class="w-[267px] h-[267px]">
-                    <h2 class="font-inter font-[700] text-[18px]">{{ event.theme }}</h2>
+        <div class="grid grid-cols-4 gap-[2rem]">
+            {% for event in upcoming_events %}
+            <div class=" rounded-[16px] border-[0.5px] border-[#CDE1F1]">
+                <button type="button" class="cursor-pointer show-event-detail" id="show-event-detail"
+                    data-event-pk="{{ event.pk }}">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter">
+                        <img src="{{ event.image.url }}" alt="Event Image" class="w-[267px] h-[267px]">
+                        <h2 class="font-inter font-[700] text-[18px] text-left">{{ event.theme }}</h2>
 
-                    <p class="text-text-color">{{ event.description }}</p>
+                        <p class="text-text-color text-justify">{{ event.description }}</p>
 
-                    <p class="text-[#6D6D6D] font-[700]">{{ event.date }}</p>
+                        <p class="text-[#6D6D6D] font-[700] text-left">{{ event.date }}</p>
 
-                </div>
+                    </div>
 
-            </button>
+                </button>
+            </div>
+
+            {% endfor %}
+
         </div>
 
-        {% endfor %}
+    </section>
 
-    </div>
 
 
 </main>
