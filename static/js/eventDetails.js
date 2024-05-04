@@ -28,7 +28,12 @@ $(document).ready(function() {
             $('#event-location').text(data.location);
             $('#event-image').attr('src', data.image_url);
 
-            $("#event-details").addClass("block").removeClass("hidden");
+            $("#event-details").removeClass("hidden");
+
+            var eventDetailsOffset = $('#event-details').offset().top;
+            $('html, body').animate({
+                scrollTop: eventDetailsOffset
+            }, 'slow');
         },
         error: function(xhr, status, error) {
           console.error('Error', xhr.responseText);
