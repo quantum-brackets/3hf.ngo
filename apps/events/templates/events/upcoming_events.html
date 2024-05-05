@@ -4,18 +4,19 @@
 {% block content %}
 <main class="mt-[1.5rem] lg:mt-[2rem]" styl="border: 14px solid red;">
 
-    <section class="hidden px-[5rem] pb-[5rem] space-y-[1.5rem] md:mt-[4.2rem]" id="event-details">
+    <section class="hidden px-[1.4rem] md:px-[2rem] mdLg:px-[5rem] pb-[2.5rem] mdLg:pb-[5rem]
+     space-y-[2.2rem] lg::space-y-[1.5rem] md:mt-[4.2rem]" id="event-details">
         <span class="border border-[#076ABB] rounded-[64px] px-[32px] py-[12px] font-inter
          text-[#076ABB] text-[16px] inline-block">
             Charity Event</span>
 
         <div class="flex gap-[4rem]">
-            <div class="basis-[50%] space-y-[1.6rem]">
-                <h2 id="event-theme" class="font-delaGothic text-[56px] leading-[4rem] capitalize">
+            <div class="basis-[100%] mdLg:basis-[50%] space-y-[1.6rem]">
+                <h2 id="event-theme" class="font-delaGothic text-[32px] mdLg:text-[56px] mdLg:leading-[4rem] capitalize">
                 </h2>
-                <p id="event-description" class="font-inter text-[16px] text-[#6D6D6D]"></p>
+                <p id="event-description" class="font-inter text-[16px] text-[#6D6D6D] md:pr-[4rem] mdLg:pr-0"></p>
 
-                <div class="text-[16px] text-[#6D6D6D] flex gap-[2rem]">
+                <div class="text-[16px] text-[#6D6D6D] flex flex-col mdLg:flex-row gap-[1rem] mdLg:gap-[2rem]">
                     <div class="flex gap-[0.5rem]">
                         <img src="{% static '/heartsandhands/media/events/clock.png' %}" alt=""
                         class="w-[32px] h-[32px]">
@@ -37,7 +38,7 @@
 
             </div>
 
-            <div class="">
+            <div class="hidden mdLg:block">
                 <img id="event-image" src="" alt="Event Image" class="w-[540px] h-[414px] object-contain">
             </div>
         </div>
