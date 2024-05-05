@@ -4,7 +4,7 @@
 {% block content %}
 <main class="mt-[1.5rem] lg:mt-[2rem]" styl="border: 14px solid red;">
 
-    <section class="hidden px-[1.4rem] md:px-[2rem] mdLg:px-[5rem] pb-[2.5rem] mdLg:pb-[5rem]
+    <section class="hidden px-[1.4rem] md:px-[2rem] mdLg:px-[4rem] pb-[2.5rem] mdLg:pb-[5rem]
      space-y-[2.2rem] lg::space-y-[1.5rem] md:mt-[4.2rem]" id="event-details">
         <span class="border border-[#076ABB] rounded-[64px] px-[32px] py-[12px] font-inter
          text-[#076ABB] text-[16px] inline-block">
@@ -16,20 +16,20 @@
                 </h2>
                 <p id="event-description" class="font-inter text-[16px] text-[#6D6D6D] md:pr-[4rem] mdLg:pr-0"></p>
 
-                <div class="text-[16px] text-[#6D6D6D] flex flex-col mdLg:flex-row gap-[1rem] mdLg:gap-[2rem]">
-                    <div class="flex gap-[0.5rem]">
+                <div class="text-[16px] text-[#6D6D6D] flex flex-col xl:flex-row gap-[1rem] xl:gap-[2rem]" styl="border: 2px dotted red;">
+                    <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
                         <img src="{% static '/heartsandhands/media/events/clock.png' %}" alt=""
                         class="w-[32px] h-[32px]">
                         <span id="event-time"></span>
                     </div>
 
-                    <div class="flex gap-[0.5rem]">
+                    <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
                         <img src="{% static '/heartsandhands/media/events/calendar.png' %}" alt=""
                         class="w-[32px] h-[32px]">
                         <span id="event-date"></span>
                     </div>
 
-                    <div class="flex gap-[0.5rem]">
+                    <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
                         <img src="{% static '/heartsandhands/media/events/location.png' %}" alt=""
                         class="w-[32px] h-[32px]">
                         <span id="event-location"></span>

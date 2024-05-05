@@ -3002,6 +3002,11 @@ input:checked + .toggle-bg {
     padding-right: 5rem;
   }
 
+  .mdLg\:px-\[4rem\] {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .mdLg\:pl-\[5rem\] {
     padding-left: 5rem;
   }
@@ -3152,12 +3157,20 @@ input:checked + .toggle-bg {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
   .lg\:justify-between {
     justify-content: space-between;
   }
 
   .lg\:gap-\[3rem\] {
     gap: 3rem;
+  }
+
+  .lg\:gap-\[2rem\] {
+    gap: 2rem;
   }
 
   .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -3266,6 +3279,10 @@ input:checked + .toggle-bg {
     display: flex;
   }
 
+  .lgXl\:flex-row {
+    flex-direction: row;
+  }
+
   .lgXl\:justify-around {
     justify-content: space-around;
   }
@@ -3312,8 +3329,16 @@ input:checked + .toggle-bg {
     flex-basis: 50%;
   }
 
+  .xl\:flex-row {
+    flex-direction: row;
+  }
+
   .xl\:justify-around {
     justify-content: space-around;
+  }
+
+  .xl\:gap-\[2rem\] {
+    gap: 2rem;
   }
 
   .xl\:pl-\[10rem\] {
