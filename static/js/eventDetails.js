@@ -24,7 +24,8 @@ $(document).ready(function() {
             $('#event-theme').text(data.theme);
             $('#event-description').text(data.description);
             $('#event-time').text(data.time);
-            $('#event-date').text(data.date);
+            // $('#event-date').text(data.date);
+            $('#event-date').text(formatDate(data.date))
             $('#event-location').text(data.location);
             $('#event-image').attr('src', data.image_url);
 
@@ -45,3 +46,9 @@ $(document).ready(function() {
         scrollTop: eventDetailsOffset
     }, 'slow');
   }
+
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    const options = { month: 'long', day: 'numeric', year: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+}
