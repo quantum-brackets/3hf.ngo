@@ -33,37 +33,29 @@
             <div class="hidden mdLg:flex mdLg:justify-between mdLg:basis-[80%] space-y-[-1.1rem]" id="navbar-list"
                 styl="border: 4px solid chocolate;">
                 <ul class="mdLg:flex mdLg:justify-evenly basis-[55%] py-6 capitalize text-[#6D6D6D] 
-                leading-[3rem]" style="border: 4px dotted blueviolet;">
+                leading-[3rem]" styl="border: 4px dotted blueviolet;">
                     <li>
                         <a href="{% url 'about_us' %}" styl="border: 4px dotted blue;">about us</a>
-
                     </li>
 
-                    <li data-dropdown-toggle="language-dropdown-menu" class="cursor-pointer">
-                        events
+                    <li data-collapse-toggle="events-dropdown" class="cursor-pointer" styl="border: 3px solid saddlebrown;">
+                        outreach
+                        <div class="hidden -mt-[20px z-[1000]" id="events-dropdown" styl="border: 1px solid blueviolet;" styl="border: 3px solid blue;">
+                            <ul class="text-[13px]">
+                                <li class="px-[7px] lg:px-0 hover:text-[#076ABB]">
+                                    <a href="{% url 'upcoming_events' %}" 
+                                    class=""
+                                        styl="border: 3px solid saddlebrown;">Upcoming </a>
+                                </li>
+    
+                                <li class="px-[7px] lg:px-0 hover:text-[#076ABB]">
+                                    <a href="{% url 'upcoming_events' %}" class=""
+                                        styl="border: 3px solid saddlebrown;">Past</a>
+                                </li>
+    
+                            </div>
                     </li>
-                    <li class="hidden z-[1000]" id="language-dropdown-menu" styl="border: 1px solid blueviolet;">
-                        <ul>
-                            <li class="px-[7px] hover:bg-[#076ABB] hover:text-[white]">
-                                <a href="{% url 'upcoming_events' %}" 
-                                class="block "
-                                    styl="border: 3px solid saddlebrown;">Upcoming </a>
-                            </li>
-
-                            <li class="px-[7px] hover:bg-[#076ABB] hover:text-[white]">
-                                <a href="{% url 'upcoming_events' %}" class="block"
-                                    styl="border: 3px solid saddlebrown;">Past</a>
-                            </li>
-                        </ul>
-                        <!-- <li> -->
-
-                        <!-- </li> -->
-
-                        <!-- <li> -->
-
-                        <!-- </li> -->
-
-                    </li>
+                   
 
 
                     <li>

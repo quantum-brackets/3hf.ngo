@@ -1226,6 +1226,10 @@ input:checked + .toggle-bg {
   margin-top: 3rem;
 }
 
+.-mt-\[20px\] {
+  margin-top: -20px;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -2066,6 +2070,26 @@ input:checked + .toggle-bg {
   padding-right: 7px;
 }
 
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.py-\[23rem\] {
+  padding-top: 23rem;
+  padding-bottom: 23rem;
+}
+
+.py-\[-3rem\] {
+  padding-top: -3rem;
+  padding-bottom: -3rem;
+}
+
+.py-\[-13rem\] {
+  padding-top: -13rem;
+  padding-bottom: -13rem;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -2226,6 +2250,14 @@ input:checked + .toggle-bg {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-\[10px\] {
+  font-size: 10px;
+}
+
+.text-\[13px\] {
+  font-size: 13px;
 }
 
 .font-\[400\] {
@@ -2474,6 +2506,11 @@ input:checked + .toggle-bg {
 .hover\:text-\[white\]:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-\[\#076ABB\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(7 106 187 / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus {
