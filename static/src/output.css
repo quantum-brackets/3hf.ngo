@@ -1137,6 +1137,34 @@ input:checked + .toggle-bg {
   top: 2rem;
 }
 
+.top-\[3rem\] {
+  top: 3rem;
+}
+
+.top-\[1rem\] {
+  top: 1rem;
+}
+
+.top-\[1\.3rem\] {
+  top: 1.3rem;
+}
+
+.top-\[1\.2rem\] {
+  top: 1.2rem;
+}
+
+.top-\[1\.222rem\] {
+  top: 1.222rem;
+}
+
+.top-\[0\.8rem\] {
+  top: 0.8rem;
+}
+
+.top-\[0\.9rem\] {
+  top: 0.9rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1163,6 +1191,10 @@ input:checked + .toggle-bg {
 
 .order-last {
   order: 9999;
+}
+
+.float-right {
+  float: right;
 }
 
 .mx-auto {
@@ -1228,6 +1260,10 @@ input:checked + .toggle-bg {
 
 .-mt-\[20px\] {
   margin-top: -20px;
+}
+
+.ms-3 {
+  margin-inline-start: 0.75rem;
 }
 
 .box-border {
@@ -1323,6 +1359,22 @@ input:checked + .toggle-bg {
   height: max-content;
 }
 
+.h-2 {
+  height: 0.5rem;
+}
+
+.h-2\.5 {
+  height: 0.625rem;
+}
+
+.h-\[1rem\] {
+  height: 1rem;
+}
+
+.h-\[0\.7rem\] {
+  height: 0.7rem;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1381,6 +1433,22 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
+}
+
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-2\.5 {
+  width: 0.625rem;
+}
+
+.w-\[1rem\] {
+  width: 1rem;
+}
+
+.w-\[0\.7rem\] {
+  width: 0.7rem;
 }
 
 .flex-1 {
@@ -2987,6 +3055,10 @@ input:checked + .toggle-bg {
 
   .lg\:top-\[4\.7rem\] {
     top: 4.7rem;
+  }
+
+  .lg\:top-\[1\.222rem\] {
+    top: 1.222rem;
   }
 
   .lg\:order-last {
