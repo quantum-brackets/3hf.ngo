@@ -2,9 +2,19 @@
 
 {% block content %}
 <main>
-    Thank you for your donation, {{ customer.name }}
+    <div class="mx-auto md:w-[90%] lg:w-[50%] font-inter space-y-[2rem] mt-[2rem] md:mt-[6rem] lg:mt-[3.9rem] pb-[7rem] md:pb-[14rem] lg:pb-[11rem" 
+    styl="border: 1px solid blue;">
+        <h3 class="text-center text-[24px] font-[700] px-[1rem]">Thanks for your support, <span class="capitalize"> {{ customer.name }}</span> &#9829;</h3>
 
+        <p class="text-[#6D6D6D] px-[1rem] md:px-[2rem] leading-[2rem]">
+            Your generous contribution is fueling our mission and bringing hope to countless lives. With your help, we are
+            transforming lives and creating a brighter tomorrow.
+        </p>
+    </div>
 </main>
 
-<!-- {% include '_footer.html' %} -->
+<section class="">
+{% include '_footer.html' %}
+
+</section>
 {% endblock content %}
