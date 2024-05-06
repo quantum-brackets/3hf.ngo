@@ -31,7 +31,7 @@
                 </div>
             </a>
 
-            <div class="hidden mdLg:flex mdLg:justify-between mdLg:basis-[80%] space-y-[-1.1rem]" id="navbar-list"
+            <div class="hidden mdLg:flex mdLg:justify-between mdLg:basis-[80%] space-y-[-1.1rem] lg:space-y-[-0.6rem]" id="navbar-list"
                 styl="border: 4px solid chocolate;">
                 <ul class="mdLg:flex mdLg:justify-evenly basis-[55%] py-6 capitalize text-[#6D6D6D] 
                 leading-[3rem]" styl="border: 4px dotted blueviolet;">
@@ -72,14 +72,13 @@
                     </li>
                 </ul>
 
-                <div class="basis-[43.7%] mdLg:text-center py-9 bg-[{{bg_color}}] capitalize font-[650] mt[2rem]"
+                <div class="basis-[43.7%] mdLg:text-center py-9 bg-[{{bg_color}} capitalize font-[650] mt[2rem]"
                     styl="border: 2px dashed #000000;">
-                    <a href="{% url 'donate' %}" class="py-[12px] px-[32px] border-solid border-[1px] border-black 
-                        rounded-[40px] bg-white w-full md:w-[50%] mdLg:w-auto inline-block">
+                    <a href="{% url 'donate' %}" class="bg-[#356abb] text-[#FFFFFF] py-[12px] px-[32px] border-solid border-[1px] border-blac 
+                        rounded-[40px] w-full md:w-[50%] mdLg:w-auto inline-block">
                         donate now
-                        <img src="{% static '/heartsandhands/media/donate_arrow.png' %}" alt="arrow"
+                        <img src="{% static '/heartsandhands/media/arrow.png' %}" alt="arrow"
                             class="inline w-[21.5px]">
-
                     </a>
                 </div>
             </div>
