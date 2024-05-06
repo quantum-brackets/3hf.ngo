@@ -1335,6 +1335,10 @@ input:checked + .toggle-bg {
   height: max-content;
 }
 
+.h-\[28px\] {
+  height: 28px;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1397,6 +1401,10 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[62px\] {
+  width: 62px;
 }
 
 .flex-1 {
