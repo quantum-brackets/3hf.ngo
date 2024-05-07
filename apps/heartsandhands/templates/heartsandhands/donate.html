@@ -81,6 +81,13 @@
                     {% csrf_token %}
                     <input type="text" name="amount" id="stripe-amount" placeholder="Enter amount" required
                         class="border-[1px] border-[#DFDFDF] w-full h-[52px] py-[16px] px-[32px] rounded-[8px]">
+
+                    <select name="currency" id="currency"
+                        class="border-[1px] border-[#DFDFDF] w-full h-[52px] py-[16px] px-[32px] rounded-[8px]">
+                        <option value="USD" selected>USD</option>
+                        <!-- <option value="GHS">Cedis</option> -->
+                    </select>
+
                     <input type="radio" id="payment_gateway" name="payment_gateway" value="stripe" checked
                         class="hidden">
 
