@@ -19,47 +19,63 @@
 
 <body class="box-border">
     <header class="flex justify-between pt-[1rem] md:pt-0 font-inter" styl="border: 2px solid gray">
-        <div class="flex flex-col mdLg:flex-row mdLg:justify-between basis-[100%] pl-[0.7rem] md:pl-[3rem] 
+        <div class="flex flex-col mdLg:flex-row mdLg:justify-between basis-[100%] p-[0.7rem] md:pl-[3rem] 
         mdLg:pl-[5rem] space-y[8rem]" styl="border: 3px dashed lawngreen;">
-            <a href="{% url 'home' %}"
-                class="flex w-max gap-[1rem] md:ml[2rem] xl:ml[6rem]  md:pt-[1rem]"
-                style="border: 3px solid #000000;">
-                <img src="{% static '/heartsandhands/media/logo.png' %}" alt="3hf logo" class="h-[58px] w-[68px]">
-                <div class="hidden mdLg:block capitalize font-delaGothic font-[400] text-[1rem]">
-                    <span class="block">hearts & hands </span>
-                    <span class="block">humanitarian foundation</span>
-                </div>
-            </a>
 
-            <div class="hidden mdLg:flex mdLg:justify-between mdLg:basis-[80%] space-y-[-1.1rem] lg:space-y-[-0.6rem]" id="navbar-list"
-                styl="border: 4px solid chocolate;">
+            <div class="flex justify-between" styl="border: 3px solid black;">
+                <a href="{% url 'home' %}" class="flex w-max gap-[1rem] md:ml[2rem] xl:ml[6rem]  md:pt-[1rem]"
+                    styl="border: 3px solid #000000;">
+                    <img src="{% static '/heartsandhands/media/logo.png' %}" alt="3hf logo" class="h-[58px] w-[68px]">
+                    <div class="hidden mdLg:block capitalize font-delaGothic font-[400] text-[13px]">
+                        <span class="block">hearts & hands </span>
+                        <span class="block">humanitarian </span>
+                        <span>foundation</span>
+                    </div>
+                </a>
+
+                <button data-collapse-toggle="navbar-list" type="button" class="inline-flex items-center mr-[0.7rem] md:mr-[2rem] mt-[0.7rem] md:mt-[1.7rem] p-2 w-10 h-10 justify-center text-sm text-gray-500 
+        rounded-lg mdLg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    aria-controls="navbar-list" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden mdLg:flex mdLg:justify-between mdLg:basis-[74%] space-y-[-1.1rem] lg:space-y-[-0.6rem]"
+                id="navbar-list" styl="border: 4px solid chocolate;">
                 <ul class="mdLg:flex mdLg:justify-evenly basis-[55%] py-6 capitalize text-[#6D6D6D] 
                 leading-[3rem]" styl="border: 4px dotted blueviolet;">
                     <li>
                         <a href="{% url 'about_us' %}" styl="border: 4px dotted blue;">about us</a>
                     </li>
 
-                    <li data-collapse-toggle="events-dropdown" class="cursor-pointer" styl="border: 2px solid saddlebrown;">
+                    <li data-collapse-toggle="events-dropdown" class="cursor-pointer"
+                        styl="border: 2px solid saddlebrown;">
                         outreach
-                        <svg class="w-[0.7rem] h-[0.7rem] ms-3 float-right relative top-[1rem] lg:top-[1.222rem]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                          </svg>
-                        <div class="hidden -mt-[20px z-[1000]" id="events-dropdown" styl="border: 1px solid blueviolet;" styl="border: 3px solid blue;">
+                        <svg class="w-[0.7rem] h-[0.7rem] ms-3 float-right relative top-[1rem] lg:top-[1.222rem]"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 4 4 4-4" />
+                        </svg>
+                        <div class="hidden -mt-[20px z-[1000]" id="events-dropdown" styl="border: 1px solid blueviolet;"
+                            styl="border: 3px solid blue;">
                             <ul class="text-[13px]">
                                 <li class="px-[7px] lg:px-0 hover:text-[#076ABB]">
-                                    <a href="{% url 'upcoming_events' %}" 
-                                    class=""
+                                    <a href="{% url 'upcoming_events' %}" class=""
                                         styl="border: 3px solid saddlebrown;">Upcoming </a>
                                 </li>
-    
+
                                 <li class="px-[7px] lg:px-0 hover:text-[#076ABB]">
                                     <a href="{% url 'upcoming_events' %}" class=""
                                         styl="border: 3px solid saddlebrown;">Past</a>
                                 </li>
-    
-                            </div>
+
+                        </div>
                     </li>
-                   
 
 
                     <li>
@@ -72,27 +88,18 @@
                     </li>
                 </ul>
 
-                <div class="basis-[43.7%] mdLg:text-center py-9 bg-[{{bg_color}} capitalize font-[650] mt[2rem]"
+                <div class="basis-[43.7%] text-center py-9 bg-[{{bg_color}} capitalize font-[650] mt[2rem]"
                     styl="border: 2px dashed #000000;">
-                    <a href="{% url 'donate' %}" class="bg-[#356abb] text-[#FFFFFF] py-[12px] px-[32px] border-solid border-[1px] border-blac 
-                        rounded-[40px] w-full md:w-[50%] mdLg:w-auto inline-block">
+                    <a href="{% url 'donate' %}" class="bg-[#356abb] text-[#FFFFFF] py-[12px] px-[32px] border-solid 
+                    border-[1px] rounded-[40px] w-full md:w-[50% mdLg:w-auto inline-block">
                         donate now
-                        <img src="{% static '/heartsandhands/media/arrow.png' %}" alt="arrow"
-                            class="inline w-[21.5px]">
+                        <img src="{% static '/heartsandhands/media/arrow.png' %}" alt="arrow" class="inline w-[21.5px]">
                     </a>
                 </div>
             </div>
         </div>
 
-        <button data-collapse-toggle="navbar-list" type="button" class="inline-flex items-center mr-[0.7rem] md:mr-[2rem] mt-[0.7rem] md:mt-[1.7rem] p-2 w-10 h-10 justify-center text-sm text-gray-500 
-            rounded-lg mdLg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-            aria-controls="navbar-list" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M1 1h15M1 7h15M1 13h15" />
-            </svg>
-        </button>
+
     </header>
 
     {% block content %}
