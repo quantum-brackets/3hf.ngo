@@ -1411,6 +1411,15 @@ input:checked + .toggle-bg {
   width: 100%;
 }
 
+.w-auto {
+  width: auto;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
