@@ -2314,6 +2314,10 @@ input:checked + .toggle-bg {
   font-weight: 600;
 }
 
+.font-\[00\] {
+  font-weight: 00;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -2418,6 +2422,11 @@ input:checked + .toggle-bg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\#2B2B2B\] {
+  --tw-text-opacity: 1;
+  color: rgb(43 43 43 / var(--tw-text-opacity));
 }
 
 .opacity-0 {
@@ -2999,8 +3008,17 @@ input:checked + .toggle-bg {
     font-size: 64px;
   }
 
+  .mdLg\:font-\[400\] {
+    font-weight: 400;
+  }
+
   .mdLg\:leading-\[4rem\] {
     line-height: 4rem;
+  }
+
+  .mdLg\:text-\[\#6D6D6D\] {
+    --tw-text-opacity: 1;
+    color: rgb(109 109 109 / var(--tw-text-opacity));
   }
 }
 
