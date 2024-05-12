@@ -2731,6 +2731,10 @@ input:checked + .toggle-bg {
     gap: 1.4rem;
   }
 
+  .md\:gap-\[1\.8rem\] {
+    gap: 1.8rem;
+  }
+
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -2916,6 +2920,26 @@ input:checked + .toggle-bg {
     justify-content: space-evenly;
   }
 
+  .mdLg\:gap-\[1rem\] {
+    gap: 1rem;
+  }
+
+  .mdLg\:gap-\[1re\] {
+    gap: 1re;
+  }
+
+  .mdLg\:gap-\[11rem\] {
+    gap: 11rem;
+  }
+
+  .mdLg\:gap-\[1\.2rem\] {
+    gap: 1.2rem;
+  }
+
+  .mdLg\:gap-\[1\.8rem\] {
+    gap: 1.8rem;
+  }
+
   .mdLg\:px-\[13rem\] {
     padding-left: 13rem;
     padding-right: 13rem;
@@ -3091,6 +3115,10 @@ input:checked + .toggle-bg {
 
   .lg\:gap-\[3rem\] {
     gap: 3rem;
+  }
+
+  .lg\:gap-\[1\.8rem\] {
+    gap: 1.8rem;
   }
 
   .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
