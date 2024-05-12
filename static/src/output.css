@@ -1302,6 +1302,10 @@ input:checked + .toggle-bg {
   height: 0.7rem;
 }
 
+.h-\[226px\] {
+  height: 226px;
+}
+
 .h-\[32px\] {
   height: 32px;
 }
@@ -1326,21 +1330,9 @@ input:checked + .toggle-bg {
   height: 58px;
 }
 
-.h-\[72px\] {
-  height: 72px;
-}
-
-.h-auto {
-  height: auto;
-}
-
 .h-max {
   height: -moz-max-content;
   height: max-content;
-}
-
-.h-\[226px\] {
-  height: 226px;
 }
 
 .w-1\/2 {
@@ -1411,25 +1403,17 @@ input:checked + .toggle-bg {
   width: 100%;
 }
 
-.w-auto {
-  width: auto;
-}
-
 .w-max {
   width: -moz-max-content;
   width: max-content;
 }
 
-.w-svw {
-  width: 100svw;
+.w-\[58px\] {
+  width: 58px;
 }
 
-.w-lvw {
-  width: 100lvw;
-}
-
-.w-screen {
-  width: 100vw;
+.w-\[52px\] {
+  width: 52px;
 }
 
 .flex-1 {
@@ -1474,10 +1458,6 @@ input:checked + .toggle-bg {
 
 .basis-\[8\%\] {
   flex-basis: 8%;
-}
-
-.basis-\[23\.7\%\] {
-  flex-basis: 23.7%;
 }
 
 .-translate-x-full {
@@ -2116,11 +2096,6 @@ input:checked + .toggle-bg {
   padding-bottom: 4rem;
 }
 
-.py-\[1px\] {
-  padding-top: 1px;
-  padding-bottom: 1px;
-}
-
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -2143,10 +2118,6 @@ input:checked + .toggle-bg {
 
 .pb-\[7rem\] {
   padding-bottom: 7rem;
-}
-
-.pl-\[0\.7rem\] {
-  padding-left: 0.7rem;
 }
 
 .pl-\[1\.8rem\] {
@@ -2237,10 +2208,6 @@ input:checked + .toggle-bg {
   font-size: 18px;
 }
 
-.text-\[1rem\] {
-  font-size: 1rem;
-}
-
 .text-\[2\.7rem\] {
   font-size: 2.7rem;
 }
@@ -2317,10 +2284,6 @@ input:checked + .toggle-bg {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-\[65\] {
-  font-weight: 65;
 }
 
 .uppercase {
@@ -2716,10 +2679,6 @@ input:checked + .toggle-bg {
     width: 251px;
   }
 
-  .md\:w-\[50\%\] {
-    width: 50%;
-  }
-
   .md\:w-\[55\%\] {
     width: 55%;
   }
@@ -2730,10 +2689,6 @@ input:checked + .toggle-bg {
 
   .md\:w-\[92\%\] {
     width: 92%;
-  }
-
-  .md\:w-auto {
-    width: auto;
   }
 
   .md\:basis-\[30\%\] {
@@ -2933,14 +2888,6 @@ input:checked + .toggle-bg {
     flex-basis: 50%;
   }
 
-  .mdLg\:basis-\[80\%\] {
-    flex-basis: 80%;
-  }
-
-  .mdLg\:basis-\[70\%\] {
-    flex-basis: 70%;
-  }
-
   .mdLg\:basis-\[74\%\] {
     flex-basis: 74%;
   }
@@ -2982,10 +2929,6 @@ input:checked + .toggle-bg {
 
   .mdLg\:pr-0 {
     padding-right: 0px;
-  }
-
-  .mdLg\:text-center {
-    text-align: center;
   }
 
   .mdLg\:text-\[20px\] {
