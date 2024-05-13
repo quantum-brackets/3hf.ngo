@@ -1351,6 +1351,10 @@ input:checked + .toggle-bg {
   height: max-content;
 }
 
+.h-\[20\.11px\] {
+  height: 20.11px;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1430,6 +1434,10 @@ input:checked + .toggle-bg {
 
 .w-\[52px\] {
   width: 52px;
+}
+
+.w-\[20\.11px\] {
+  width: 20.11px;
 }
 
 .flex-1 {
