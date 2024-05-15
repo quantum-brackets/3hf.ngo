@@ -76,6 +76,22 @@ WSGI_APPLICATION = 'hearts_and_hands.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+ENVIRONMENT = config('ENVIRONMENT')
+
+if ENVIRONMENT == 'dev':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db/dev.sqlite3',
+        }
+    }
+elif ENVIRONMENT == 'prod':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+           'NAME': BASE_DIR / 'db/prod.sqlite3',
+        }
+    }
 
 # DATABASES = {
 #     'default': {
@@ -84,16 +100,18 @@ WSGI_APPLICATION = 'hearts_and_hands.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': config("DATABASE_HOST"),
-        'NAME': config("DATABASE_NAME"),
-        'USER': config("DATABASE_USER"),
-        'PASSWORD': config("DATABASE_PASSWORD"),
-        'PORT': config("DATABASE_PORT"),
-    }
-}
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'HOST': config("DATABASE_HOST"),
+#         'NAME': config("DATABASE_NAME"),
+#         'USER': config("DATABASE_USER"),
+#         'PASSWORD': config("DATABASE_PASSWORD"),
+#         'PORT': config("DATABASE_PORT"),
+#     }
+# }
 
 
 # Password validation
