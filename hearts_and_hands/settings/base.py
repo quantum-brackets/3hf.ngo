@@ -3,23 +3,29 @@ import os
 import sys
 from decouple import config
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
+ENVIRONMENT = config('ENVIRONMENT')
+
+
+if ENVIRONMENT == 'prod':
+    from .prod import *
+else:
+    from .dev import *
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%j6(p4+my8+$9akwa-%_n$o$q6zg&akgxl03#rucde!*-i-$-c'
+# SECRET_KEY = 'django-insecure-%j6(p4+my8+$9akwa-%_n$o$q6zg&akgxl03#rucde!*-i-$-c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = ["3hf.ngo", "www.3hf.ngo", "127.0.0.1"]
 
 
 # Application definition
@@ -76,22 +82,22 @@ WSGI_APPLICATION = 'hearts_and_hands.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-ENVIRONMENT = config('ENVIRONMENT')
 
-if ENVIRONMENT == 'dev':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db/dev.sqlite3',
-        }
-    }
-elif ENVIRONMENT == 'prod':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-           'NAME': BASE_DIR / 'db/prod.sqlite3',
-        }
-    }
+
+# if ENVIRONMENT == 'dev':
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db/dev.sqlite3',
+#         }
+#     }
+# elif ENVIRONMENT == 'prod':
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#            'NAME': BASE_DIR / 'db/prod.sqlite3',
+#         }
+#     }
 
 # DATABASES = {
 #     'default': {
@@ -99,7 +105,6 @@ elif ENVIRONMENT == 'prod':
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
 
 
 # DATABASES = {
@@ -169,4 +174,3 @@ EMAIL_USE_TLS = True
 
 STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')
 PAYSTACK_SECRET_KEY = config("PAYSTACK_SECRET_KEY")
-DOMAIN = config('DOMAIN')
