@@ -2894,6 +2894,10 @@ input:checked + .toggle-bg {
     width: 98%;
   }
 
+  .md\:w-\[100\%\] {
+    width: 100%;
+  }
+
   .md\:basis-\[30\%\] {
     flex-basis: 30%;
   }
@@ -2944,6 +2948,10 @@ input:checked + .toggle-bg {
 
   .md\:gap-\[1\.4rem\] {
     gap: 1.4rem;
+  }
+
+  .md\:gap-\[2rem\] {
+    gap: 2rem;
   }
 
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -3007,6 +3015,11 @@ input:checked + .toggle-bg {
   .md\:py-\[4rem\] {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .md\:py-\[4\.9rem\] {
+    padding-top: 4.9rem;
+    padding-bottom: 4.9rem;
   }
 
   .md\:pb-\[11rem\] {
@@ -3297,6 +3310,10 @@ input:checked + .toggle-bg {
     width: 90%;
   }
 
+  .lg\:w-\[100\%\] {
+    width: 100%;
+  }
+
   .lg\:basis-\[35\%\] {
     flex-basis: 35%;
   }
@@ -3390,6 +3407,16 @@ input:checked + .toggle-bg {
   .lg\:py-\[5rem\] {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .lg\:py-\[9rem\] {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+
+  .lg\:py-\[7\.3rem\] {
+    padding-top: 7.3rem;
+    padding-bottom: 7.3rem;
   }
 
   .lg\:pb-0 {
@@ -3500,12 +3527,24 @@ input:checked + .toggle-bg {
     width: 750px;
   }
 
+  .xl\:w-\[90\%\] {
+    width: 90%;
+  }
+
+  .xl\:w-\[100\%\] {
+    width: 100%;
+  }
+
   .xl\:basis-\[47\%\] {
     flex-basis: 47%;
   }
 
   .xl\:basis-\[50\%\] {
     flex-basis: 50%;
+  }
+
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .xl\:flex-row {
@@ -3546,8 +3585,34 @@ input:checked + .toggle-bg {
     width: 820px;
   }
 
+  .\32xl\:w-\[90\%\] {
+    width: 90%;
+  }
+
+  .\32xl\:w-\[9\%\] {
+    width: 9%;
+  }
+
+  .\32xl\:w-\[86\%\] {
+    width: 86%;
+  }
+
+  .\32xl\:w-\[89\%\] {
+    width: 89%;
+  }
+
   .\32xl\:basis-\[50\%\] {
     flex-basis: 50%;
+  }
+
+  .\32xl\:gap-0 {
+    gap: 0px;
+  }
+
+  .\32xl\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
   .\32xl\:px-\[12rem\] {
