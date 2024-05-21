@@ -16,6 +16,9 @@ class UpcomingEvents(models.Model):
         verbose_name = "Upcoming event"
         verbose_name_plural = "Upcoming events"
         
+    def __str__(self):
+        return f"{self.theme.title()}"
+ 
     def save(self, *args, **kwargs): 
         slug = f'{self.theme}-{self.date}'
         if not self.slug:
