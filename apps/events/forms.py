@@ -2,7 +2,7 @@ from django.forms import ModelForm
 from django.core.validators import MaxLengthValidator
 from django import forms
 
-from .models import UpcomingEvents
+from .models import UpcomingEvents, PastEvents
 
 
 class CreateUpcomingEventForm(ModelForm):
@@ -14,3 +14,13 @@ class CreateUpcomingEventForm(ModelForm):
     class Meta:
         model = UpcomingEvents
         fields = ['theme', 'description', 'date', "time", "location", "image"]
+
+from django_summernote.widgets import SummernoteWidget
+
+class PastEventsForm(forms.ModelForm):
+    class Meta:
+        model = PastEvents
+        fields = ('content',)
+        widgets = {
+            'content': SummernoteWidget(),
+        }
