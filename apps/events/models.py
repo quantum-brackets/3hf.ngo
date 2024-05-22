@@ -1,6 +1,9 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 
+from cloudinary.models import CloudinaryField
+from django_summernote.models import AbstractAttachment
+
 class UpcomingEvents(models.Model):
     theme = models.CharField(max_length=200)
     description = models.TextField()
@@ -38,3 +41,7 @@ class PastEvents(models.Model):
 
     def __str__(self):
         return f"{self.event.theme.title()}"
+
+
+class SummernoteAttachment(AbstractAttachment):
+    file = CloudinaryField('image')
