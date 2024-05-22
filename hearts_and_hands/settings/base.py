@@ -3,7 +3,8 @@ import os
 import sys
 from decouple import config
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+BASE_DIR = os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +28,6 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     # Third party apps
     'django_social_share'
 ]
+
+INSTALLED_APPS.append('django_summernote')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -158,6 +160,9 @@ STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -174,3 +179,18 @@ EMAIL_USE_TLS = True
 
 STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')
 PAYSTACK_SECRET_KEY = config("PAYSTACK_SECRET_KEY")
+
+SUMMERNOTE_CONFIG = {
+    'iframe': True,
+
+     'toolbar': [
+        ['style', ['style']],
+        ['font', ['bold', 'italic', 'underline', 'clear']],
+        ['fontname', ['fontname']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['table', ['table']],
+        ['insert', ['link', 'picture', 'video']],
+        ['view', ['fullscreen', 'codeview', 'help']],
+    ],
+}

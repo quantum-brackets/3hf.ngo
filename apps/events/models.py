@@ -24,3 +24,17 @@ class UpcomingEvents(models.Model):
         if not self.slug:
             self.slug = slugify(slug)
         return super().save(*args, **kwargs)
+
+
+class PastEvents(models.Model):
+    event = models.OneToOneField(UpcomingEvents, on_delete=models.CASCADE)
+    content = models.TextField(blank=False, null=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Past event"
+        verbose_name_plural = "Past events"
+
+    def __str__(self):
+        return f"{self.event.theme.title()}"
