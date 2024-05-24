@@ -19,17 +19,7 @@ else:
     from .dev import *
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-%j6(p4+my8+$9akwa-%_n$o$q6zg&akgxl03#rucde!*-i-$-c'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-
-
 # Application definition
-
 INSTALLED_APPS = [
     # Local apps
     "users.apps.UsersConfig",
@@ -45,7 +35,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Third party apps
-    'django_social_share'
+    'django_social_share',
+    'cloudinary_storage',
+    'cloudinary'
 ]
 
 INSTALLED_APPS.append('django_summernote')
@@ -182,6 +174,7 @@ PAYSTACK_SECRET_KEY = config("PAYSTACK_SECRET_KEY")
 
 SUMMERNOTE_CONFIG = {
     'iframe': True,
+    # 'attachment_model': 'events.SummernoteAttachment',
 
      'toolbar': [
         ['style', ['style']],
@@ -195,12 +188,11 @@ SUMMERNOTE_CONFIG = {
     ],
 }
 
-import cloudinary
-import cloudinary.api
-import cloudinary.uploader
 
-cloudinary.config(
-    cloud_name=config("CLOUDINARY_CLOUD_NAME"),
-    api_key=config("CLOUDINARY_API_KEY"),
-    api_secret=config("CLOUDINARY_API_SECRET"),
-)
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': config("CLOUDINARY_CLOUD_NAME"),
+    'API_KEY': config("CLOUDINARY_API_KEY"),
+    'API_SECRET': config("CLOUDINARY_API_SECRET")
+}
