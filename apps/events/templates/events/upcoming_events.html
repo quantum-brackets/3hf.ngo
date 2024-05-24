@@ -49,22 +49,8 @@
 
         <div class="md:grid md:grid-cols-2 lg:grid-cols-4 gap-[2rem] space-y-[1.4rem] md:space-y-0">
             {% for event in upcoming_events %}
-            <div class=" rounded-[16px] border-[0.5px] border-[#CDE1F1]">
-                <button type="button" class="cursor-pointer show-event-detail" id="show-event-detail"
-                    data-event-pk="{{ event.pk }}">
-                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter">
-                        <img src="{{ event.image.url }}" alt="Event Image" class="w-full lg:w-[267p] h-[226px]">
-                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">{{ event.theme }}</h2>
-
-                        <p class="text-text-color text-justify">{{ event.description }}</p>
-
-                        <p class="text-[#6D6D6D] font-[700] text-left">{{ event.date }}</p>
-
-                    </div>
-
-                </button>
-            </div>
-
+         
+            {% include 'events/_event_details.html' %}
             {% endfor %}
 
         </div>
