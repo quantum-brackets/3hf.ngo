@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+{{ concluded_event.event.theme}}
+
+{{ concluded_event.event.date}}
+
+{{ concluded_event.event.location}}
+
+<img src="{{ concluded_event.event.image.url}}" alt="">
+
+{{ concluded_event.content | safe }}
+
+
+
+
+{% endblock content %}

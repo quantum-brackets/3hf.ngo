@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DetailView
 from django.template.loader import render_to_string
-from .models import UpcomingEvents
+from .models import UpcomingEvents, PastEvents
 
 
 class UpcomingEventsView(ListView):
@@ -29,3 +29,13 @@ def event_detail_json(request, pk):
     }
 
     return JsonResponse(data)
+
+class ConcludedEventsView(ListView):
+    model = PastEvents
+    template_name = 'events/past_events.html'
+    context_object_name = 'past_events'
+
+class ConcludedEventsDetailsView(DetailView):
+    model = PastEvents
+    template_name = 'events/concluded_event_details.html'
+    context_object_name = 'concluded_event'
