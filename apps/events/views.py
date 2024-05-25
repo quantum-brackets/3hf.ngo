@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.generic import TemplateView, ListView, DetailView
-from .models import UpcomingEvents, PastEvents
+from .models import UpcomingEvents, ConcludedEvents
 from django.shortcuts import get_object_or_404
 
 
@@ -34,11 +34,11 @@ def event_detail_json(request, slug):
     return JsonResponse(data)
 
 class ConcludedEventsView(ListView):
-    model = PastEvents
-    template_name = 'events/past_events.html'
-    context_object_name = 'past_events'
+    model = ConcludedEvents
+    template_name = 'events/concluded_events.html'
+    context_object_name = 'concluded_events'
 
 class ConcludedEventsDetailsView(DetailView):
-    model = PastEvents
+    model = ConcludedEvents
     template_name = 'events/concluded_event_details.html'
     context_object_name = 'concluded_event'

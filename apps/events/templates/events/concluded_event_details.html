@@ -2,17 +2,21 @@
 
 {% block content %}
 
-{{ concluded_event.event.theme}}
 
-{{ concluded_event.event.date}}
+<main class="px-[1rem] md:px-[3rem] lg:px-[5rem] mt-[2.8rem] pb-[5rem]">
+    <section class="xl:w-[61%] space-y-[1rem] md:space-y-[2rem]">
+        <h2 class="text-[1.7rem] font-delaGothic">{{ concluded_event.event }}</h2>
 
-{{ concluded_event.event.location}}
+        <div class="content">
+            <p class="text-[8rem] font-inter">
+                {{ concluded_event.content | safe }}
+            </p>
+        </div>
+    </section>
 
-<img src="{{ concluded_event.event.image.url}}" alt="">
-
-{{ concluded_event.content | safe }}
+</main>
 
 
-
+{% include '_footer.html' %}
 
 {% endblock content %}

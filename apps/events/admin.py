@@ -2,22 +2,22 @@ from django.contrib import admin
 
 from django_summernote.admin import SummernoteModelAdmin
 
-from .models import UpcomingEvents, PastEvents, SummernoteAttachment
-from .forms import CreateUpcomingEventForm, PastEventsForm
+from .models import UpcomingEvents, ConcludedEvents, SummernoteAttachment
+from .forms import CreateUpcomingEventForm, ConcludedEventsForm
 
-class PastEventsInline(admin.StackedInline):
-    model = PastEvents
+class ConcludedEventsInline(admin.StackedInline):
+    model = ConcludedEvents
     extra= 0
-    form = PastEventsForm
+    form = ConcludedEventsForm
 
 @admin.register(UpcomingEvents)
 class UpcomingEventsAdmin(admin.ModelAdmin):
     model = UpcomingEvents
     form = CreateUpcomingEventForm
     list_display = ['theme', 'date', 'location']
-    inlines = [PastEventsInline]
+    inlines = [ConcludedEventsInline]
 
-@admin.register(PastEvents)
+@admin.register(ConcludedEvents)
 class PastEventsAdmin(SummernoteModelAdmin):
     summernote_fields = ('content')
     list_display = ['event',  'created_at',]
