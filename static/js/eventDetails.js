@@ -15,9 +15,9 @@
 
 $(document).ready(function () {
   // Function to fetch and display event details
-  function fetchEventDetails(eventPk) {
+  function fetchEventDetails(eventSlug) {
     $.ajax({
-      url: "/events/upcoming/" + eventPk + "/",
+      url: `/events/upcoming/${eventSlug}/`,
       type: "GET",
       success: function (data) {
         $("#event-theme").text(data.theme);
@@ -46,8 +46,8 @@ $(document).ready(function () {
 
   // Event listener for click events to show event details
   $(".show-event-detail").click(function () {
-    var eventPk = $(this).data("event-pk");
-    fetchEventDetails(eventPk);
+    var eventSlug = $(this).data("event-slug");
+    fetchEventDetails(eventSlug);
 
     // Update the URL with the event pk
     var newUrl =
@@ -56,7 +56,7 @@ $(document).ready(function () {
       window.location.host +
       window.location.pathname +
       "?event=" +
-      eventPk;
+      eventSlug;
     window.history.pushState({ path: newUrl }, "", newUrl);
   });
 
@@ -64,8 +64,8 @@ $(document).ready(function () {
   window.onpopstate = function (event) {
     if (event.state && event.state.path) {
       console.log({ state: event.state });
-      var eventPk = new URL(event.state.path).searchParams.get("event");
-      fetchEventDetails(eventPk);
+      var eventSlug = new URL(event.state.path).searchParams.get("event");
+      fetchEventDetails(eventSlug);
     }
   };
 });

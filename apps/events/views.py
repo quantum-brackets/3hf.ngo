@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.generic import TemplateView, ListView, DetailView
-from django.template.loader import render_to_string
 from .models import UpcomingEvents, PastEvents
+from django.shortcuts import get_object_or_404
 
 
 class UpcomingEventsView(ListView):
@@ -11,12 +11,14 @@ class UpcomingEventsView(ListView):
     context_object_name = "upcoming_events"
 
 
-def event_detail_json(request, pk):
-    print('Event pk', pk)
-    # event = UpcomingEvents.objects.get(pk=pk)
-    event = UpcomingEvents.objects.only(
-        "theme", "description", "time", "date", "location", "image",).get(pk=pk)
+def event_detail_json(request, slug):
+    # print('Event pk', pk)
+    print('Slug', slug)
 
+    # event = UpcomingEvents.objects.get(pk=pk)
+    # event = UpcomingEvents.objects.only(
+        # "theme", "description", "time", "date", "location", "image", "slug").get(pk=pk)
+    event = get_object_or_404(UpcomingEvents, slug=slug)
     print(event)
 
     data = {
@@ -25,7 +27,8 @@ def event_detail_json(request, pk):
         "location": event.location,
         "time": event.time,
         "date": event.date,
-        "image_url": event.image.url
+        "image_url": event.image.url,
+        "slug": event.slug
     }
 
     return JsonResponse(data)
