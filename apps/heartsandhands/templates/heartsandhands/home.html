@@ -105,7 +105,8 @@
     <section class="pt-[1.2rem] md:pt-[3rem] pb-[5rem] font-inter space-y-[3rem]" styl="border: 2px solid black;">
         <div class="mdtext-center">
             <h2 class="text-center text-[32px] md:text-[64px] font-bold">How to Support</h2>
-            <p class="text-text-color md:text-center px-[1rem] text-justify mdLg:px-[13rem]" styl="border: 2px dotted red;">
+            <p class="text-text-color md:text-center px-[1rem] text-justify mdLg:px-[13rem]"
+                styl="border: 2px dotted red;">
                 You can support our mission by volunteering your time and skills, making donations, or contributing to
                 our projects aimed at youth empowerment, skill development, and education.
 
@@ -130,8 +131,7 @@
 
                 </p>
 
-                <a href="{% url 'contact_us' %}"
-                    class="block border-[0.5px] border-[#C4C4C4] rounded-[8px] text-center font-[500] text-#00000 py-[16px]
+                <a href="{% url 'contact_us' %}" class="block border-[0.5px] border-[#C4C4C4] rounded-[8px] text-center font-[500] text-#00000 py-[16px]
                     md:absolute md:bottom-[30px] md:left-[20px] md:w-[92%]">
                     Sign up to Volunteer
                 </a>
@@ -149,8 +149,7 @@
                     in need and create a lasting impact on their lives.
                 </p>
 
-                <a href="{% url 'donate' %}" 
-                class="block bg-[#076ABB] border-[0.5px] border-[#C4C4C4] rounded-[8px] text-center font-[500] 
+                <a href="{% url 'donate' %}" class="block bg-[#076ABB] border-[0.5px] border-[#C4C4C4] rounded-[8px] text-center font-[500] 
                     text-#00000 text-white py-[16px] md:absolute md:bottom-[30px] md:left-[20px] md:w-[92%] ">
                     Donate
                 </a>
@@ -190,46 +189,12 @@
                     difference and create a brighter future for all.
                 </p>
 
-                <form method="post" class="space-y-[1.3rem] mt-[2.5rem]" styl="border: 4px dashed blue;">
-                    {% csrf_token %}
+                <div class="mt-[2.5rem]">
+                    {% include 'heartsandhands/_contact_form.html' %}
+                </div>
 
-                    <div class="space-y-[0.2rem] " styl="border: 4px solid red;">
-                        <label for="id_name" class="block text-[#344054] text-[22px]">Name</label>
-                        <input type="text" id="id_name"
-                            class="w-full border-[1px] border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px]" name="name"
-                            placeholder="Full name">
-
-                    </div>
-
-                    <div class="space-y-[0.2rem]">
-                        <label for="id_email" class="block text-[#344054] text-[22px]">Email</label>
-                        <input type="text" id="id_email"
-                            class="w-full border-[1px] border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px]" name="email"
-                            placeholder="Example@xyz.com">
-
-                    </div>
-
-                    <div class="space-y-[0.2rem]">
-                        <label for="id_phone_number" class="block text-[#344054] text-[22px]">Phone number</label>
-                        <input type="text" id="id_phone_number"
-                            class="w-full border-[1px] border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px]"
-                            name="phone_number" placeholder="+234 70 4589 751">
-
-                    </div>
-
-                    <div class="space-y-[0.2rem]">
-                        <label for="id_message" class="block text-[#344054] text-[22px]">Message</label>
-                        <textarea id="id_message" class="w-full border-[1px] border-[#D0D5DD] rounded-[8px] resize-none"
-                            name="message" id="" cols="30" rows="7" placeholder="Leave us a message"></textarea>
-                    </div>
-
-                    <button type="submit"
-                        class="bg-[#076ABB] w-full px-[20px] py-[12px] text-white font-bold rounded-[8px]">
-                        Send Message</button>
-                </form>
             </div>
         </div>
-
 
         <!-- <div class="basis-[8%]"> -->
         <img src="{% static '/heartsandhands/media/home/phone.png' %}" alt=""
