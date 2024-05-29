@@ -16,15 +16,3 @@ class UpcomingEventsAdmin(admin.ModelAdmin):
     form = CreateUpcomingEventForm
     list_display = ['theme', 'date', 'location']
     inlines = [ConcludedEventsInline]
-
-@admin.register(ConcludedEvents)
-class PastEventsAdmin(SummernoteModelAdmin):
-    summernote_fields = ('content')
-    list_display = ['event',  'created_at',]
-
-# @admin.register(PastEvents)
-# class PastEventsAdmin(admin.ModelAdmin):
-#     summernote_fields = ('content')
-#     list_display = ['event',  'created_at',]
-
-admin.site.register(SummernoteAttachment)

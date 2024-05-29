@@ -16,8 +16,8 @@ class UpcomingEvents(models.Model):
     slug = models.SlugField(max_length=70, null=True, blank=True, editable=False)
 
     class Meta:
-        verbose_name = "Upcoming event"
-        verbose_name_plural = "Upcoming events"
+        verbose_name = "event"
+        verbose_name_plural = "events"
         
     def __str__(self):
         return f"{self.theme.title()}"
