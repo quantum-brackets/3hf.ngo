@@ -26,7 +26,17 @@ class HomeView(TemplateView):
 
     def post(self, request, *args, **kwargs):
         form = ContactUsForm(request.POST)
-        contact_utils.contact_us_form(self, form, redirect)
+
+        if form.is_valid():
+            try:
+                contact_utils.contact_us_form(self, form, redirect)
+                return redirect('home')
+            except Exception as e:
+                print('error:', e)
+        context = self.get_context_data()
+        context['form'] = form
+        return self.render_to_response(context)
+
 
 
 class ContactUsView(TemplateView):
@@ -40,21 +50,17 @@ class ContactUsView(TemplateView):
 
     def post(self, request, *args, **kwargs):
         form = ContactUsForm(request.POST)
+
         if form.is_valid():
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-            phone_number = form.cleaned_data['phone_number']
-            message = form.cleaned_data['message']
-
-            email_utils.send_contact_message(
-                name, email, phone_number, message)
-
-            return redirect('contact_us')
-        else:
-            # If the form is not valid, re-render the page with the form and errors
-            context = self.get_context_data()
-            context['form'] = form
-            return self.render_to_response(context)
+            try:
+                contact_utils.contact_us_form(self, form, redirect)
+                return redirect('contact_us')
+            except Exception as e:
+                print('error:', e)
+        context = self.get_context_data()
+        context['form'] = form
+        return self.render_to_response(context)
+    
 
 
 class AboutUsView(TemplateView):
