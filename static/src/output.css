@@ -1734,12 +1734,6 @@ input:checked + .toggle-bg {
   margin-bottom: calc(4rem * var(--tw-space-y-reverse));
 }
 
-.space-y-\[0\.2rem\] > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.2rem * var(--tw-space-y-reverse));
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1798,22 +1792,6 @@ input:checked + .toggle-bg {
 
 .border-\[1px\] {
   border-width: 1px;
-}
-
-.border-\[2px\] {
-  border-width: 2px;
-}
-
-.border-\[4px\] {
-  border-width: 4px;
-}
-
-.border-\[13px\] {
-  border-width: 13px;
-}
-
-.border-8 {
-  border-width: 8px;
 }
 
 .border-t-\[2px\] {
@@ -1884,20 +1862,6 @@ input:checked + .toggle-bg {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
-.border-red-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(224 36 36 / var(--tw-border-opacity));
-}
-
-.border-\[red-600\] {
-  border-color: red-600;
-}
-
-.border-red-700 {
-  --tw-border-opacity: 1;
-  border-color: rgb(200 30 30 / var(--tw-border-opacity));
-}
-
 .bg-\[\#04355E\] {
   --tw-bg-opacity: 1;
   background-color: rgb(4 53 94 / var(--tw-bg-opacity));
@@ -1965,11 +1929,6 @@ input:checked + .toggle-bg {
 
 .bg-gray-900\/50 {
   background-color: rgb(17 24 39 / 0.5);
-}
-
-.bg-red-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(224 36 36 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -2539,9 +2498,17 @@ input:checked + .toggle-bg {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+.disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
 .bg-\[\#FCF7CC\] {
   background-color: rgba(252, 247, 204, 1);
 }
+
+/* Utilities layer for classes that should always take precedence
+ over any other styles. */
 
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;

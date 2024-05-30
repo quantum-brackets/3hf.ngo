@@ -1,7 +1,7 @@
 const contactUsForm = document.getElementById("contact-us-form");
 //  const submitButton = document.getElementById("contact-form-button");
 const submitButton = document.querySelector('button[type="submit"]');
-console.log({submitButton});
+console.log({ submitButton });
 
 const fullName = document.getElementById("id_name");
 const email = document.getElementById("id_email");
@@ -43,47 +43,49 @@ async function handleFormSubmission(event) {
     return false;
   } else {
     submitButton.innerHTML = "Sending...";
-    submitButton.disabled = true;
 
-    // Actual form submission logic goes here
+    // customized .disbaled class declared in input.css
+    submitButton.classList.add("disabled");
+
+    // Actual form submission logic
     try {
-      const url = '/contact/';
+      const url = "/contact/";
       const formData = {
         name: fullName.value,
         email: email.value,
         phoneNumber: phoneNumber.value,
         message: message.value,
       };
-  
+
       const response = await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "X-CSRFToken": document.getElementsByName("csrfmiddlewaretoken")[0].value,
+          "X-CSRFToken": document.getElementsByName("csrfmiddlewaretoken")[0]
+            .value,
         },
         body: JSON.stringify(formData),
       });
-  
+
       const data = await response.json();
       console.log({ data });
-  
+
       if (data.success === true) {
+        contactUsForm.reset();
+
         // Show a success modal
         const successModal = document.getElementById("success-modal");
         successModal.classList.add("show");
       } else {
-        console.log("Failure: " +JSON.stringify( data));
+        console.log("Failure: " + JSON.stringify(data));
       }
     } catch (error) {
       console.log({ errorOnSubmission: error });
     } finally {
       submitButton.innerHTML = "Send Message";
-      submitButton.disabled = false;
+      submitButton.classList.remove("disabled");
     }
-
   }
 }
-
-
 
 contactUsForm.addEventListener("submit", handleFormSubmission);
