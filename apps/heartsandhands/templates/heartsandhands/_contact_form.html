@@ -1,5 +1,5 @@
 <form method="post" class="space-y-[1.3rem]" id="contact-us-form" styl="border: 4px dashed blue;"
-    onsubmit="return validateContactForm();">
+>
     {% csrf_token %}
 
     <p class="hidden text-red-600 text-[1.4rem]" id="contact-form-error">Please enter the needed field(s)</p>
@@ -29,7 +29,7 @@
             cols="30" rows="7" placeholder="Leave us a message"></textarea>
     </div>
 
-    <button type="submit" class="bg-[#076ABB] w-full px-[20px] py-[12px] text-white font-bold rounded-[8px]">
+    <button type="submit" id="contact-form-button" class="bg-[#076ABB] w-full px-[20px] py-[12px] text-white font-bold rounded-[8px]">
         Send Message</button>
 </form>
 

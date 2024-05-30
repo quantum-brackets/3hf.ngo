@@ -7,3 +7,5 @@ def send_contact_message(name, email, phone_number, message):
         from_email=email,
         recipient_list=['program@3hf.ngo'],
     )
+
+    print("Sent message")
