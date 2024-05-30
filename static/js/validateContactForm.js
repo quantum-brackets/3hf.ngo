@@ -24,7 +24,7 @@ function validateForErrors() {
   return errors;
 }
 
-function handleFormSubmission(event) {
+async function handleFormSubmission(event) {
   console.log("Form submittted");
 
   event.preventDefault();
@@ -46,44 +46,41 @@ function handleFormSubmission(event) {
     submitButton.disabled = true;
 
     // Actual form submission logic goes here
-    const url= '/contact/'
-    console.log({url});
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-CSRFToken": document.getElementsByName("csrfmiddlewaretoken")[0]
-          .value,
-      },
-      body: JSON.stringify({
+    try {
+      const url = '/contact/';
+      const formData = {
         name: fullName.value,
         email: email.value,
         phoneNumber: phoneNumber.value,
         message: message.value,
-      }),
-    })
-      .then((response) => {
-        response.json()
-        console.log({response});
-      }) 
-      .then((data) => {
-        console.log({ data });
-        if (data.success) {
-          // Show a success modal
-          const successModal = document.getElementById("success-modal");
-          successModal.classList.add("show");
-        } else {
-          console.log("Failure: " + data);
-        }
-        submitButton.innerHTML = "Send Message";
-        submitButton.disabled = false;
-      })
-      .catch((error) => {
-        // Handle error
-        console.log({ errorOnSubmission: error });
-        submitButton.innerHTML = "Send Message";
-        submitButton.disabled = false;
+      };
+  
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRFToken": document.getElementsByName("csrfmiddlewaretoken")[0].value,
+        },
+        body: JSON.stringify(formData),
       });
+  
+      const data = await response.json();
+      console.log({ data });
+  
+      if (data.success === true) {
+        // Show a success modal
+        const successModal = document.getElementById("success-modal");
+        successModal.classList.add("show");
+      } else {
+        console.log("Failure: " +JSON.stringify( data));
+      }
+    } catch (error) {
+      console.log({ errorOnSubmission: error });
+    } finally {
+      submitButton.innerHTML = "Send Message";
+      submitButton.disabled = false;
+    }
+
   }
 }
 

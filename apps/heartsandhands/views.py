@@ -57,10 +57,10 @@ class ContactUsView(TemplateView):
             print("Form is valid")
             contact_utils.contact_us_form(self, body, redirect)
             print("success")
-            return JsonResponse({'message': 'Form submitted successfully', "success": True})
+            return JsonResponse({'message': f"Thank you for reaching out, {body['name']}", "success": True})
         except Exception as e:
             print('error:', e)
-            return JsonResponse({'error': str(e)}, status=500)
+            return JsonResponse({"success": False, 'error': str(e)})
         
 
 
