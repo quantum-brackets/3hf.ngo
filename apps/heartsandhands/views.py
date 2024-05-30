@@ -25,17 +25,16 @@ class HomeView(TemplateView):
         return context
 
     def post(self, request, *args, **kwargs):
-        form = ContactUsForm(request.POST)
+        body = json.loads(request.body.decode('utf-8'))
+        print('Body: ', body)
 
-        if form.is_valid():
-            try:
-                contact_utils.contact_us_form(self, form, redirect)
-                return redirect('home')
-            except Exception as e:
-                print('error:', e)
-        context = self.get_context_data()
-        context['form'] = form
-        return self.render_to_response(context)
+        try:
+            contact_utils.contact_us_form(self, body, redirect)
+            print("success")
+            return JsonResponse({'message': f"Thank you for reaching out, {body['name']}", "success": True})
+        except Exception as e:
+            print('error:', e)
+            return JsonResponse({"success": False, 'error': str(e)})
 
 
 
@@ -52,9 +51,7 @@ class ContactUsView(TemplateView):
         body = json.loads(request.body.decode('utf-8'))
         print('Body: ', body)
 
-        # if form.is_valid():
         try:
-            print("Form is valid")
             contact_utils.contact_us_form(self, body, redirect)
             print("success")
             return JsonResponse({'message': f"Thank you for reaching out, {body['name']}", "success": True})
