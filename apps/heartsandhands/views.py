@@ -29,13 +29,9 @@ class HomeView(TemplateView):
         print('Body: ', body)
 
         try:
-            contact_utils.contact_us_form(self, body, redirect)
+            contact_utils.send_message(self, body, redirect)
             print("success")
-            return JsonResponse({
-                'message':
-                f"Hi, {body['name'].title()}, thank you for reaching out to us. We'll be in touch shortly.",
-                "success": True
-            })
+            return JsonResponse(contact_utils.successResponse)
         except Exception as e:
             print('error:', e)
             return JsonResponse({"success": False, 'error': str(e)})
@@ -55,13 +51,9 @@ class ContactUsView(TemplateView):
         print('Body: ', body)
 
         try:
-            contact_utils.contact_us_form(self, body, redirect)
+            contact_utils.send_message(self, body, redirect)
             print("success")
-            return JsonResponse({
-                'message':
-                f"Hi, {body['name'].title()}, thank you for reaching out to us. We'll be in touch shortly.",
-                "success": True
-            })
+            return JsonResponse(contact_utils.successResponse(body))
         except Exception as e:
             print('error:', e)
             return JsonResponse({"success": False, 'error': str(e)})
