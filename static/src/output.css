@@ -3159,6 +3159,14 @@ input:checked + .toggle-bg {
     width: 70%;
   }
 
+  .lg\:w-\[90\%\] {
+    width: 90%;
+  }
+
+  .lg\:w-\[93\%\] {
+    width: 93%;
+  }
+
   .lg\:basis-\[35\%\] {
     flex-basis: 35%;
   }
@@ -3197,6 +3205,10 @@ input:checked + .toggle-bg {
 
   .lg\:gap-\[3rem\] {
     gap: 3rem;
+  }
+
+  .lg\:gap-0 {
+    gap: 0px;
   }
 
   .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
