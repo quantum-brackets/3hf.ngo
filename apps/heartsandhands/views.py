@@ -31,11 +31,14 @@ class HomeView(TemplateView):
         try:
             contact_utils.contact_us_form(self, body, redirect)
             print("success")
-            return JsonResponse({'message': f"Thank you for reaching out, {body['name']}", "success": True})
+            return JsonResponse({
+                'message':
+                f"Hi, {body['name'].title()}, thank you for reaching out to us. We'll be in touch shortly.",
+                "success": True
+            })
         except Exception as e:
             print('error:', e)
             return JsonResponse({"success": False, 'error': str(e)})
-
 
 
 class ContactUsView(TemplateView):
@@ -54,11 +57,14 @@ class ContactUsView(TemplateView):
         try:
             contact_utils.contact_us_form(self, body, redirect)
             print("success")
-            return JsonResponse({'message': f"Thank you for reaching out, {body['name']}", "success": True})
+            return JsonResponse({
+                'message':
+                f"Hi, {body['name'].title()}, thank you for reaching out to us. We'll be in touch shortly.",
+                "success": True
+            })
         except Exception as e:
             print('error:', e)
             return JsonResponse({"success": False, 'error': str(e)})
-        
 
 
 class AboutUsView(TemplateView):
@@ -117,7 +123,6 @@ class DonationSuccessFul(TemplateView):
         context['customer'] = customer
 
         return context
-
 
 
 def verify_paystack_success(request):

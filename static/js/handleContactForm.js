@@ -1,7 +1,6 @@
 const contactUsForm = document.getElementById("contact-us-form");
 //  const submitButton = document.getElementById("contact-form-button");
 const submitButton = document.querySelector('button[type="submit"]');
-console.log({ submitButton });
 
 const fullName = document.getElementById("id_name");
 const email = document.getElementById("id_email");
@@ -74,8 +73,12 @@ async function handleFormSubmission(event) {
         contactUsForm.reset();
 
         // Show a success modal
-        const successModal = document.getElementById("success-modal");
-        successModal.classList.add("show");
+        const modalMessage = document.getElementById("contact-success-message");
+        modalMessage.textContent = data.message;
+        const modalToggle = document.querySelector(
+          '[data-modal-toggle="contact-success-modal"]'
+        );
+        modalToggle.click();
       } else {
         console.log("Failure: " + JSON.stringify(data));
       }
