@@ -1,8 +1,7 @@
 from django.contrib import admin
 
-from django_summernote.admin import SummernoteModelAdmin
 
-from .models import UpcomingEvents, ConcludedEvents, SummernoteAttachment
+from .models import UpcomingEvents, ConcludedEvents
 from .forms import CreateUpcomingEventForm, ConcludedEventsForm
 
 class ConcludedEventsInline(admin.StackedInline):

@@ -1,6 +1,6 @@
-from django.core.mail import send_mail
 from django.core.mail import EmailMessage
 from django.conf import settings
+
 
 def send_contact_message(name, email, phone_number, message):
     subject = 'Contact message from 3hf'

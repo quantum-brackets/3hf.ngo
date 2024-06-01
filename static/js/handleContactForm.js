@@ -24,10 +24,7 @@ function validateForErrors() {
 }
 
 async function handleFormSubmission(event) {
-  console.log("Form submittted");
-
   event.preventDefault();
-
   const errors = validateForErrors();
 
   if (errors.length > 0) {
@@ -43,42 +40,17 @@ async function handleFormSubmission(event) {
   } else {
     submitButton.innerHTML = "Sending...";
 
-    // customized .disbaled class declared in input.css
+    // custom .disabled class declared in input.css
     submitButton.classList.add("disabled");
 
-    // Actual form submission logic
     try {
-      const url = "/contact/";
-      const formData = {
-        name: fullName.value,
-        email: email.value,
-        phoneNumber: phoneNumber.value,
-        message: message.value,
-      };
-
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-CSRFToken": document.getElementsByName("csrfmiddlewaretoken")[0]
-            .value,
-        },
-        body: JSON.stringify(formData),
-      });
-
+      const response = await sendContactMessageRequest()
       const data = await response.json();
       console.log({ data });
 
       if (data.success === true) {
+        showSuccessModal(data);
         contactUsForm.reset();
-
-        // Show a success modal
-        const modalMessage = document.getElementById("contact-success-message");
-        modalMessage.textContent = data.message;
-        const modalToggle = document.querySelector(
-          '[data-modal-toggle="contact-success-modal"]'
-        );
-        modalToggle.click();
       } else {
         console.log("Failure: " + JSON.stringify(data));
       }
@@ -92,3 +64,32 @@ async function handleFormSubmission(event) {
 }
 
 contactUsForm.addEventListener("submit", handleFormSubmission);
+
+const sendContactMessageRequest = async () => {
+  const url = "/contact/";
+  const formData = {
+    name: fullName.value,
+    email: email.value,
+    phoneNumber: phoneNumber.value,
+    message: message.value,
+  };
+
+  return await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRFToken": document.getElementsByName("csrfmiddlewaretoken")[0]
+        .value,
+    },
+    body: JSON.stringify(formData),
+  });
+}
+
+const showSuccessModal = (data) => {
+  const modalMessage = document.getElementById("contact-success-message");
+  modalMessage.textContent = data.message;
+  const modalToggle = document.querySelector(
+    '[data-modal-toggle="contact-success-modal"]'
+  );
+  modalToggle.click();
+};
