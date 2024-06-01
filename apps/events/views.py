@@ -33,9 +33,9 @@ def event_detail_json(request, slug):
 
     return JsonResponse(data)
 
-class ConcludedEventsView(ListView):
+class ConcludedEventsListView(ListView):
     model = ConcludedEvents
-    template_name = 'events/concluded_events.html'
+    template_name = 'events/concluded_events_list.html'
     context_object_name = 'concluded_events'
 
 class ConcludedEventsDetailsView(DetailView):
