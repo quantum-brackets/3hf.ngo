@@ -7,12 +7,12 @@
     <section class="bg-[#F2F2F2] py-[4rem] px-[1.3rem] md:px-[2rem] lg:px-[5rem] space-y-[2rem]">
         <h2 class="text-[#06589C] text-[28px] font-inter font-[700]">Events</h2>
 
-        <div class="md:grid md:grid-cols-2 lg:grid-cols-4 gap-[2rem] space-y-[1.4rem] md:space-y-0"  styl="border: 1px dashed green;">
+        <div class="md:grid md:grid-cols-2 lg:grid-cols-4 gap-[2rem] space-y-[1.4rem] md:space-y-0">
             {% for event in concluded_events %}
         
-            <div class=" rounded-[16px] border-[0.5px] border-[#CDE1F1]">
+            <div class=" rounded-[16px] border-[0.5px] border-[#CDE1F1] w-full">
                 <a href="{{ event.slug }}" class="cursor-pointer" id="">
-                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" style="border: 1px solid red;">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter">
                         <img src="{{ event.event.image.url }}" alt="Event Image" class="w-full lg:w-[267p] h-[226px] rounded-[24px] object-cover">
                         <h2 class="font-inter font-[700] text-[18px] text-left capitalize">{{ event.event.theme }}</h2>
 
