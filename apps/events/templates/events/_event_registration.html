@@ -1,32 +1,45 @@
-
-<div id="event-registration-form" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center
+<div id="event-registration-form" tabindex="-1" aria-hidden="true" class="hidden  overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center
      w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <form>
-        <div class="">
-            <div class="">
-                <label for="email">Email</label>
-                <input type="email" name="" id="">
+    <form class="bg-[#FFFFFF] mx-auto p-[16px] w-[90%] rounded-[8px] space-y-[1rem] font-inter">
+        <h3 class="text-[20px] font-[700]">Enter your details below</h3>
+        <div class="space-y-[1rem]">
+            <div class="space-y-[0.1rem]">
+                <label for="email" class="block font-inter font-[600]">Email
+                    <span class="text-red-500">*</span>
+                </label>
+                <input type="email" name="" id="" 
+                class="w-full h-[52px] rounded-[8px] border border-[#D0D5DD]">
             </div>
 
-            <div class="">
-                <label for="name">Full Name</label>
-                <input type="text" name="name">
+            <div class="space-y-[0.1rem]">
+                <label for="name" class="block font-inter font-[600]">Full Name
+                    <span class="text-red-500">*</span>
+                </label>
+                <input type="text" name="name" id=""
+                class="w-full h-[52px] rounded-[8px] border border-[#D0D5DD]">
             </div>
 
-            <div class="">
-                <label for="phone_number">Phone Number</label>
-                <input name="phone_number">
+            <div class="space-y-[0.1rem]">
+                <label for="phone_number" class="block font-inter font-[600]">
+                    Phone Number<span class="text-red-500">*</span>
+                </label>
+                <input type="tel" name="phone_number" id=""
+                class="w-full h-[52px] rounded-[8px] border border-[#D0D5DD]">
             </div>
 
-            <div class="">
-                <label for="additional_message">Anything you want us to know?</label>
-                <textarea name="additional_message"></textarea>
+            <div class="space-y-[0.1rem]">
+                <label for="additional_message" class="block font-inter font-[600]">Anything you want us to know?</label>
+                <textarea name="additional_message" id="" rows="5"
+                class="w-full  rounded-[8px] border border-[#D0D5DD] resize-none"></textarea>
             </div>
 
         </div>
 
-        <button type="submit" class="bg-[#076ABB] text-[#FFFFFF] px-[20px]"
-        >Register</button>
+        <button type="submit" 
+        class="bg-[#076ABB] text-[#FFFFFF] rounded-[8px] py-[16px] px-[32px] w-full 
+        font-inter font-[600] text-[20px]">
+            Register
+        </button>
 
     </form>
 </div>
