@@ -3031,6 +3031,10 @@ input:checked + .toggle-bg {
     height: auto;
   }
 
+  .md\:h-\[29px\] {
+    height: 29px;
+  }
+
   .md\:w-\[251px\] {
     width: 251px;
   }
@@ -3061,6 +3065,10 @@ input:checked + .toggle-bg {
 
   .md\:w-\[98\%\] {
     width: 98%;
+  }
+
+  .md\:w-\[29px\] {
+    width: 29px;
   }
 
   .md\:basis-\[30\%\] {
