@@ -1508,6 +1508,22 @@ input:checked + .toggle-bg {
   flex-shrink: 1;
 }
 
+.shrink {
+  flex-shrink: 1;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.grow-0 {
+  flex-grow: 0;
+}
+
 .basis-\[100\%\] {
   flex-basis: 100%;
 }
@@ -1542,6 +1558,26 @@ input:checked + .toggle-bg {
 
 .basis-\[8\%\] {
   flex-basis: 8%;
+}
+
+.basis-\[30\%\] {
+  flex-basis: 30%;
+}
+
+.basis-\[33\%\] {
+  flex-basis: 33%;
+}
+
+.basis-\[43\%\] {
+  flex-basis: 43%;
+}
+
+.basis-\[36\%\] {
+  flex-basis: 36%;
+}
+
+.basis-\[33s\%\] {
+  flex-basis: 33s%;
 }
 
 .-translate-x-full {
@@ -1830,6 +1866,10 @@ input:checked + .toggle-bg {
   --tw-space-y-reverse: 0;
   margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+}
+
+.self-start {
+  align-self: flex-start;
 }
 
 .overflow-hidden {
