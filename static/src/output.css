@@ -1411,6 +1411,10 @@ input:checked + .toggle-bg {
   height: 20px;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -3559,12 +3563,20 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 1280px) {
+  .xl\:absolute {
+    position: absolute;
+  }
+
   .xl\:right-\[4rem\] {
     right: 4rem;
   }
 
   .xl\:top-\[30\%\] {
     top: 30%;
+  }
+
+  .xl\:bottom-3 {
+    bottom: 0.75rem;
   }
 
   .xl\:flex {
