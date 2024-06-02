@@ -1,19 +1,6 @@
-// $('#show-event-detail').click(function() {
-//     var eventPk = $(this).data('event-pk');
-//     var offset = $(this).data('offset');
-
-//     $.get('/load_more_comments/', {post_id, offset}, function(data) {
-//         $('#comments-list').append(data.html);
-//         $('#load-more-comments').data('offset', offset + 6);
-//         if ( !data.has_more_comments) {
-//             $('#load-more-comments').hide();
-//         }
-//     }).fail(function() {
-//         console.log('Failed to load more comments');
-//     });;
-// });
-
 $(document).ready(function () {
+  let eventId;
+
   // Function to fetch and display event details
   function fetchEventDetails(eventSlug) {
     $.ajax({
@@ -26,6 +13,9 @@ $(document).ready(function () {
         $("#event-date").text(formatDate(data.date));
         $("#event-location").text(data.location);
         $("#event-image").attr("src", data.image_url);
+
+        eventId = data.id
+        console.log({eventId: eventId});
 
         $("#event-details").removeClass("hidden");
         scrollToEventDetail();
@@ -42,7 +32,7 @@ $(document).ready(function () {
   if (urlParams.has("event")) {
     var eventPk = urlParams.get("event");
     fetchEventDetails(eventPk);
-  } 
+  }
 
   // Event listener for click events to show event details
   $(".show-event-detail").click(function () {
@@ -68,6 +58,15 @@ $(document).ready(function () {
       fetchEventDetails(eventSlug);
     }
   };
+
+  $(document).on(
+    "click",
+    "[data-modal-target='event-registration-form']",
+    function () {
+      // Set the value of the hidden field to the event ID for event registration
+      $("#event_id_input").val(eventId);
+    }
+  );
 });
 
 function scrollToEventDetail() {

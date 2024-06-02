@@ -14,8 +14,11 @@ class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 
         <span class="sr-only">Close modal</span>
     </button>
 
-    <form class="bg-[#FFFFFF] mx-auto p-[16px] md:py-[25px] w-[90%] lg:w-[50%] xl:w-[40%] rounded-[8px] space-y-[1rem] font-inter mt[2.4rem]">
+    <form class="bg-[#FFFFFF] mx-auto p-[16px] md:py-[25px] w-[90%] lg:w-[50%] xl:w-[40%] rounded-[8px] space-y-[1rem] font-inter mt[2.4rem]" method="post">
         <h3 class="text-[20px] font-[700]">Enter your details below</h3>
+
+        <input type="hidden" name="event_id" id="event_id_input"> 
+        
         <div class="space-y-[1rem]">
             <div class="space-y-[0.1rem]">
                 <label for="email" class="block font-inter font-[600]">Email

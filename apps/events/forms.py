@@ -1,8 +1,9 @@
+from django_summernote.widgets import SummernoteWidget
 from django.forms import ModelForm
 from django.core.validators import MaxLengthValidator
 from django import forms
 
-from .models import UpcomingEvents, ConcludedEvents
+from .models import UpcomingEvents, ConcludedEvents, EventRegistration
 
 
 class CreateUpcomingEventForm(ModelForm):
@@ -10,12 +11,11 @@ class CreateUpcomingEventForm(ModelForm):
         widget=forms.Textarea(attrs={'maxlength': 250}),
         validators=[MaxLengthValidator(250)]
     )
-      
+
     class Meta:
         model = UpcomingEvents
         fields = ['theme', 'description', 'date', "time", "location", "image"]
 
-from django_summernote.widgets import SummernoteWidget
 
 class ConcludedEventsForm(forms.ModelForm):
     class Meta:
@@ -24,3 +24,9 @@ class ConcludedEventsForm(forms.ModelForm):
         widgets = {
             'content': SummernoteWidget(),
         }
+
+
+class EventRegistrationForm(forms.ModelForm):
+    model = EventRegistration
+    fields = ['registrant_email', 'registrant_name',
+              'registrant_phone_number', 'additional_message']
