@@ -19,7 +19,7 @@ def event_detail_json(request, slug):
     # event = UpcomingEvents.objects.only(
         # "theme", "description", "time", "date", "location", "image", "slug").get(pk=pk)
     event = get_object_or_404(UpcomingEvents, slug=slug)
-    print(event)
+    print(event.id)
 
     data = {
         'theme': event.theme,

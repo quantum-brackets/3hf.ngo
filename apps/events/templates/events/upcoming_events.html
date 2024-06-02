@@ -12,29 +12,36 @@
 
         <div class="flex gap-[4rem]">
             <div class="basis-[100%] mdLg:basis-[50%] space-y-[1.6rem]">
-                <h2 id="event-theme" class="font-delaGothic text-[32px] mdLg:text-[56px] mdLg:leading-[4rem] capitalize">
+                <h2 id="event-theme"
+                    class="font-delaGothic text-[32px] mdLg:text-[56px] mdLg:leading-[4rem] capitalize">
                 </h2>
                 <p id="event-description" class="font-inter text-[16px] text-[#6D6D6D] md:pr-[4rem] mdLg:pr-0"></p>
 
-                <div class="text-[16px] text-[#6D6D6D] flex flex-col xl:flex-row gap-[1rem] xl:gap-[2rem]" styl="border: 2px dotted red;">
+                <div class="text-[16px] text-[#6D6D6D] flex flex-col xl:flex-row gap-[1rem] xl:gap-[2rem]"
+                    styl="border: 2px dotted red;">
                     <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
                         <img src="{% static '/heartsandhands/media/events/clock.png' %}" alt=""
-                        class="w-[32px] h-[32px]">
+                            class="w-[32px] h-[32px]">
                         <span id="event-time"></span>
                     </div>
 
                     <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
                         <img src="{% static '/heartsandhands/media/events/calendar.png' %}" alt=""
-                        class="w-[32px] h-[32px]">
+                            class="w-[32px] h-[32px]">
                         <span id="event-date"></span>
                     </div>
 
                     <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
                         <img src="{% static '/heartsandhands/media/events/location.png' %}" alt=""
-                        class="w-[32px] h-[32px]">
+                            class="w-[32px] h-[32px]">
                         <span id="event-location"></span>
                     </div>
                 </div>
+
+                <button type="button" data-modal-target="event-registration-form"
+                    data-modal-toggle="event-registration-form" class="">
+                    Register For Event
+                </button>
 
             </div>
 
@@ -49,16 +56,14 @@
 
         <div class="md:grid md:grid-cols-2 lg:grid-cols-4 gap-[2rem] space-y-[1.4rem] md:space-y-0">
             {% for event in upcoming_events %}
-         
+
             {% include 'events/_upcoming_events_list.html' %}
             {% endfor %}
 
         </div>
-
     </section>
 
-
-
+    {% include 'events/_event_registration.html' %}
 </main>
 
 <script src="{% static 'js/eventDetails.js' %}"></script>
