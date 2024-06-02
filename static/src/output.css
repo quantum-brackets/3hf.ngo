@@ -1185,6 +1185,34 @@ input:checked + .toggle-bg {
   inset-inline-end: 1rem;
 }
 
+.top-\[0rem\] {
+  top: 0rem;
+}
+
+.top-\[-0\.9rem\] {
+  top: -0.9rem;
+}
+
+.end-\[-1rem\] {
+  inset-inline-end: -1rem;
+}
+
+.end-\[-0\.5rem\] {
+  inset-inline-end: -0.5rem;
+}
+
+.end-\[-0\.3rem\] {
+  inset-inline-end: -0.3rem;
+}
+
+.end-\[-0rem\] {
+  inset-inline-end: -0rem;
+}
+
+.end-\[0rem\] {
+  inset-inline-end: 0rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1296,6 +1324,14 @@ input:checked + .toggle-bg {
 
 .mt-\[5rem\] {
   margin-top: 5rem;
+}
+
+.mt-\[1\.9rem\] {
+  margin-top: 1.9rem;
+}
+
+.mt-\[2\.4rem\] {
+  margin-top: 2.4rem;
 }
 
 .box-border {
@@ -1866,6 +1902,18 @@ input:checked + .toggle-bg {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.1rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[1\.7rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.7rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.7rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[2\.4rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.4rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.4rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
