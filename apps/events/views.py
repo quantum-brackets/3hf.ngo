@@ -5,7 +5,7 @@ from .models import UpcomingEvents, ConcludedEvents, EventRegistration
 from django.shortcuts import get_object_or_404
 import json
 
-from . forms import EventRegistrationForm
+from django.core.exceptions import ValidationError
 
 
 class UpcomingEventsView(ListView):
@@ -59,7 +59,8 @@ def register_for_event(request, event_id):
             registrant = EventRegistration.objects.create(**body)
             print('registrant: ',registrant)
             return JsonResponse({'success': True, 'message': 'Thank you for registering!'})
-        except Exception as error:
-            return JsonResponse({'success': False, 'message': error})
+        except Exception as e:
+            error_message = e.messages[0]  # Extract the error message
+            return JsonResponse({'success': False, 'message': error_message})
     else:
         return JsonResponse({'success': False, 'message': 'Invalid request method'})

@@ -1,5 +1,6 @@
 from django.db import models
 from django.template.defaultfilters import slugify
+from django.core.exceptions import ValidationError
 
 from cloudinary.models import CloudinaryField
 from django_summernote.models import AbstractAttachment
@@ -65,10 +66,28 @@ class EventRegistration(models.Model):
 
     def __str__(self):
         return f"{self.registrant_name} - {self.registrant_email}"
-    
+
+    def save(self, *args, **kwargs):
+        if EventRegistration.objects.filter(
+            event_id=self.event_id,
+            registrant_email=self.registrant_email,
+            registrant_phone_number=self.registrant_phone_number).exists():
+            raise ValidationError(
+                'You have already registered for this event.')
+        super().save(*args, **kwargs)
+
     class Meta:
         verbose_name = "Registered person"
         verbose_name_plural = "registered persons"
+
+        constraints = [
+            models.UniqueConstraint(
+                fields=['event_id', 'registrant_email',
+                        'registrant_phone_number'],
+                name='Duplicated registration',
+                violation_error_message='Duplicate registration'
+            ),
+        ]
 
 
 class SummernoteAttachment(AbstractAttachment):

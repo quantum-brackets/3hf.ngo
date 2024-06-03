@@ -49,11 +49,11 @@ $(document).ready(function () {
           form[0].reset(); // Reset the form
         } else {
           // Display error messages
-          var errorMessages = "";
-          $.each(response.errors, function (key, value) {
-            errorMessages += value + "\n";
-          });
-          alert("There was an error with your registration:\n" + errorMessages);
+        //   var errorMessages = "";
+        //   $.each(response.errors, function (key, value) {
+        //     errorMessages += value + "\n";
+        //   });
+        alert(response.message);
         }
       },
       error: function (xhr, errmsg, err) {
