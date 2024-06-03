@@ -1,10 +1,10 @@
 from django.db import models
 from django.template.defaultfilters import slugify
-from django.core.exceptions import ValidationError
 
 from cloudinary.models import CloudinaryField
 from django_summernote.models import AbstractAttachment
 
+from . managers import EventRegistrationManager
 
 class UpcomingEvents(models.Model):
     theme = models.CharField(max_length=200)
@@ -15,8 +15,12 @@ class UpcomingEvents(models.Model):
     image = models.ImageField(upload_to='static/uploads')
     createdAt = models.DateTimeField(auto_now_add=True)
     updatedAt = models.DateTimeField(auto_now=True)
-    slug = models.SlugField(max_length=70, null=True,
-                            blank=True, editable=False)
+    slug = models.SlugField(
+        max_length=70,
+        null=True,
+        blank=True,
+        editable=False
+    )
 
     class Meta:
         verbose_name = "event"
@@ -64,17 +68,11 @@ class EventRegistration(models.Model):
     registered_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    objects = EventRegistrationManager()
+
     def __str__(self):
         return f"{self.registrant_name} - {self.registrant_email}"
 
-    def save(self, *args, **kwargs):
-        if EventRegistration.objects.filter(
-            event_id=self.event_id,
-            registrant_email=self.registrant_email.lower(),
-            registrant_phone_number=self.registrant_phone_number).exists():
-            raise ValidationError(
-                'Sorry, You are already registered for this event.')
-        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name = "Registered person"

@@ -20,7 +20,7 @@ def event_detail_json(request, slug):
 
     # event = UpcomingEvents.objects.get(pk=pk)
     # event = UpcomingEvents.objects.only(
-        # "theme", "description", "time", "date", "location", "image", "slug").get(pk=pk)
+    # "theme", "description", "time", "date", "location", "image", "slug").get(pk=pk)
     event = get_object_or_404(UpcomingEvents, slug=slug)
     print(event.id)
 
@@ -37,10 +37,12 @@ def event_detail_json(request, slug):
 
     return JsonResponse(data)
 
+
 class ConcludedEventsListView(ListView):
     model = ConcludedEvents
     template_name = 'events/concluded_events_list.html'
     context_object_name = 'concluded_events'
+
 
 class ConcludedEventsDetailsView(DetailView):
     model = ConcludedEvents
@@ -56,10 +58,13 @@ def register_for_event(request, event_id):
 
     if request.method == 'POST':
         try:
-            registrant = EventRegistration.objects.create(**body)
-            print('registrant: ',registrant)
-            return JsonResponse({'success': True, 'message': 'Thank you for registering!'})
+            registrant = EventRegistration.objects.create_registrant(**body)
+            return JsonResponse({
+                'success': True,
+                'message': 'Thank you for registering!'
+            })
         except Exception as e:
+            print('Error:', e)
             error_message = e.messages[0]  # Extract the error message
             return JsonResponse({'success': False, 'message': error_message})
     else:
