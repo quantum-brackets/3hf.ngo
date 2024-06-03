@@ -27,6 +27,7 @@ class ConcludedEventsForm(forms.ModelForm):
 
 
 class EventRegistrationForm(forms.ModelForm):
-    model = EventRegistration
-    fields = ['registrant_email', 'registrant_name',
+    class Meta:
+        model = EventRegistration
+        fields = ['registrant_email', 'registrant_name',
               'registrant_phone_number', 'additional_message']

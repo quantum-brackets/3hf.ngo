@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from django.views.generic import TemplateView, ListView, DetailView, CreateView
 from .models import UpcomingEvents, ConcludedEvents, EventRegistration
 from django.shortcuts import get_object_or_404
+import json
 
 from . forms import EventRegistrationForm
 
@@ -48,16 +49,17 @@ class ConcludedEventsDetailsView(DetailView):
 
 
 def register_for_event(request, event_id):
-    event = get_object_or_404(UpcomingEvents, id=event_id)
+    body = json.loads(request.body.decode('utf-8'))
+    event = UpcomingEvents.objects.get(id=event_id)
+    if not event:
+        return JsonResponse({'success': False, 'message': 'Event not found'}, status=404)
+
     if request.method == 'POST':
-        form = EventRegistrationForm(request.POST)
-        if form.is_valid():
-            registration = form.save(commit=False)   # Create the instance but don't save it yet
-            registration.event = event  # Set the foreign key field
-            registration.save()
+        try:
+            registrant = EventRegistration.objects.create(**body)
+            print('registrant: ',registrant)
             return JsonResponse({'success': True, 'message': 'Thank you for registering!'})
-        else:
-            return JsonResponse({'success': False, 'errors': form.errors})
+        except Exception as error:
+            return JsonResponse({'success': False, 'message': error})
     else:
-        form = EventRegistrationForm()
-    return render(request, 'register_for_event.html', {'event': event, 'form': form})
+        return JsonResponse({'success': False, 'message': 'Invalid request method'})

@@ -64,7 +64,7 @@ $(document).ready(function () {
     "[data-modal-target='event-registration-form']",
     function () {
       // Set the value of the hidden field to the event ID for event registration
-      $("#event_id_input").val(eventId);
+      $("#event-id-input").val(eventId);
     }
   );
 });
