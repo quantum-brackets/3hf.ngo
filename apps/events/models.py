@@ -70,7 +70,7 @@ class EventRegistration(models.Model):
     def save(self, *args, **kwargs):
         if EventRegistration.objects.filter(
             event_id=self.event_id,
-            registrant_email=self.registrant_email,
+            registrant_email=self.registrant_email.lower(),
             registrant_phone_number=self.registrant_phone_number).exists():
             raise ValidationError(
                 'Sorry, You are already registered for this event.')
