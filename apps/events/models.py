@@ -73,7 +73,7 @@ class EventRegistration(models.Model):
             registrant_email=self.registrant_email,
             registrant_phone_number=self.registrant_phone_number).exists():
             raise ValidationError(
-                'You have already registered for this event.')
+                'Sorry, You are already registered for this event.')
         super().save(*args, **kwargs)
 
     class Meta:
