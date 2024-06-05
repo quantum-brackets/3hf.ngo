@@ -5,12 +5,14 @@ from cloudinary.models import CloudinaryField
 from django_summernote.models import AbstractAttachment
 
 from . managers import EventRegistrationManager
+from .validators import validate_date
+
 
 class UpcomingEvents(models.Model):
     theme = models.CharField(max_length=200)
     description = models.TextField()
     time = models.TimeField()
-    date = models.DateField()
+    date = models.DateField(validators=[validate_date])
     location = models.CharField(max_length=200)
     image = models.ImageField(upload_to='static/uploads')
     createdAt = models.DateTimeField(auto_now_add=True)
@@ -72,7 +74,6 @@ class EventRegistration(models.Model):
 
     def __str__(self):
         return f"{self.registrant_name} - {self.registrant_email}"
-
 
     class Meta:
         verbose_name = "Registered person"
