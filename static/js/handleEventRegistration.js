@@ -21,22 +21,17 @@ $(document).ready(function () {
   $("#event-register-form").on("submit", function (event) {
     event.preventDefault();
 
-    const event_id = $("#event-id-input").val()
+    const event_id = $("#event-id-input").val();
 
-   
     const formData = {
-        event_id,
-        registrant_name: $("#registrant-name").val(),
-        registrant_email: $("#registrant-email").val(),
-        registrant_phone_number: $("#registrant-phone-number").val(),
-        additional_message: $("#additional-message").val(),
-      };
+      event_id,
+      registrant_name: $("#registrant-name").val(),
+      registrant_email: $("#registrant-email").val(),
+      registrant_phone_number: $("#registrant-phone-number").val(),
+      additional_message: $("#additional-message").val(),
+    };
 
     var form = $(this);
-    
-    console.log({form});
-    // var formData = form.serialize(); // Serialize form data
-    console.log({ formData });
 
     $.ajax({
       type: "POST",
@@ -45,15 +40,15 @@ $(document).ready(function () {
       headers: { "Content-Type": "application/json", "X-CSRFToken": csrftoken },
       success: function (response) {
         if (response.success) {
-          alert(response.message); // Display success message
+          showResponseModal("Registration successful!", response);
           form[0].reset(); // Reset the form
         } else {
           // Display error messages
-        //   var errorMessages = "";
-        //   $.each(response.errors, function (key, value) {
-        //     errorMessages += value + "\n";
-        //   });
-        alert(response.message);
+          //   var errorMessages = "";
+          //   $.each(response.errors, function (key, value) {
+          //     errorMessages += value + "\n";
+          //   });
+          showResponseModal("Oops!",response);
         }
       },
       error: function (xhr, errmsg, err) {
@@ -62,3 +57,15 @@ $(document).ready(function () {
     });
   });
 });
+
+const showResponseModal = (headerResponse, data) => {
+  const modalMessage = document.getElementById("modal-message");
+  const responseHeader = document.getElementById("modal-header");
+
+  responseHeader.textContent = headerResponse;
+  modalMessage.textContent = data.message;
+  const modalToggle = document.querySelector(
+    '[data-modal-toggle="response-modal"]'
+  );
+  modalToggle.click();
+};

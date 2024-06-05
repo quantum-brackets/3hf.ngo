@@ -86,10 +86,13 @@ const sendContactMessageRequest = async () => {
 }
 
 const showSuccessModal = (data) => {
-  const modalMessage = document.getElementById("contact-success-message");
+  const responseHeader = document.getElementById("modal-header");
+  const modalMessage = document.getElementById("modal-message");
+
+  responseHeader.textContent = 'Your message has been sent!'
   modalMessage.textContent = data.message;
   const modalToggle = document.querySelector(
-    '[data-modal-toggle="contact-success-modal"]'
+    '[data-modal-toggle="response-modal"]'
   );
   modalToggle.click();
 };

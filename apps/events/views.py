@@ -61,7 +61,7 @@ def register_for_event(request, event_id):
             registrant = EventRegistration.objects.create_registrant(**body)
             return JsonResponse({
                 'success': True,
-                'message': 'Thank you for registering!'
+                'message': 'Thank you for registering.'
             })
         except Exception as e:
             print('Error:', e)
