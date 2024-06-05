@@ -10,6 +10,13 @@ class EventRegistrationManager(models.Manager):
         registrant_phone_number = kwargs.pop('registrant_phone_number')
         additional_message = kwargs.pop('additional_message')
 
+        if not registrant_email:
+            raise ValidationError('Email is required')
+        if not registrant_name:
+            raise ValidationError('Full name is required')
+        if not registrant_phone_number:
+            raise ValidationError('Phone number is required')
+
         if self.filter(
             event_id=event_id,
             registrant_email=registrant_email.lower(),
