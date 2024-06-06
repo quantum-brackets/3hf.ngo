@@ -1,21 +1,4 @@
 $(document).ready(function () {
-  function getCookie(name) {
-    var cookieValue = null;
-    if (document.cookie && document.cookie !== "") {
-      var cookies = document.cookie.split(";");
-      for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i].trim();
-        // Check if the cookie name matches the CSRF token cookie name
-        if (cookie.substring(0, name.length + 1) === name + "=") {
-          // Extract the CSRF token value
-          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-          break;
-        }
-      }
-    }
-    return cookieValue;
-  }
-
   var csrftoken = getCookie("csrftoken");
 
   $("#event-register-form").on("submit", function (event) {
@@ -32,6 +15,9 @@ $(document).ready(function () {
     };
 
     var form = $(this);
+    const submitButton = $("#event-registration-button");
+    submitButton.addClass("disabled");
+    submitButton.text("Registering...");
 
     $.ajax({
       type: "POST",
@@ -41,24 +27,21 @@ $(document).ready(function () {
       success: function (response) {
         if (response.success) {
           showResponseModal("Registration successful!", response);
-          form[0].reset(); // Reset the form
+          removeDisabled(submitButton);
+          form[0].reset();
         } else {
-          // Display error messages
-          //   var errorMessages = "";
-          //   $.each(response.errors, function (key, value) {
-          //     errorMessages += value + "\n";
-          //   });
-          showResponseModal("Oops!",response);
+          showResponseModal("Oops!", response);
+          removeDisabled(submitButton);
         }
       },
       error: function (xhr, errmsg, err) {
-        alert("There was an error with your request: " + errmsg);
+        showResponseModal("There was an error with your request: ", errmsg);
       },
     });
   });
 });
 
-const showResponseModal = (headerResponse, data) => {
+function showResponseModal(headerResponse, data) {
   const modalMessage = document.getElementById("modal-message");
   const responseHeader = document.getElementById("modal-header");
 
@@ -68,4 +51,26 @@ const showResponseModal = (headerResponse, data) => {
     '[data-modal-toggle="response-modal"]'
   );
   modalToggle.click();
-};
+}
+
+function getCookie(name) {
+  var cookieValue = null;
+  if (document.cookie && document.cookie !== "") {
+    var cookies = document.cookie.split(";");
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i].trim();
+      // Check if the cookie name matches the CSRF token cookie name
+      if (cookie.substring(0, name.length + 1) === name + "=") {
+        // Extract the CSRF token value
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}
+
+function removeDisabled(submitButton) {
+  submitButton.removeClass("disabled");
+  submitButton.text("Registering");
+}
