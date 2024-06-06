@@ -5,14 +5,12 @@ from cloudinary.models import CloudinaryField
 from django_summernote.models import AbstractAttachment
 
 from . managers import EventRegistrationManager
-from .validators import validate_date
-
 
 class UpcomingEvents(models.Model):
     theme = models.CharField(max_length=200)
     description = models.TextField()
     time = models.TimeField()
-    date = models.DateField(validators=[validate_date])
+    date = models.DateField()
     location = models.CharField(max_length=200)
     image = CloudinaryField()
     createdAt = models.DateTimeField(auto_now_add=True)
