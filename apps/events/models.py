@@ -14,7 +14,7 @@ class UpcomingEvents(models.Model):
     time = models.TimeField()
     date = models.DateField(validators=[validate_date])
     location = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='static/uploads')
+    image = CloudinaryField()
     createdAt = models.DateTimeField(auto_now_add=True)
     updatedAt = models.DateTimeField(auto_now=True)
     slug = models.SlugField(
