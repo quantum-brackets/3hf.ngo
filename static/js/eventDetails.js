@@ -14,6 +14,11 @@ $(document).ready(function () {
         $("#event-location").text(data.location);
         $("#event-image").attr("src", data.image_url);
 
+        // Add to calendar 
+        $(".title").text(data.theme);
+        $(".start").text(`${data.date} ${data.time}`);
+        $(".location").text(data.location);
+
         eventId = data.id
         console.log({eventId: eventId});
 

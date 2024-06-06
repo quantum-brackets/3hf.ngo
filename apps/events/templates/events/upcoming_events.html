@@ -38,8 +38,15 @@
                     </div>
                 </div>
 
+                <div title="Add to Calendar" class="addeventatc cursor-pointer block">
+                    Add to calendar
+                    <span class="start"></span>
+                    <span class="title"></span>
+                    <span class="location">Location of the event</span>
+                </div>
+
                 <button type="button" data-modal-target="event-registration-form"
-                    data-modal-toggle="event-registration-form" class="bg-[#076ABB] text-[#FFFFFF] py-[20px] px-[32px] rounded-[8px] w-full md:w-[60%]
+                    data-modal-toggle="event-registration-form" class="block bg-[#076ABB] text-[#FFFFFF] py-[20px] px-[32px] rounded-[8px] w-full md:w-[60%]
                      mt-0 md:mt-[14rem] xl:absolut xl:bottom- font-inter font-[700]">
                     Register For Event
                 </button>
@@ -68,6 +75,7 @@
 </main>
 
 <script src="{% static 'js/eventDetails.js' %}"></script>
+<script type="text/javascript" src="https://cdn.addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
 
 {% include '_footer.html' %}
 {% endblock content %}
