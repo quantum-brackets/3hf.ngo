@@ -1816,6 +1816,24 @@ input:checked + .toggle-bg {
   margin-bottom: calc(4rem * var(--tw-space-y-reverse));
 }
 
+.space-y-\[11rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(11rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(11rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[0\.8rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.8rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.8rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[0\.5rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
