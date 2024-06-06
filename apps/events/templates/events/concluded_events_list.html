@@ -11,7 +11,7 @@
             {% for event in concluded_events %}
         
             <div class=" rounded-[16px] border-[0.5px] border-[#CDE1F1] w-full">
-                <a href="{{ event.slug }}" class="cursor-pointer" id="">
+                <a href="{% url 'concluded_event_details' slug=event.slug %}" class="cursor-pointer" id="">
                     <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter">
                         <img src="{{ event.event.image.url }}" alt="Event Image" class="w-full lg:w-[267p] h-[226px] rounded-[24px] object-cover">
                         <h2 class="font-inter font-[700] text-[18px] text-left capitalize">{{ event.event.theme }}</h2>
