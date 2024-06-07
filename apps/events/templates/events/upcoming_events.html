@@ -31,7 +31,7 @@
                         <span id="event-date"></span>
                     </div>
 
-                    <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
+                    <div id="map-div" class="cursor-pointer flex gap-[0.5rem]" styl="border: 1px solid black;">
                         <img src="{% static '/heartsandhands/media/events/location.png' %}" alt=""
                             class="w-[32px] h-[32px]">
                         <span id="event-location"></span>
@@ -76,6 +76,7 @@
 </main>
 
 <script src="{% static 'js/eventDetails.js' %}"></script>
+<script src="{% static 'js/locationMapHandler.js' %}"></script>
 <script type="text/javascript" src="https://cdn.addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
 
 {% include '_footer.html' %}
