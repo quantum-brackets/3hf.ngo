@@ -14,13 +14,14 @@ $(document).ready(function () {
         $("#event-location").text(data.location);
         $("#event-image").attr("src", data.image_url);
 
-        // Add to calendar 
+        // Add to calendar
         $(".title").text(data.theme);
         $(".start").text(`${data.date} ${data.time}`);
         $(".location").text(data.location);
 
-        eventId = data.id
-        console.log({eventId: eventId});
+        handleLocationMap()
+
+        eventId = data.id;
 
         $("#event-details").removeClass("hidden");
         scrollToEventDetail();
@@ -33,7 +34,6 @@ $(document).ready(function () {
 
   // Check if there's an event pk in the URL on page load
   var urlParams = new URLSearchParams(window.location.search);
-  console.log({ urlParams });
   if (urlParams.has("event")) {
     var eventPk = urlParams.get("event");
     fetchEventDetails(eventPk);
@@ -88,4 +88,32 @@ function formatDate(dateString) {
   const date = new Date(dateString);
   const options = { month: "long", day: "numeric", year: "numeric" };
   return date.toLocaleDateString("en-US", options);
+}
+
+function handleLocationMap() {
+  const mapLink = document.getElementById("map-link");
+  const address = document.getElementById("event-location").innerHTML;
+  console.log({ address });
+
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  console.log({ isMobile });
+
+  if (isMobile) {
+    // Open Google Maps app on mobile devices
+    mapLink.href = isAndroid()
+      ? `intent://maps?q=${encodeURIComponent(
+          address
+        )}#Intent;scheme=googlemaps;package=com.google.android.apps.maps;end`
+      : `googlemaps://?q=${encodeURIComponent(address)}`;
+  } else {
+    // Open Google Maps web on PC browsers
+    mapLink.href = `https://www.google.com/maps?q=${encodeURIComponent(
+      address
+    )}`;
+  }
+
+  // Helper function to check if the device is an Android device
+  function isAndroid() {
+    return /Android/i.test(navigator.userAgent);
+  }
 }
