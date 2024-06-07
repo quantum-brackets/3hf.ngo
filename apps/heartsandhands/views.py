@@ -78,7 +78,6 @@ class DonateView(TemplateView):
             return HttpResponseBadRequest("amount cannot be empty")
 
         amount = int(request.POST.get('amount'))
-
         payment_gateway = request.POST.get('payment_gateway')
 
         if payment_gateway == 'stripe':
@@ -92,10 +91,7 @@ class DonateView(TemplateView):
 
         elif payment_gateway == 'paystack':
             print("Payment Gateway is paystack")
-
-            # Handle Paystack payment logic
-            # ... (your Paystack implementation)
-            # return render(request, 'donation_success.html')  # Or handle errors
+            # paystack donation is handled entirely on the clientside
         else:
             # Handle invalid gateway choice
             return render(request, 'heartsandhands/donate.html', {'error': 'Invalid payment gateway'})
@@ -105,6 +101,7 @@ class DonationSuccessFul(TemplateView):
     template_name = "heartsandhands/donation_success.html"
 
     def get_context_data(self, **kwargs):
+        stripe.api_key = settings.STRIPE_SECRET_KEY
         context = super().get_context_data(**kwargs)
         session_id = self.request.GET.get('session_id')
         session = stripe.checkout.Session.retrieve(session_id)
@@ -131,12 +128,9 @@ def verify_paystack_success(request):
             if response.status_code == 200:
                 data = response.json()
                 if data["data"]['status'] == 'success':
-                    # Donation is successful, proceed with your logic
                     print("succesfulpayment")
-                    # return "settled"
                 else:
                     # Handle unsuccessful verification from Paystack
-                    # ... (handle unsuccessful verification)
                     print("Unsuccessful")
             else:
                 # Error during verification request
