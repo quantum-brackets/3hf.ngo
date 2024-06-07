@@ -93,27 +93,8 @@ function formatDate(dateString) {
 function handleLocationMap() {
   const mapLink = document.getElementById("map-link");
   const address = document.getElementById("event-location").innerHTML;
-  console.log({ address });
 
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  console.log({ isMobile });
-
-  if (isMobile) {
-    // Open Google Maps app on mobile devices
-    mapLink.href = isAndroid()
-      ? `intent://maps?q=${encodeURIComponent(
-          address
-        )}#Intent;scheme=googlemaps;package=com.google.android.apps.maps;end`
-      : `googlemaps://?q=${encodeURIComponent(address)}`;
-  } else {
-    // Open Google Maps web on PC browsers
-    mapLink.href = `https://www.google.com/maps?q=${encodeURIComponent(
-      address
-    )}`;
-  }
-
-  // Helper function to check if the device is an Android device
-  function isAndroid() {
-    return /Android/i.test(navigator.userAgent);
-  }
+  mapLink.href = `https://www.google.com/maps?q=${encodeURIComponent(
+    address
+  )}`;
 }
