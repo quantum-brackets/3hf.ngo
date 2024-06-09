@@ -1,9 +1,13 @@
+from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.generic import TemplateView, ListView, DetailView, CreateView
 from .models import UpcomingEvents, ConcludedEvents, EventRegistration
 from django.shortcuts import get_object_or_404
 import json
+from datetime import datetime, date
+import time
+from django.db.models import Q
 
 from django.core.exceptions import ValidationError
 
@@ -12,6 +16,15 @@ class UpcomingEventsView(ListView):
     model = UpcomingEvents
     template_name = "events/upcoming_events.html"
     context_object_name = "upcoming_events"
+
+    def get_queryset(self):
+        today = date.today()
+        current_time = datetime.now()
+        formatted_time = current_time.strftime("%H:%M:%S")
+
+        return self.model.objects.filter(
+            Q(date__gt=today) | (Q(date=today) & Q(time__gt=formatted_time))
+        ).order_by('date', 'time')
 
 
 def event_detail_json(request, slug):
