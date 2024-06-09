@@ -17,6 +17,7 @@ class EventRegistrationManager(models.Manager):
         if not registrant_phone_number:
             raise ValidationError('Phone number is required')
 
+
         if self.filter(
             event_id=event_id,
             registrant_email=registrant_email.lower(),

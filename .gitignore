@@ -10,7 +10,7 @@ db.sqlite3-journal
 db/dev.sqlite3
 db/prod.sqlite3
 
-hearts_and_hands/settings/prod.py
+# hearts_and_hands/settings/prod.py
 
 ### Django.Python Stack ###
 # Byte-compiled / optimized / DLL files

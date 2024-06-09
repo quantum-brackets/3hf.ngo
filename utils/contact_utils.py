@@ -9,12 +9,12 @@ def successResponse(body):
     }
 
 
-def send_message(self, body, redirect):
+def send_message(self, body):
     name = body["name"]
     email = body['email']
     phone_number = body['phoneNumber']
     message = body['message']
 
-    print('formbody: ', body)
+    print('contactMessageData: ', body)
     send_contact_message(
         name, email, phone_number, message)

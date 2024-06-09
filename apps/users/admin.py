@@ -27,7 +27,7 @@ class CustomUserAdmin(UserAdmin):
                     "is_superuser",
                 ],
                 "classes": ["collapse"],
-            },        ),
+            },),
 
         (
             'Important Dates',
@@ -72,7 +72,3 @@ class CustomUserAdmin(UserAdmin):
     )
 
     ordering = ['email']
-
-    # add_fieldsets = UserAdmin.add_fieldsets + (
-    #     (None, {'fields': ('first_name', 'last_name', 'email',)}),
-    # )

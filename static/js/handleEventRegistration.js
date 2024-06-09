@@ -35,18 +35,21 @@ $(document).ready(function () {
         }
       },
       error: function (xhr, errmsg, err) {
-        showResponseModal("There was an error with your request: ", errmsg);
+        showResponseModal("Server error ");
+        removeDisabled(submitButton);
       },
     });
   });
 });
 
-function showResponseModal(headerResponse, data) {
+function showResponseModal(headerResponse, data = undefined) {
   const modalMessage = document.getElementById("modal-message");
   const responseHeader = document.getElementById("modal-header");
 
   responseHeader.textContent = headerResponse;
-  modalMessage.textContent = data.message;
+  if (data) {
+    modalMessage.textContent = data.message;
+  }
   const modalToggle = document.querySelector(
     '[data-modal-toggle="response-modal"]'
   );

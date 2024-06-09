@@ -1,7 +1,7 @@
 $(document).ready(function () {
   let eventId;
 
-  // Function to fetch and display event details
+  // Fetch and display event details
   function fetchEventDetails(eventSlug) {
     $.ajax({
       url: `/events/upcoming/${eventSlug}/`,
@@ -19,7 +19,7 @@ $(document).ready(function () {
         $(".start").text(`${data.date} ${data.time}`);
         $(".location").text(data.location);
 
-        handleLocationMap()
+        handleLocationMap();
 
         eventId = data.id;
 
@@ -32,11 +32,11 @@ $(document).ready(function () {
     });
   }
 
-  // Check if there's an event pk in the URL on page load
+  // Check if there's an event query in the URL on page load
   var urlParams = new URLSearchParams(window.location.search);
   if (urlParams.has("event")) {
-    var eventPk = urlParams.get("event");
-    fetchEventDetails(eventPk);
+    var eventSlug = urlParams.get("event");
+    fetchEventDetails(eventSlug);
   }
 
   // Event listener for click events to show event details
@@ -68,7 +68,8 @@ $(document).ready(function () {
     "click",
     "[data-modal-target='event-registration-form']",
     function () {
-      // Set the value of the hidden field to the event ID for event registration
+      // Set the value of the hidden event_id field, in the event registration
+      // form to the event ID for event registration
       $("#event-id-input").val(eventId);
     }
   );
@@ -94,7 +95,5 @@ function handleLocationMap() {
   const mapLink = document.getElementById("map-link");
   const address = document.getElementById("event-location").innerHTML;
 
-  mapLink.href = `https://www.google.com/maps?q=${encodeURIComponent(
-    address
-  )}`;
+  mapLink.href = `https://www.google.com/maps?q=${encodeURIComponent(address)}`;
 }

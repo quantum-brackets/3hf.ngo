@@ -1,6 +1,7 @@
 {% extends '_base.html' %}
 {% load static %}
 
+{% block title %} Heart and Hands Humanitarian Foundation - Upcoming events{% endblock title %}
 {% block content %}
 <main class="mt-[1.5rem] lg:mt-[2rem]" styl="border: 14px solid red;">
 
@@ -78,7 +79,7 @@
     {% include 'events/_event_registration.html' %}
 </main>
 
-<script src="{% static 'js/eventDetails.js' %}"></script>
+<script src="{% static 'js/getUpcomingEvent.js' %}"></script>
 <!-- <script src="{% static 'js/locationMapHandler.js' %}"></script> -->
 <script type="text/javascript" src="https://cdn.addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
 

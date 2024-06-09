@@ -1,15 +1,10 @@
-from django.db.models.query import QuerySet
-from django.shortcuts import render
 from django.http import JsonResponse
-from django.views.generic import TemplateView, ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView
 from .models import UpcomingEvents, ConcludedEvents, EventRegistration
 from django.shortcuts import get_object_or_404
 import json
 from datetime import datetime, date
-import time
 from django.db.models import Q
-
-from django.core.exceptions import ValidationError
 
 
 class UpcomingEventsView(ListView):
@@ -28,12 +23,8 @@ class UpcomingEventsView(ListView):
 
 
 def event_detail_json(request, slug):
-    # print('Event pk', pk)
     print('Slug', slug)
 
-    # event = UpcomingEvents.objects.get(pk=pk)
-    # event = UpcomingEvents.objects.only(
-    # "theme", "description", "time", "date", "location", "image", "slug").get(pk=pk)
     event = get_object_or_404(UpcomingEvents, slug=slug)
     print(event.id)
 

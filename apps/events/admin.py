@@ -8,7 +8,7 @@ from .forms import CreateUpcomingEventForm, ConcludedEventsForm
 
 class ConcludedEventsInline(admin.StackedInline):
     model = ConcludedEvents
-    extra= 0
+    extra = 1
     form = ConcludedEventsForm
 
 class EventRegistrationInline(admin.StackedInline):

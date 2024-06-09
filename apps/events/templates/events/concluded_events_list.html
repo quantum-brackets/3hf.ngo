@@ -14,7 +14,7 @@
                 <a href="{% url 'concluded_event_details' slug=event.slug %}" class="cursor-pointer" id="">
                     <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter">
                         <img src="{{ event.event.image.url }}" alt="Event Image" class="w-full lg:w-[267p] h-[226px] rounded-[24px] object-cover">
-                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">{{ event.event.theme }}</h2>
+                        <h2 class="font-inter font-[700] text-[18px] text-left">{{ event.event.theme }}</h2>
 
                         <p class="text-text-color text-justify">{{ event.event.description }}</p>
 
