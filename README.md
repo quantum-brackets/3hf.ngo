@@ -15,12 +15,16 @@ Website repository for the hearts and hands humanitarian [project](https://githu
 
 ## Deployment
 
+[![Website](https://github.com/hengage/hearts-and-hands/actions/workflows/deployment.yml/badge.svg)](https://github.com/hengage/hearts-and-hands/actions/workflows/deployment.yml)
+
 - Merge to `main` to deploy website changes
 
 ## Database
 
-- TODO: Create ci action to store database file everyday as artifact
+[![Backup](https://github.com/hengage/hearts-and-hands/actions/workflows/database.yml/badge.svg)](https://github.com/hengage/hearts-and-hands/actions/workflows/database.yml)
+
+- Backed up everyday at 12am as a repository artifact
 
 ## Logs
 
-- File manager > Logs > passenger.logs
+- `File manager > Logs > passenger.logs`
