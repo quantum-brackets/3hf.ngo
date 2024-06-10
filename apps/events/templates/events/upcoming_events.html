@@ -35,8 +35,9 @@
                     </div>
 
 
-                    <div id="map-div"  styl="border: 1px solid black;">
-                        <a id="map-link" target="_blank" class="cursor-pointer flex gap-[0.5rem]" styl="border: 2px solid rebeccapurple;">
+                    <div id="map-div" styl="border: 1px solid black;">
+                        <a id="map-link" target="_blank" class="cursor-pointer flex gap-[0.5rem]"
+                            styl="border: 2px solid rebeccapurple;">
 
                             <img src="{% static '/heartsandhands/media/events/location.png' %}" alt=""
                                 class="w-[32px] h-[32px]">
@@ -70,12 +71,20 @@
     <section class="bg-[#F2F2F2] py-[4rem] px-[1.3rem] md:px-[2rem] lg:px-[5rem] space-y-[2rem]">
         <h2 class="text-[#06589C] text-[28px] font-inter font-[700]">Upcoming events</h2>
 
+        {% if upcoming_events %}
+
         <div id="upcoming-events"
             class="md:grid md:grid-cols-2 lg:grid-cols-4 gap-[2rem] space-y-[1.4rem] md:space-y-0">
             {% for event in upcoming_events %}
 
             {% include 'events/_upcoming_events_list.html' %}
             {% endfor %}
+
+            {% else %}
+
+            <h3 class=" font-inter text-[20px] mb-[3rem]">There are no upcoming events,
+                please check back later.</h3>
+            {% endif %}
 
         </div>
     </section>

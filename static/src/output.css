@@ -1278,6 +1278,10 @@ input:checked + .toggle-bg {
   margin-top: 5rem;
 }
 
+.mb-\[3rem\] {
+  margin-bottom: 3rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1492,6 +1496,10 @@ input:checked + .toggle-bg {
 .min-w-fit {
   min-width: -moz-fit-content;
   min-width: fit-content;
+}
+
+.min-w-full {
+  min-width: 100%;
 }
 
 .max-w-md {
@@ -2424,6 +2432,10 @@ input:checked + .toggle-bg {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-\[16rem\] {
+  font-size: 16rem;
 }
 
 .font-\[400\] {
