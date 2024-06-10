@@ -1,4 +1,4 @@
-name: Build
+name: Deployment
 
 on:
   push:
@@ -7,12 +7,12 @@ on:
   pull_request:
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
-      - name: Sync files
+      - name: Upload
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           dry-run: true
