@@ -1,0 +1,44 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %} Heart and Hands Humanitarian Foundation - {{ concluded_event.event }} {% endblock title %}
+{% block content %}
+
+
+<main class="px-[1rem] md:px-[3rem] lg:px-[5rem] mt-[2.8rem] pb-[5rem]">
+    <section class="xl:w-[61%] space-y-[3rem]">
+        <div class="space-y-[1.6rem]">
+            <h2 class="text-[1.7rem] font-delaGothic">{{ concluded_event.event.theme }}</h2>
+
+            <div class="text-[16px] text-[#6D6D6D] space-y-[0.5rem]" styl="border: 2px dotted red;">
+                <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
+                    <img src="{% static '/heartsandhands/media/events/clock.png' %}" alt="" class="w-[32px] h-[32px]">
+                    <span id="">{{concluded_event.event.time}}</span>
+                </div>
+
+                <div class="flex gap-[0.5rem] basis-[33%]" styl="border: 1px solid black;">
+                    <img src="{% static '/heartsandhands/media/events/calendar.png' %}" alt=""
+                        class="w-[32px] h-[32px]">
+                    <span id="">{{concluded_event.event.date}}</span>
+                </div>
+
+                <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
+                    <img src="{% static '/heartsandhands/media/events/location.png' %}" alt=""
+                        class="w-[32px] h-[32px]">
+                    <span id="">{{concluded_event.event.location}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <p class="text-[8rem] font-inter">
+                {{ concluded_event.content | safe }}
+            </p>
+        </div>
+    </section>
+
+</main>
+
+
+{% include '_footer.html' %}
+
+{% endblock content %}

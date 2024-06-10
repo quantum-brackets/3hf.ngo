@@ -1,0 +1,68 @@
+{% load static %}
+
+<div id="event-registration-form" tabindex="-1" aria-hidden="true" 
+class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center
+     w-full md:inset-0 h-[calc(100%-1rem)] max-h-full space-y-[2.4rem]">
+
+    <button type="button"
+        class="absolute top-[1.2rem] md:top-[5rem] lg:top-[1.2rem] end-[1rem] md:end-[3rem] lg:end-[4rem] text-gray-100 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+        data-modal-hide="event-registration-form">
+        <svg class="w-[20px] md:w-[29px] h-[20px] md:h-[29px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+        </svg>
+        <span class="sr-only">Close modal</span>
+    </button>
+
+    <form id="event-register-form" class="bg-[#FFFFFF] mx-auto p-[16px] md:py-[25px] w-[90%] lg:w-[50%] xl:w-[40%] rounded-[8px] space-y-[1rem] font-inter mt[2.4rem]" method="post">
+        {% csrf_token %}
+        <h3 class="text-[20px] font-[700]">Enter your details below</h3>
+
+        <input type="hidden" name="event_id" id="event-id-input"> 
+        
+        <div class="space-y-[1rem]">
+            <div class="space-y-[0.1rem]">
+                <label for="email" class="block font-inter font-[600]">Email
+                    <span class="text-red-500">*</span>
+                </label>
+                <input type="email" name="registrant-email" id="registrant-email" class="w-full h-[52px] rounded-[8px] border border-[#D0D5DD]">
+            </div>
+
+            <div class="space-y-[0.1rem]">
+                <label for="name" class="block font-inter font-[600]">Full Name
+                    <span class="text-red-500">*</span>
+                </label>
+                <input type="text" name="registrant-name" id="registrant-name" class="w-full h-[52px] rounded-[8px] border border-[#D0D5DD]">
+            </div>
+
+            <div class="space-y-[0.1rem]">
+                <label for="phone-number" class="block font-inter font-[600]">
+                    Phone Number<span class="text-red-500">*</span>
+                </label>
+                <input type="tel" name="registrant-phone-number" id="registrant-phone-number"
+                    class="w-full h-[52px] rounded-[8px] border border-[#D0D5DD]">
+            </div>
+
+            <div class="space-y-[0.1rem]">
+                <label for="additional-message" class="block font-inter font-[600]">Anything you want us to
+                    know?</label>
+                <textarea name="additional-message" id="additional-message" rows="5"
+                    class="w-full  rounded-[8px] border border-[#D0D5DD] resize-none"></textarea>
+            </div>
+
+        </div>
+
+        <button type="submit" id="event-registration-button" class="bg-[#076ABB] text-[#FFFFFF] rounded-[8px] py-[16px] px-[32px] w-full 
+        font-inter font-[600] text-[20px]">
+            Register
+        </button>
+
+    </form>
+</div>
+
+
+<!-- modal -->
+{% include 'heartsandhands/_response_modal.html' %}
+
+<script src="{% static 'js/handleEventRegistration.js' %}"></script>

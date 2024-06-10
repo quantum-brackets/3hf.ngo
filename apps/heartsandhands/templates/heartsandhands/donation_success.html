@@ -1,10 +1,43 @@
 {% extends "_base.html" %}
+{% load static %}
+{% load social_share %}
 
 {% block content %}
-<main>
-    Thank you for your donation, {{ customer.name }}
+<main class="pb-[7rem] md:pb-[11rem] lg:pb-[11rem">
+    <div class="mx-auto md:w-[90%] lg:w-[50%] font-inter space-y-[2rem] mt-[2rem] md:mt-[6rem] lg:mt-[3.9rem] ">
+        <h3 class="text-center text-[24px] font-[700] px-[1rem]">Thank you for your support, <span class="capitalize">
+                {{ customer.name }}</span> &#9829;</h3>
 
+        <p class="text-[#6D6D6D] px-[1rem] md:px-[2rem] leading-[2rem]">
+            Your generous contribution is fueling our mission and bringing hope to countless lives. With your help, we
+            are
+            transforming lives and creating a brighter tomorrow.
+        </p>
+
+    </div>
+
+
+    <div class="px-[1rem] md:px-[2rem] mt-[5rem]">
+        <div class="md:flex justify-around items-center mx-auto md:w-[55%] lg:w-[35%] text-center space-y-[2rem] md:space-y-0">
+            <p class="text-[18px] font-inter font-[400]">Help us spread the news</p>
+
+            <div class="flex justify-evenly md:justify-evenly basis-[40%]" styl="border: 1px solid wheat;">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/" target="_blank">
+                    <img src="{% static '/heartsandhands/media/facebook.png' %}" alt="">
+                </a>
+
+                <a href="https://twitter.com/intent/post?url=http://127.0.0.1:8000/&text=Excited to support Hearts ad Hands' mission to [briefly describe mission]! 
+                Visit their website to learn more about the amazing work they're doing! 🌟 #SpreadTheWord"
+                target="_blank">
+                    <img src="{% static '/heartsandhands/media/x.png' %}" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
 </main>
 
-<!-- {% include '_footer.html' %} -->
+<section class="">
+    {% include '_footer.html' %}
+
+</section>
 {% endblock content %}
