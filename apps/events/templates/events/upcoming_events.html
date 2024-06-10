@@ -1,0 +1,101 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %} Heart and Hands Humanitarian Foundation - Upcoming events{% endblock title %}
+{% block content %}
+<main class="mt-[1.5rem] lg:mt-[2rem]" styl="border: 14px solid red;">
+
+    <section class="hidden px-[1.4rem] md:px-[2rem] mdLg:px-[4rem] pb-[2.5rem] mdLg:pb-[5rem]
+     space-y-[2.2rem] lg::space-y-[1.5rem] md:mt-[4.2rem]" id="event-details">
+        <span class="border border-[#076ABB] rounded-[64px] px-[32px] py-[12px] font-inter
+         text-[#076ABB] text-[16px] inline-block">
+            Charity Event</span>
+
+        <div class="flex gap-[4rem]">
+            <div class="basis-[100%] mdLg:basis-[50%] space-y-[1.6rem] md:relative" styl="border: 1px solid gold;">
+                <h2 id="event-theme"
+                    class="font-delaGothic text-[32px] mdLg:text-[56px] mdLg:leading-[4rem] capitalize">
+                </h2>
+                <p id="event-description" class="font-inter text-[16px] text-[#6D6D6D] md:pr-[4rem] mdLg:pr-0"></p>
+
+                <div class="text-[16px] text-[#6D6D6D] flex flex-col xl:flex-row gap-[1rem] xl:gap-[5rem]"
+                    styl="border: 2px dotted red;">
+                    <div class="space-y-[1rem] min-w-fit" styl="border: 1px solid green;">
+                        <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
+                            <img src="{% static '/heartsandhands/media/events/clock.png' %}" alt=""
+                                class="w-[32px] h-[32px]">
+                            <span id="event-time"></span>
+                        </div>
+
+                        <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
+                            <img src="{% static '/heartsandhands/media/events/calendar.png' %}" alt=""
+                                class="w-[32px] h-[32px]">
+                            <span id="event-date"></span>
+                        </div>
+                    </div>
+
+
+                    <div id="map-div" styl="border: 1px solid black;">
+                        <a id="map-link" target="_blank" class="cursor-pointer flex gap-[0.5rem]"
+                            styl="border: 2px solid rebeccapurple;">
+
+                            <img src="{% static '/heartsandhands/media/events/location.png' %}" alt=""
+                                class="w-[32px] h-[32px]">
+                            <span id="event-location"></span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div title="Add to Calendar" class="addeventatc cursor-pointer block z-0" style="z-index: 0;">
+                    Add to calendar
+                    <span class="start"></span>
+                    <span class="title"></span>
+                    <span class="location">Location of the event</span>
+                </div>
+
+                <button type="button" id="show-event-reg-form" data-modal-target="event-registration-form"
+                    data-modal-toggle="event-registration-form" class="block bg-[#076ABB] text-[#FFFFFF] py-[20px] px-[32px] rounded-[8px] w-full md:w-[60%]
+                     mt-0 md:mt-[14rem] xl:absolut xl:bottom- font-inter font-[700]">
+                    Register For Event
+                </button>
+            </div>
+
+            <div class="hidden mdLg:block" styl="border: 1px solid black;">
+                <img id="event-image" src="" alt="Event Image" class="w-[540px] h[414px] h-full object-contain">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#F2F2F2] py-[4rem] px-[1.3rem] md:px-[2rem] lg:px-[5rem]">
+        <h2 class="text-[#06589C] text-[28px] font-inter font-[700]">Upcoming events</h2>
+
+        {% if upcoming_events %}
+
+        <div id="upcoming-events"
+            class="md:grid md:grid-cols-2 lg:grid-cols-4 gap-[2rem] space-y-[1.4rem] md:space-y-0 mt-[2rem]">
+            {% for event in upcoming_events %}
+
+            {% include 'events/_upcoming_events_list.html' %}
+            {% endfor %}
+
+            {% else %}
+
+            <h3 class=" font-inter text-[20px] mt-[1rem] mb-[5rem] md:mb-[17rem] lg:mb-[8rem]">There are no upcoming events,
+                please check back later.</h3>
+            {% endif %}
+
+        </div>
+    </section>
+
+    <!-- / Event registration -->
+    {% include 'events/_event_registration.html' %}
+</main>
+
+<script src="{% static 'js/getUpcomingEvent.js' %}"></script>
+<!-- <script src="{% static 'js/locationMapHandler.js' %}"></script> -->
+<script type="text/javascript" src="https://cdn.addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+
+{% include '_footer.html' %}
+{% endblock content %}

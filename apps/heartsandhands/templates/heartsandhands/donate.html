@@ -1,29 +1,26 @@
 {% extends '_base.html' %}
 {% load static %}
-
+{% block title %} Heart and Hands Humanitarian Foundation - Donate {% endblock title %}
 {% block content %}
+
 <main class="mt-0 md:mt-[3rem] mdLg:mt-[1rem]">
     <section class="lg:flex relative px-[1rem] md:px-[3rem] lg:pl-[1.5rem] xl:pl-[2rem] 
-    py-[3rem] md:py-[4rem] bg-[#F2F2F2] space-y-[2rem] lg:space-y-0" 
-    styl="border: 4px solid yellowgreen;">
+    py-[3rem] md:py-[4rem] bg-[#F2F2F2] space-y-[2rem] lg:space-y-0" styl="border: 4px solid yellowgreen;">
 
         <div class="lg:basis-[45%] space-y-[1.2rem] md:pr-[4rem] lg:pr-0" styl="border: 2px dashed black;">
             <h2 class="text-[40px] lg:text-[54px] font-delaGothic font-[400] leading-[2.9rem] lg:leading-[4rem]">Donate
                 to Support Our Mission</h2>
 
-            <p class="text-text-color text-[18px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus
-                rhoncus neque, eget dapibus risus
-                rhoncus
-                et. Donec sodales eros est, in auctor orci sagittis non. Nulla congue interdum diam, sed maximus nunc
-                eleifend a. Curabitur viverra
+            <p class="text-text-color text-[18px]">For more information about our organization, volunteering
+                opportunities, or how to donate, please contact us through our website or reach out to our dedicated
+                team. Together, we can make a difference and create a brighter future for all.
             </p>
         </div>
 
 
         <div class="lg:absolute lg:right-[1.5rem] lg:top-[4.7rem] xl:right-[4rem] lg:bottom-[-2rem] h-max 
         space-y[1rem] lg:w-[609px] basis-[49%] bg-[#FFFFFF] border-[1px] border-[#D9D9D9] 
-        rounded-[16px] px-[0.7rem] md:px-[8rem] lg:px-[2rem] py-[2.3rem]" 
-        styl="border: 3px solid saddlebrown;">
+        rounded-[16px] px-[0.7rem] md:px-[8rem] lg:px-[2rem] py-[2.3rem]" styl="border: 3px solid saddlebrown;">
             {% if error %}
             {{ error }}
 
@@ -51,7 +48,7 @@
                 <form id="paystack-form" method="post" class="space-y-[1rem font-inter"
                     styl="border: 3px dotted rebeccapurple;">
                     {% csrf_token %}
-                <p id="paystack-form-error" class="text-red-600"></p>
+                    <p id="paystack-form-error" class="text-red-600"></p>
 
 
                     <div class="space-y-[1.2rem]" id="">
@@ -85,6 +82,13 @@
                     {% csrf_token %}
                     <input type="text" name="amount" id="stripe-amount" placeholder="Enter amount" required
                         class="border-[1px] border-[#DFDFDF] w-full h-[52px] py-[16px] px-[32px] rounded-[8px]">
+
+                    <select name="currency" id="currency"
+                        class="border-[1px] border-[#DFDFDF] w-full h-[52px] py-[16px] px-[32px] rounded-[8px]">
+                        <option value="USD" selected>USD</option>
+                        <!-- <option value="GHS">Cedis</option> -->
+                    </select>
+
                     <input type="radio" id="payment_gateway" name="payment_gateway" value="stripe" checked
                         class="hidden">
 
@@ -95,13 +99,12 @@
                 </form>
             </div>
             <div class="text-center mt-[3rem] font-inter">
-                <img src="{% static '/heartsandhands/media/donate/shieldcheck.png' %}" alt=""
-                class="inline">
+                <img src="{% static '/heartsandhands/media/donate/shieldcheck.png' %}" alt="" class="inline">
                 <span>Your information is protected</span>
             </div>
         </div>
 
-       
+
     </section>
 
     <img src="{% static '/heartsandhands/media/donate/kids.png' %}" class="hidden lg:block w-full" alt="">
@@ -109,7 +112,9 @@
 </main>
 
 {% include '_footer.html' %}
-<script src="/static/js/donation.js"></script>
-<script src="https://js.paystack.co/v1/inline.js"></script>
+<script src="/static/js/donation.js" async></script>
+<script src="https://js.paystack.co/v1/inline.js" async></script>
+<script src="https://js.stripe.com/v3/" async></script>
+
 
 {% endblock content %}
