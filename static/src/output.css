@@ -3613,6 +3613,14 @@ input:checked + .toggle-bg {
     width: 750px;
   }
 
+  .xl\:w-\[51\%\] {
+    width: 51%;
+  }
+
+  .xl\:w-\[55\%\] {
+    width: 55%;
+  }
+
   .xl\:basis-\[47\%\] {
     flex-basis: 47%;
   }
