@@ -17,16 +17,28 @@ class UpcomingEventsView(ListView):
         current_time = datetime.now()
         formatted_time = current_time.strftime("%H:%M:%S")
 
-        return self.model.objects.filter(
-            Q(date__gt=today) | (Q(date=today) & Q(time__gt=formatted_time))
-        ).order_by('date', 'time')
+        # return self.model.objects.filter(
+        #     Q(date__gt=today) | (Q(date=today) & Q(time__gt=formatted_time))
+        # ).order_by('date', 'time').se
+        events =  self.model.objects.select_related('concludedevents')
+        # print(events)
+        for event in events:
+            print(f"Upcoming Event: {event.theme}")
+            print(f"Date: {event.date}")
+            
+            # Check if the upcoming event has a related concluded event
+            if hasattr(event, 'concludedevents'):
+                concluded_event = event.concludedevents
+                print(f"Concluded cotent: {concluded_event.content}")
+            else:
+                print("This event has not concluded yet.")
+        return events
 
 
 def event_detail_json(request, slug):
     print('Slug', slug)
 
     event = get_object_or_404(UpcomingEvents, slug=slug)
-    print(event.id)
 
     data = {
         'id': event.id,
@@ -38,6 +50,14 @@ def event_detail_json(request, slug):
         "image_url": event.image.url,
         "slug": event.slug
     }
+
+     # Check if the upcoming event has a related concluded event
+    if hasattr(event, 'concludedevents'):
+        concluded_event = event.concludedevents
+        data['content'] = concluded_event.content
+    else:
+        data['content'] = ''
+    print("Data: ", data)
 
     return JsonResponse(data)
 
