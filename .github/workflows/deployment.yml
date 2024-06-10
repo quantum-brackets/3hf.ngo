@@ -11,7 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
+      - name: Setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ 16.x }}
+      - run: npm install
       - name: Upload
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -24,5 +29,4 @@ jobs:
           exclude: |
             **/.git*
             **/.git*/**
-            **/node_modules/**
             .env
