@@ -13,12 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: FeuilleCiseaux/ftp-action@ftp_download
+    - uses: sokuhatiku/ftp-download-artifact@v1.0.0
       with:
-        host: ${{ secrets.FTP_SERVER }}
-        user: ${{ secrets.FTP_USERNAME }}
+        port: ${{ secrets.FTP_PORT }}
+        host: eel.wghservers.com
+        username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        localDir: "/home/runner/work/hearts-and-hands/hearts-and-hands/db"
-        remoteDir: "public_html/hearts_and_hands/db"
-    - name: List db files
+        secure: true
+        name: db_production
+        path: db
+        remote-path: public_html/hearts_and_hands/db/prod.sqlite3
+    - name: List files
       run: ls -lR db
