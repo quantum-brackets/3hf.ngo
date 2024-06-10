@@ -1,0 +1,28 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          dry-run: true
+          server: ftp.3hf.ngo
+          username: it@3hf.ngo
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          server-dir: public_html/hearts_and_hands/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .env
