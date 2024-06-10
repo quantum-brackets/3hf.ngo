@@ -1282,6 +1282,22 @@ input:checked + .toggle-bg {
   margin-bottom: 3rem;
 }
 
+.mb-\[6rem\] {
+  margin-bottom: 6rem;
+}
+
+.mb-\[8rem\] {
+  margin-bottom: 8rem;
+}
+
+.mb-\[10rem\] {
+  margin-bottom: 10rem;
+}
+
+.mb-\[5rem\] {
+  margin-bottom: 5rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -2935,6 +2951,26 @@ input:checked + .toggle-bg {
     margin-top: 6rem;
   }
 
+  .md\:mb-\[10rem\] {
+    margin-bottom: 10rem;
+  }
+
+  .md\:mb-\[14rem\] {
+    margin-bottom: 14rem;
+  }
+
+  .md\:mb-\[24rem\] {
+    margin-bottom: 24rem;
+  }
+
+  .md\:mb-\[20rem\] {
+    margin-bottom: 20rem;
+  }
+
+  .md\:mb-\[17rem\] {
+    margin-bottom: 17rem;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -3340,6 +3376,14 @@ input:checked + .toggle-bg {
     margin-top: 3.9rem;
   }
 
+  .lg\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .lg\:mb-\[8rem\] {
+    margin-bottom: 8rem;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -3568,6 +3612,10 @@ input:checked + .toggle-bg {
 
   .xl\:top-\[30\%\] {
     top: 30%;
+  }
+
+  .xl\:mb-\[8rem\] {
+    margin-bottom: 8rem;
   }
 
   .xl\:flex {

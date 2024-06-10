@@ -68,13 +68,13 @@
         </div>
     </section>
 
-    <section class="bg-[#F2F2F2] py-[4rem] px-[1.3rem] md:px-[2rem] lg:px-[5rem] space-y-[2rem]">
+    <section class="bg-[#F2F2F2] py-[4rem] px-[1.3rem] md:px-[2rem] lg:px-[5rem]">
         <h2 class="text-[#06589C] text-[28px] font-inter font-[700]">Upcoming events</h2>
 
         {% if upcoming_events %}
 
         <div id="upcoming-events"
-            class="md:grid md:grid-cols-2 lg:grid-cols-4 gap-[2rem] space-y-[1.4rem] md:space-y-0">
+            class="md:grid md:grid-cols-2 lg:grid-cols-4 gap-[2rem] space-y-[1.4rem] md:space-y-0 mt-[2rem]">
             {% for event in upcoming_events %}
 
             {% include 'events/_upcoming_events_list.html' %}
@@ -82,7 +82,7 @@
 
             {% else %}
 
-            <h3 class=" font-inter text-[20px] mb-[3rem]">There are no upcoming events,
+            <h3 class=" font-inter text-[20px] mt-[1rem] mb-[5rem] md:mb-[17rem] lg:mb-[8rem]">There are no upcoming events,
                 please check back later.</h3>
             {% endif %}
 
