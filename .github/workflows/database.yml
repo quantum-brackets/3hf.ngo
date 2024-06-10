@@ -1,0 +1,25 @@
+name: Database
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  schedule:
+  - cron: '0 0 * * *'
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: sokuhatiku/ftp-download-artifact@v1.0.0
+      with:
+        name: db_production
+        port: ${{ secrets.FTP_PORT }}
+        host: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        secure: true
+        remote-path: public_html/hearts_and_hands/db/prod.sqlite3
+    - run: ls -R
