@@ -14,14 +14,21 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: sokuhatiku/ftp-download-artifact@v1.0.0
+      id: download
       with:
         port: ${{ secrets.FTP_PORT }}
         host: eel.wghservers.com
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         secure: true
-        name: db_production
+        name: db-production
         path: db
         remote-path: public_html/hearts_and_hands/db/prod.sqlite3
     - run: pwd
     - run: ls -lR
+      working-directory: ${{ steps.download.outputs.download-path }}
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v4
+      with:
+        name: db-production
+        path: ${{ steps.download.outputs.download-path }}
