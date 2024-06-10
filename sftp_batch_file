@@ -1,1 +1,0 @@
-get /public_html/hearts_and_hands/db/prod.sqlite3 ./db/prod.sqlite3
