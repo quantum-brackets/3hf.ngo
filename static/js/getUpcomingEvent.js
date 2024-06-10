@@ -92,8 +92,8 @@ function formatDate(dateString) {
 }
 
 function handleLocationMap() {
-  const mapLink = document.getElementById("map-link");
   const address = document.getElementById("event-location").innerHTML;
+  const mapLink = document.getElementById("map-link");
 
   mapLink.href = `https://www.google.com/maps?q=${encodeURIComponent(address)}`;
 }

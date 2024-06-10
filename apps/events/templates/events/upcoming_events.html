@@ -20,28 +20,30 @@
 
                 <div class="text-[16px] text-[#6D6D6D] flex flex-col xl:flex-row gap-[1rem] xl:gap-[5rem]"
                     styl="border: 2px dotted red;">
-                    <div class="space-y-[1rem]">
+                    <div class="space-y-[1rem] min-w-fit" styl="border: 1px solid green;">
                         <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
                             <img src="{% static '/heartsandhands/media/events/clock.png' %}" alt=""
                                 class="w-[32px] h-[32px]">
                             <span id="event-time"></span>
                         </div>
-    
+
                         <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
                             <img src="{% static '/heartsandhands/media/events/calendar.png' %}" alt=""
                                 class="w-[32px] h-[32px]">
                             <span id="event-date"></span>
                         </div>
                     </div>
-                   
-                    <a id="map-link" target="_blank" style="border: 2px solid rebeccapurple;">
-                        <div id="map-div" class="cursor-pointer flex gap-[0.5rem]" style="border: 1px solid black;">
+
+
+                    <div id="map-div"  styl="border: 1px solid black;">
+                        <a id="map-link" target="_blank" class="cursor-pointer flex gap-[0.5rem]" styl="border: 2px solid rebeccapurple;">
+
                             <img src="{% static '/heartsandhands/media/events/location.png' %}" alt=""
                                 class="w-[32px] h-[32px]">
                             <span id="event-location"></span>
+                        </a>
 
-                        </div>
-                    </a>
+                    </div>
 
                 </div>
 
@@ -68,7 +70,8 @@
     <section class="bg-[#F2F2F2] py-[4rem] px-[1.3rem] md:px-[2rem] lg:px-[5rem] space-y-[2rem]">
         <h2 class="text-[#06589C] text-[28px] font-inter font-[700]">Upcoming events</h2>
 
-        <div id="upcoming-events" class="md:grid md:grid-cols-2 lg:grid-cols-4 gap-[2rem] space-y-[1.4rem] md:space-y-0">
+        <div id="upcoming-events"
+            class="md:grid md:grid-cols-2 lg:grid-cols-4 gap-[2rem] space-y-[1.4rem] md:space-y-0">
             {% for event in upcoming_events %}
 
             {% include 'events/_upcoming_events_list.html' %}

@@ -1484,6 +1484,16 @@ input:checked + .toggle-bg {
   width: max-content;
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.min-w-fit {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
 .max-w-md {
   max-width: 28rem;
 }
@@ -3610,6 +3620,10 @@ input:checked + .toggle-bg {
 
   .xl\:gap-\[5rem\] {
     gap: 5rem;
+  }
+
+  .xl\:gap-\[rem\] {
+    gap: rem;
   }
 
   .xl\:pl-\[10rem\] {
