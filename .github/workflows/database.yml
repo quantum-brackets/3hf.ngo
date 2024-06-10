@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Download Database
-        uses: joutvhu/ftp-transfer@v1
+        uses: iamogbz/ftp-transfer@9ca73bb82fcd0c9fa9475e63997b21481d770c2d
         with:
           port: ${{ secrets.FTP_PORT }}
           host: ${{ secrets.FTP_SERVER }}
