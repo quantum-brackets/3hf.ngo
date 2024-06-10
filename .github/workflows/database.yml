@@ -6,29 +6,24 @@ on:
       - main
   pull_request:
   schedule:
-  - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
 jobs:
   backup:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: joutvhu/ftp-transfer@v1
-      with:
-        port: ${{ secrets.FTP_PORT }}
-        host: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        commands: |
-          get ./public_html/hearts_and_hands/db/prod.sqlite3 ./db/prod.sqlite3
-          rename ./build ./build.old
-          rename ./build.new ./build
-          delete ./build.old
-    - run: pwd
-    - run: ls -lR
-      working-directory: ${{ steps.download.outputs.download-path }}
-    - name: 'Upload Artifact'
-      uses: actions/upload-artifact@v4
-      with:
-        name: db-production
-        path: ./db/prod.sqlite3
+      - uses: actions/checkout@v4
+      - name: Download Database
+        uses: joutvhu/ftp-transfer@v1
+        with:
+          port: ${{ secrets.FTP_PORT }}
+          host: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          commands: |
+            get 'public_html/hearts_and_hands/db/' 'db/'
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: db-production
+          path: ./db/prod.sqlite3
