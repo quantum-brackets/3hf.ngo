@@ -23,5 +23,5 @@ jobs:
         name: db_production
         path: db
         remote-path: public_html/hearts_and_hands/db/prod.sqlite3
-    - name: List files
-      run: ls -lR db
+    - run: pwd
+    - run: ls -lR
