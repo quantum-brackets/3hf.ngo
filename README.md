@@ -2,17 +2,25 @@
 
 Website repository for the hearts and hands humanitarian [project](https://github.com/users/iamogbz/projects/2/views/1).
 
-## Logs
+## Development
 
-- File manager > Logs > passenger.logs
+- `npm install`
+- `python -m venv venv`
+  - `. venv/bin/activate`
+- `pip install -r requirements.txt`
+- Run migrations
+  - `python -m manage makemigrate`
+  - `python -m manage migrate`
+- `python -m manage runserver`
 
 ## Deployment
 
-- Delete the local env file
-- Zip the entire repository
-- Upload to /public_html
-- Unzip file and replace `heart-and-hands`
+- Merge to `main` to deploy website changes
 
-## Database backup
+## Database
 
-- Create ci action to store database file everyday as artifact
+- TODO: Create ci action to store database file everyday as artifact
+
+## Logs
+
+- File manager > Logs > passenger.logs
