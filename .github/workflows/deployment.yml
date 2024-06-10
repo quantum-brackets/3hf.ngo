@@ -15,7 +15,7 @@ jobs:
       - name: Upload
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          dry-run: true
+          dry-run: false
           server: ftp.3hf.ngo
           username: it@3hf.ngo
           password: ${{ secrets.FTP_PASSWORD }}
