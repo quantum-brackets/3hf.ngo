@@ -1218,6 +1218,10 @@ input:checked + .toggle-bg {
   margin-bottom: 1rem;
 }
 
+.mb-\[5rem\] {
+  margin-bottom: 5rem;
+}
+
 .ml-\[2\.3rem\] {
   margin-left: 2.3rem;
 }
@@ -1276,26 +1280,6 @@ input:checked + .toggle-bg {
 
 .mt-\[5rem\] {
   margin-top: 5rem;
-}
-
-.mb-\[3rem\] {
-  margin-bottom: 3rem;
-}
-
-.mb-\[6rem\] {
-  margin-bottom: 6rem;
-}
-
-.mb-\[8rem\] {
-  margin-bottom: 8rem;
-}
-
-.mb-\[10rem\] {
-  margin-bottom: 10rem;
-}
-
-.mb-\[5rem\] {
-  margin-bottom: 5rem;
 }
 
 .box-border {
@@ -1504,18 +1488,9 @@ input:checked + .toggle-bg {
   width: max-content;
 }
 
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
 .min-w-fit {
   min-width: -moz-fit-content;
   min-width: fit-content;
-}
-
-.min-w-full {
-  min-width: 100%;
 }
 
 .max-w-md {
@@ -2450,10 +2425,6 @@ input:checked + .toggle-bg {
   line-height: 1.75rem;
 }
 
-.text-\[16rem\] {
-  font-size: 16rem;
-}
-
 .font-\[400\] {
   font-weight: 400;
 }
@@ -2927,6 +2898,10 @@ input:checked + .toggle-bg {
     margin-right: auto;
   }
 
+  .md\:mb-\[17rem\] {
+    margin-bottom: 17rem;
+  }
+
   .md\:mr-\[2rem\] {
     margin-right: 2rem;
   }
@@ -2949,26 +2924,6 @@ input:checked + .toggle-bg {
 
   .md\:mt-\[6rem\] {
     margin-top: 6rem;
-  }
-
-  .md\:mb-\[10rem\] {
-    margin-bottom: 10rem;
-  }
-
-  .md\:mb-\[14rem\] {
-    margin-bottom: 14rem;
-  }
-
-  .md\:mb-\[24rem\] {
-    margin-bottom: 24rem;
-  }
-
-  .md\:mb-\[20rem\] {
-    margin-bottom: 20rem;
-  }
-
-  .md\:mb-\[17rem\] {
-    margin-bottom: 17rem;
   }
 
   .md\:flex {
@@ -3368,20 +3323,16 @@ input:checked + .toggle-bg {
     float: right;
   }
 
+  .lg\:mb-\[8rem\] {
+    margin-bottom: 8rem;
+  }
+
   .lg\:mt-\[2rem\] {
     margin-top: 2rem;
   }
 
   .lg\:mt-\[3\.9rem\] {
     margin-top: 3.9rem;
-  }
-
-  .lg\:mb-0 {
-    margin-bottom: 0px;
-  }
-
-  .lg\:mb-\[8rem\] {
-    margin-bottom: 8rem;
   }
 
   .lg\:block {
@@ -3614,10 +3565,6 @@ input:checked + .toggle-bg {
     top: 30%;
   }
 
-  .xl\:mb-\[8rem\] {
-    margin-bottom: 8rem;
-  }
-
   .xl\:flex {
     display: flex;
   }
@@ -3658,32 +3605,12 @@ input:checked + .toggle-bg {
     flex-direction: row;
   }
 
-  .xl\:justify-between {
-    justify-content: space-between;
-  }
-
   .xl\:justify-around {
     justify-content: space-around;
   }
 
-  .xl\:gap-\[4rem\] {
-    gap: 4rem;
-  }
-
-  .xl\:gap-\[2rem\] {
-    gap: 2rem;
-  }
-
-  .xl\:gap-\[14rem\] {
-    gap: 14rem;
-  }
-
   .xl\:gap-\[5rem\] {
     gap: 5rem;
-  }
-
-  .xl\:gap-\[rem\] {
-    gap: rem;
   }
 
   .xl\:pl-\[10rem\] {
