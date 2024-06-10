@@ -13,6 +13,8 @@ $(document).ready(function () {
         $("#event-date").text(formatDate(data.date));
         $("#event-location").text(data.location);
         $("#event-image").attr("src", data.image_url);
+        $("#event-content").html(data.content);
+        console.log({content: data.content});
 
         // Add to calendar
         $(".title").text(data.theme);

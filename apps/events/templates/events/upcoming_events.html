@@ -6,12 +6,12 @@
 <main class="mt-[1.5rem] lg:mt-[2rem]" styl="border: 14px solid red;">
 
     <section class="hidden px-[1.4rem] md:px-[2rem] mdLg:px-[4rem] pb-[2.5rem] mdLg:pb-[5rem]
-     space-y-[2.2rem] lg::space-y-[1.5rem] md:mt-[4.2rem]" id="event-details">
+     space-y-[3rem] xl:space-y-[5.2rem] lg::space-y-[1.5rem] md:mt-[4.2rem]" id="event-details">
         <span class="border border-[#076ABB] rounded-[64px] px-[32px] py-[12px] font-inter
          text-[#076ABB] text-[16px] inline-block">
             Charity Event</span>
 
-        <div class="flex gap-[4rem]">
+        <div class="flex gap-[4rem]" styl="border: 1px solid gold;">
             <div class="basis-[100%] mdLg:basis-[50%] space-y-[1.6rem] md:relative" styl="border: 1px solid gold;">
                 <h2 id="event-theme"
                     class="font-delaGothic text-[32px] mdLg:text-[56px] mdLg:leading-[4rem] capitalize">
@@ -66,6 +66,12 @@
                 <img id="event-image" src="" alt="Event Image" class="w-[540px] h[414px] h-full object-contain">
             </div>
         </div>
+
+        <div class="xl:w-[61%]">
+            <p id="event-content" class="font-inter text-[16px] text-[#6D6D6D]" 
+            styl="border: 1px dashed hotpink;"></p>
+        </div>
+
     </section>
 
     <section class="bg-[#F2F2F2] py-[4rem] px-[1.3rem] md:px-[2rem] lg:px-[5rem]">
@@ -82,7 +88,8 @@
 
             {% else %}
 
-            <h3 class=" font-inter text-[20px] mt-[1rem] mb-[5rem] md:mb-[17rem] lg:mb-[8rem]">There are no upcoming events,
+            <h3 class=" font-inter text-[20px] mt-[1rem] mb-[5rem] md:mb-[17rem] lg:mb-[8rem]">There are no upcoming
+                events,
                 please check back later.</h3>
             {% endif %}
 

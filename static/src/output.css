@@ -1835,6 +1835,18 @@ input:checked + .toggle-bg {
   margin-bottom: calc(4rem * var(--tw-space-y-reverse));
 }
 
+.space-y-\[4\.2rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(4.2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(4.2rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[7\.2rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(7.2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(7.2rem * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -2425,6 +2437,10 @@ input:checked + .toggle-bg {
   line-height: 1.75rem;
 }
 
+.text-\[1rem\] {
+  font-size: 1rem;
+}
+
 .font-\[400\] {
   font-weight: 400;
 }
@@ -2590,6 +2606,10 @@ input:checked + .toggle-bg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[rem\] {
+  color: rem;
 }
 
 .opacity-0 {
@@ -3611,6 +3631,18 @@ input:checked + .toggle-bg {
 
   .xl\:gap-\[5rem\] {
     gap: 5rem;
+  }
+
+  .xl\:space-y-\[7\.2rem\] > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(7.2rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(7.2rem * var(--tw-space-y-reverse));
+  }
+
+  .xl\:space-y-\[5\.2rem\] > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(5.2rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(5.2rem * var(--tw-space-y-reverse));
   }
 
   .xl\:pl-\[10rem\] {
