@@ -14,8 +14,9 @@ $(document).ready(function () {
         $("#event-location").text(data.location);
         $("#event-image").attr("src", data.image_url);
         $("#event-content").html(data.content);
-        console.log({content: data.content});
+        console.log({ content: data.content });
 
+        toggleEventActions(data);
         // Add to calendar
         $(".title").text(data.theme);
         $(".start").text(`${data.date} ${data.time}`);
@@ -98,4 +99,20 @@ function handleLocationMap() {
   const mapLink = document.getElementById("map-link");
 
   mapLink.href = `https://www.google.com/maps?q=${encodeURIComponent(address)}`;
+}
+
+function toggleEventActions(data) {
+  /*Display the add to calendar and event registration buttons
+  if data.content is an empty string. 
+  */
+  const addToCalendarSection = $("#add-to-calendar");
+  const eventRegButton = $("#add-to-calendar");
+
+  if (data.content.trim() == "") {
+    addToCalendarSection.show();
+    eventRegButton.show();
+  } else {
+    addToCalendarSection.hide();
+    eventRegButton.hide();
+  }
 }
