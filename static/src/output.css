@@ -1161,6 +1161,10 @@ input:checked + .toggle-bg {
   top: 30%;
 }
 
+.z-0 {
+  z-index: 0;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1183,10 +1187,6 @@ input:checked + .toggle-bg {
 
 .z-\[1000\] {
   z-index: 1000;
-}
-
-.z-0 {
-  z-index: 0;
 }
 
 .order-last {
@@ -3588,12 +3588,28 @@ input:checked + .toggle-bg {
     flex-direction: row;
   }
 
+  .xl\:justify-between {
+    justify-content: space-between;
+  }
+
   .xl\:justify-around {
     justify-content: space-around;
   }
 
+  .xl\:gap-\[4rem\] {
+    gap: 4rem;
+  }
+
   .xl\:gap-\[2rem\] {
     gap: 2rem;
+  }
+
+  .xl\:gap-\[14rem\] {
+    gap: 14rem;
+  }
+
+  .xl\:gap-\[5rem\] {
+    gap: 5rem;
   }
 
   .xl\:pl-\[10rem\] {
