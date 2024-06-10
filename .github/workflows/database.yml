@@ -13,17 +13,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: sokuhatiku/ftp-download-artifact@v1.0.0
-      id: download
+    - uses: joutvhu/ftp-transfer@v1
       with:
         port: ${{ secrets.FTP_PORT }}
-        host: eel.wghservers.com
+        host: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        secure: true
-        name: db-production
-        path: db
-        remote-path: public_html/hearts_and_hands/db/prod.sqlite3
+        commands: |
+          get ./public_html/hearts_and_hands/db/prod.sqlite3 ./db/prod.sqlite3
+          rename ./build ./build.old
+          rename ./build.new ./build
+          delete ./build.old
     - run: pwd
     - run: ls -lR
       working-directory: ${{ steps.download.outputs.download-path }}
@@ -31,4 +31,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: db-production
-        path: ${{ steps.download.outputs.download-path }}
+        path: ./db/prod.sqlite3
