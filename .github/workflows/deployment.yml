@@ -20,7 +20,7 @@ jobs:
       - name: Upload
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          dry-run: false
+          dry-run: ${{ github.ref == 'refs/heads/main' && 'false' || 'true' }}
           server: ftp.3hf.ngo
           username: it@3hf.ngo
           password: ${{ secrets.FTP_PASSWORD }}
