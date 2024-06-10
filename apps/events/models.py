@@ -51,9 +51,8 @@ class ConcludedEvents(models.Model):
         return f"{self.event.theme.title()}"
 
     def save(self, *args, **kwargs):
-        slug = self.event.slug
         if not self.slug:
-            self.slug = slugify(slug)
+            self.slug = self.event.slug
         return super().save(*args, **kwargs)
 
 
