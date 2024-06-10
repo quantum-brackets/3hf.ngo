@@ -20,6 +20,5 @@ jobs:
         host: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        secure: true
         remote-path: public_html/hearts_and_hands/db/prod.sqlite3
     - run: ls -R
