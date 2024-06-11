@@ -4,7 +4,7 @@ $(document).ready(function () {
   // Fetch and display event details
   function fetchEventDetails(eventSlug) {
     $.ajax({
-      url: `/events/upcoming/${eventSlug}/`,
+      url: `/events/json/${eventSlug}/`,
       type: "GET",
       success: function (data) {
         $("#event-theme").text(data.theme);
