@@ -14,7 +14,6 @@ $(document).ready(function () {
         $("#event-location").text(data.location);
         $("#event-image").attr("src", data.image_url);
         $("#event-content").html(data.content);
-        console.log({ content: data.content });
 
         toggleEventActions(data);
         // Add to calendar
@@ -35,34 +34,52 @@ $(document).ready(function () {
     });
   }
 
-  // Check if there's an event query in the URL on page load
-  var urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.has("event")) {
-    var eventSlug = urlParams.get("event");
-    fetchEventDetails(eventSlug);
+  if (window.location.pathname.split('/').length > 2) {
+    // Extract event slug from path (handling trailing slash)
+    var pathSegments = window.location.pathname.split('/');
+    console.log({pathSegments})
+    pathSegments.pop().trim(); // Remove trailing slash and whitespace
+    const slug = pathSegments[pathSegments.length - 1];
+    console.log({slug});
+  
+    // Check for valid event slug (excluding "events" and empty string)
+    if (slug !== 'events' && slug !== '') {
+      // Fetch event details based on slug
+      fetchEventDetails(slug);
+    }
   }
+  
 
   // Event listener for click events to show event details
   $(".show-event-detail").click(function () {
     var eventSlug = $(this).data("event-slug");
     fetchEventDetails(eventSlug);
 
-    // Update the URL with the event pk
-    var newUrl =
-      window.location.protocol +
-      "//" +
-      window.location.host +
-      window.location.pathname +
-      "?event=" +
-      eventSlug;
+    var pathSegments = window.location.pathname.split('/');
+    var lastSegment = pathSegments[pathSegments.length - 1];
+  
+    var basePath;
+    if (lastSegment === "event") {
+      basePath = pathSegments.join('/'); // Keep the entire path
+    } else {
+      pathSegments.pop(); // Remove the last segment (which is a slug)
+      basePath = pathSegments.join('/');
+    }
+  
+    // Construct new URL with event slug
+    var newUrl = window.location.origin + basePath + "/" + eventSlug;
     window.history.pushState({ path: newUrl }, "", newUrl);
   });
 
   // Handle browser back/forward buttons
   window.onpopstate = function (event) {
     if (event.state && event.state.path) {
-      console.log({ state: event.state });
-      var eventSlug = new URL(event.state.path).searchParams.get("event");
+      // Extract event slug from URL path
+      var url = new URL(event.state.path);
+      console.log({url});
+      var pathSegments = url.pathname.split('/');
+      var eventSlug = pathSegments[pathSegments.length - 1];  // Last segment is the slug
+  
       fetchEventDetails(eventSlug);
     }
   };
