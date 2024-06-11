@@ -55,19 +55,7 @@ $(document).ready(function () {
     var eventSlug = $(this).data("event-slug");
     fetchEventDetails(eventSlug);
 
-    var pathSegments = window.location.pathname.split('/');
-    var lastSegment = pathSegments[pathSegments.length - 1];
-  
-    var basePath;
-    if (lastSegment === "event") {
-      basePath = pathSegments.join('/'); // Keep the entire path
-    } else {
-      pathSegments.pop(); // Remove the last segment (which is a slug)
-      basePath = pathSegments.join('/');
-    }
-  
-    // Construct new URL with event slug
-    var newUrl = window.location.origin + basePath + "/" + eventSlug;
+    var newUrl = window.location.origin + "/events/" + eventSlug;
     window.history.pushState({ path: newUrl }, "", newUrl);
   });
 
@@ -79,7 +67,7 @@ $(document).ready(function () {
       console.log({url});
       var pathSegments = url.pathname.split('/');
       var eventSlug = pathSegments[pathSegments.length - 1];  // Last segment is the slug
-  
+      console.log({eventSlug});
       fetchEventDetails(eventSlug);
     }
   };
