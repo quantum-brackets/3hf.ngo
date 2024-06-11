@@ -53,28 +53,8 @@
                         <a href="{% url 'about_us' %}" styl="border: 4px dotted blue;" class="">about us</a>
                     </li>
 
-                    <li data-collapse-toggle="events-dropdown" class="cursor-pointer"
-                        styl="border: 2px solid saddlebrown;">
-                        outreach
-                        <svg class="w-[0.7rem] h-[0.7rem] ms-3 float-right relative top-[1rem] lg:top-[1.222rem]"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 1 4 4 4-4" />
-                        </svg>
-                        <div class="hidden -mt-[20px z-[1000]" id="events-dropdown" styl="border: 1px solid blueviolet;"
-                            styl="border: 3px solid blue;">
-                            <ul class="text-[#6D6D6D]">
-                                <li class="px-[7px] lg:px-0 hover:text-[#076ABB] text-[1px]">
-                                    <a href="{% url 'upcoming_events' %}" class=""
-                                        style="font-size: 15px;">Upcoming </a>
-                                </li>
-
-                                <li class="px-[7px] lg:px-0 hover:text-[#076ABB]">
-                                    <a href="{% url 'concluded_events' %}" class="text-[1px]"
-                                        style=" font-size: 15px;">concluded</a>
-                                </li>
-
-                        </div>
+                    <li class="">
+                        <a href="{% url 'events' %}" styl="border: 4px dotted blue;" class="">events</a>
                     </li>
 
 
