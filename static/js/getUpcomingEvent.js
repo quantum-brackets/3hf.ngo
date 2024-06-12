@@ -16,6 +16,7 @@ $(document).ready(function () {
         $("#event-content").html(data.content);
 
         toggleEventActions(data);
+
         // Add to calendar
         $(".title").text(data.theme);
         $(".start").text(`${data.date} ${data.time}`);
@@ -34,21 +35,18 @@ $(document).ready(function () {
     });
   }
 
-  if (window.location.pathname.split('/').length > 2) {
+  if (window.location.pathname.split("/").length > 2) {
     // Extract event slug from path (handling trailing slash)
-    var pathSegments = window.location.pathname.split('/');
-    console.log({pathSegments})
+    var pathSegments = window.location.pathname.split("/");
     pathSegments.pop().trim(); // Remove trailing slash and whitespace
     const slug = pathSegments[pathSegments.length - 1];
-    console.log({slug});
-  
+
     // Check for valid event slug (excluding "events" and empty string)
-    if (slug !== 'events' && slug !== '') {
+    if (slug !== "events" && slug !== "") {
       // Fetch event details based on slug
       fetchEventDetails(slug);
     }
   }
-  
 
   // Event listener for click events to show event details
   $(".show-event-detail").click(function () {
@@ -61,15 +59,21 @@ $(document).ready(function () {
 
   // Handle browser back/forward buttons
   window.onpopstate = function (event) {
-    if (event.state && event.state.path) {
-      // Extract event slug from URL path
-      var url = new URL(event.state.path);
-      console.log({url});
-      var pathSegments = url.pathname.split('/');
-      var eventSlug = pathSegments[pathSegments.length - 1];  // Last segment is the slug
-      console.log({eventSlug});
-      fetchEventDetails(eventSlug);
-    }
+      var url = window.location.origin + window.location.pathname;
+      
+      const segments = url.split("/");
+      if(segments.length === 6) {
+        // There could an empty string at the end, we pop that off
+        // so the slug is the last item
+        segments.pop()
+      }
+      var lastIndex = segments[segments.length - 1];
+      if (lastIndex !== "events" && lastIndex !== '') {
+        // then last index is the slug
+        fetchEventDetails(lastIndex);
+      } else {
+        $("#event-details").addClass('hidden');
+      }
   };
 
   $(document).on(
