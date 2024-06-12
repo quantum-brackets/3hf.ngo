@@ -115,7 +115,7 @@ function toggleEventActions(data) {
   if data.content is an empty string. 
   */
   const addToCalendarSection = $("#add-to-calendar");
-  const eventRegButton = $("#add-to-calendar");
+  const eventRegButton = $("#show-event-reg-form");
 
   if (data.content.trim() == "") {
     addToCalendarSection.show();
