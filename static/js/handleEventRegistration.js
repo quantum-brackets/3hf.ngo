@@ -19,9 +19,10 @@ $(document).ready(function () {
     submitButton.addClass("disabled");
     submitButton.text("Registering...");
 
+    const url = `${window.location.origin}/events/${event_id}/register/`;
     $.ajax({
       type: "POST",
-      url: `${event_id}/register/`,
+      url,
       data: JSON.stringify(formData),
       headers: { "Content-Type": "application/json", "X-CSRFToken": csrftoken },
       success: function (response) {
@@ -75,5 +76,5 @@ function getCookie(name) {
 
 function removeDisabled(submitButton) {
   submitButton.removeClass("disabled");
-  submitButton.text("Registering");
+  submitButton.text("Register");
 }

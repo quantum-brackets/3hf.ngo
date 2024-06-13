@@ -4,7 +4,7 @@ $(document).ready(function () {
   // Fetch and display event details
   function fetchEventDetails(eventSlug) {
     $.ajax({
-      url: `/events/upcoming/${eventSlug}/`,
+      url: `/events/json/${eventSlug}/`,
       type: "GET",
       success: function (data) {
         $("#event-theme").text(data.theme);
@@ -13,6 +13,9 @@ $(document).ready(function () {
         $("#event-date").text(formatDate(data.date));
         $("#event-location").text(data.location);
         $("#event-image").attr("src", data.image_url);
+        $("#event-content").html(data.content);
+
+        toggleEventActions(data);
 
         // Add to calendar
         $(".title").text(data.theme);
@@ -32,11 +35,17 @@ $(document).ready(function () {
     });
   }
 
-  // Check if there's an event query in the URL on page load
-  var urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.has("event")) {
-    var eventSlug = urlParams.get("event");
-    fetchEventDetails(eventSlug);
+  if (window.location.pathname.split("/").length > 2) {
+    // Extract event slug from path (handling trailing slash)
+    var pathSegments = window.location.pathname.split("/");
+    pathSegments.pop().trim(); // Remove trailing slash and whitespace
+    const slug = pathSegments[pathSegments.length - 1];
+
+    // Check for valid event slug (excluding "events" and empty string)
+    if (slug !== "events" && slug !== "") {
+      // Fetch event details based on slug
+      fetchEventDetails(slug);
+    }
   }
 
   // Event listener for click events to show event details
@@ -44,24 +53,27 @@ $(document).ready(function () {
     var eventSlug = $(this).data("event-slug");
     fetchEventDetails(eventSlug);
 
-    // Update the URL with the event pk
-    var newUrl =
-      window.location.protocol +
-      "//" +
-      window.location.host +
-      window.location.pathname +
-      "?event=" +
-      eventSlug;
+    var newUrl = window.location.origin + "/events/" + eventSlug;
     window.history.pushState({ path: newUrl }, "", newUrl);
   });
 
   // Handle browser back/forward buttons
   window.onpopstate = function (event) {
-    if (event.state && event.state.path) {
-      console.log({ state: event.state });
-      var eventSlug = new URL(event.state.path).searchParams.get("event");
-      fetchEventDetails(eventSlug);
-    }
+      var url = window.location.origin + window.location.pathname;
+      
+      const segments = url.split("/");
+      if(segments.length === 6) {
+        // There could an empty string at the end, we pop that off
+        // so the slug is the last item
+        segments.pop()
+      }
+      var lastIndex = segments[segments.length - 1];
+      if (lastIndex !== "events" && lastIndex !== '') {
+        // then last index is the slug
+        fetchEventDetails(lastIndex);
+      } else {
+        $("#event-details").addClass('hidden');
+      }
   };
 
   $(document).on(
@@ -96,4 +108,20 @@ function handleLocationMap() {
   const mapLink = document.getElementById("map-link");
 
   mapLink.href = `https://www.google.com/maps?q=${encodeURIComponent(address)}`;
+}
+
+function toggleEventActions(data) {
+  /*Display the add to calendar and event registration buttons
+  if data.content is an empty string. 
+  */
+  const addToCalendarSection = $("#add-to-calendar");
+  const eventRegButton = $("#show-event-reg-form");
+
+  if (data.content.trim() == "") {
+    addToCalendarSection.show();
+    eventRegButton.show();
+  } else {
+    addToCalendarSection.hide();
+    eventRegButton.hide();
+  }
 }
