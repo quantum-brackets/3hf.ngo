@@ -75,5 +75,5 @@ function getCookie(name) {
 
 function removeDisabled(submitButton) {
   submitButton.removeClass("disabled");
-  submitButton.text("Registering");
+  submitButton.text("Register");
 }
