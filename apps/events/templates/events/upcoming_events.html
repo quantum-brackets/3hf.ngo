@@ -11,69 +11,74 @@
          text-[#076ABB] text-[16px] inline-block">
             Charity Event</span>
 
-        <div class="flex gap-[4rem]" styl="border: 1px solid gold;">
-            <div class="basis-[100%] mdLg:basis-[50%] space-y-[1.6rem] md:relative" styl="border: 1px solid gold;">
-                <h2 id="event-theme"
-                    class="font-delaGothic text-[32px] mdLg:text-[56px] mdLg:leading-[4rem] capitalize">
-                </h2>
-                <p id="event-description" class="font-inter text-[16px] text-[#6D6D6D] md:pr-[4rem] mdLg:pr-0"></p>
+        <div class="flex gap-[4rem]" stye="border: 1px solid gold;">
+            <div class="basis-[100%] mdLg:basis-[50%] md:relative space-y-[5rem]" styl="border: 1px solid blue;">
+                <div class="space-y-[1.6rem]">
+                    <h2 id="event-theme"
+                        class="font-delaGothic text-[32px] mdLg:text-[56px] mdLg:leading-[4rem] capitalize">
+                    </h2>
+                    <p id="event-description" class="font-inter text-[16px] text-[#6D6D6D] md:pr-[4rem] mdLg:pr-0"></p>
 
-                <div class="text-[16px] text-[#6D6D6D] flex flex-col xl:flex-row gap-[1rem] xl:gap-[5rem]"
-                    styl="border: 2px dotted red;">
-                    <div class="space-y-[1rem] min-w-fit" styl="border: 1px solid green;">
-                        <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
-                            <img src="{% static '/heartsandhands/media/events/clock.png' %}" alt=""
-                                class="w-[32px] h-[32px]">
-                            <span id="event-time"></span>
+                    <div class="text-[16px] text-[#6D6D6D] flex flex-col xl:flex-row gap-[1rem] xl:gap-[5rem]"
+                        styl="border: 2px dotted red;">
+                        <div class="space-y-[1rem] min-w-fit" styl="border: 1px solid green;">
+                            <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
+                                <img src="{% static '/heartsandhands/media/events/clock.png' %}" alt=""
+                                    class="w-[32px] h-[32px]">
+                                <span id="event-time"></span>
+                            </div>
+
+                            <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
+                                <img src="{% static '/heartsandhands/media/events/calendar.png' %}" alt=""
+                                    class="w-[32px] h-[32px]">
+                                <span id="event-date"></span>
+                            </div>
                         </div>
 
-                        <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
-                            <img src="{% static '/heartsandhands/media/events/calendar.png' %}" alt=""
-                                class="w-[32px] h-[32px]">
-                            <span id="event-date"></span>
+
+                        <div id="map-div" styl="border: 1px solid black;">
+                            <a id="map-link" target="_blank" class="cursor-pointer flex gap-[0.5rem]"
+                                styl="border: 2px solid rebeccapurple;">
+
+                                <img src="{% static '/heartsandhands/media/events/location.png' %}" alt=""
+                                    class="w-[32px] h-[32px]">
+                                <span id="event-location"></span>
+                            </a>
+
                         </div>
-                    </div>
-
-
-                    <div id="map-div" styl="border: 1px solid black;">
-                        <a id="map-link" target="_blank" class="cursor-pointer flex gap-[0.5rem]"
-                            styl="border: 2px solid rebeccapurple;">
-
-                            <img src="{% static '/heartsandhands/media/events/location.png' %}" alt=""
-                                class="w-[32px] h-[32px]">
-                            <span id="event-location"></span>
-                        </a>
 
                     </div>
 
-                </div>
+                    <div class="" id="add-to-calendar">
 
-                <div class="" id="add-to-calendar">
-
-                    <div title="Add to Calendar" class="addeventatc cursor-pointer block z-0" style="z-index: 0;" ">
+                        <div title="Add to Calendar" class="addeventatc cursor-pointer block z-0" style="z-index: 0;" ">
                     Add to calendar
                     <span class=" start"></span>
-                        <span class="title"></span>
-                        <span class="location">Location of the event</span>
+                            <span class="title"></span>
+                            <span class="location">Location of the event</span>
+                        </div>
                     </div>
+
+                    <button type="button" id="show-event-reg-form" data-modal-target="event-registration-form"
+                        data-modal-toggle="event-registration-form" class="block bg-[#076ABB] text-[#FFFFFF] py-[20px] px-[32px] rounded-[8px] w-full md:w-[60%]
+                     mt-0 md:mt-[14rem] xl:absolut xl:bottom- font-inter font-[700]">
+                        Register For Event
+                    </button>
                 </div>
 
-                <button type="button" id="show-event-reg-form" data-modal-target="event-registration-form"
-                    data-modal-toggle="event-registration-form" class="block bg-[#076ABB] text-[#FFFFFF] py-[20px] px-[32px] rounded-[8px] w-full md:w-[60%]
-                     mt-0 md:mt-[14rem] xl:absolut xl:bottom- font-inter font-[700]">
-                    Register For Event
-                </button>
+                <div class="" styl="border: 1px dotted black;">
+                    <p id="event-content" class="font-inter text-[16px] text-[#6D6D6D]"
+                        styl="border: 1px dashed hotpink;"></p>
+                </div>
             </div>
 
-            <div class="hidden mdLg:block" styl="border: 1px solid black;">
-                <img id="event-image" src="" alt="Event Image" class="w-[540px] h[414px] h-full object-contain">
+            <div class="hidden mdLg:block">
+                <div class="">
+                    <img id="event-image" src="" alt="Event Image"
+                        class="w-[540px] h[414px] h-full object-contain">
+                </div>
             </div>
         </div>
-
-        <div class="xl:w-[55%]">
-            <p id="event-content" class="font-inter text-[16px] text-[#6D6D6D]" styl="border: 1px dashed hotpink;"></p>
-        </div>
-
     </section>
 
     <section class="bg-[#F2F2F2] py-[4rem] px-[1.3rem] md:px-[2rem] lg:px-[5rem]">
