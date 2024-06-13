@@ -1,0 +1,29 @@
+name: Database
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download Database
+        uses: iamogbz/ftp-transfer@9ca73bb82fcd0c9fa9475e63997b21481d770c2d
+        with:
+          port: ${{ secrets.FTP_PORT }}
+          host: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          commands: |
+            get 'public_html/hearts_and_hands/db/prod.sqlite3' 'db/prod.sqlite3'
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: db-production
+          path: ./db/prod.sqlite3
