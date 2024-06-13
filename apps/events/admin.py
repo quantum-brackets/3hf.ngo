@@ -18,10 +18,16 @@ class EventRegistrationInline(admin.StackedInline):
 class UpcomingEventsAdmin(admin.ModelAdmin):
     model = UpcomingEvents
     form = CreateUpcomingEventForm
-    list_display = ['theme', 'date', 'location']
+    list_display = ['theme', 'date', 'location', 'has_concluded_event']
     inlines = [ConcludedEventsInline, EventRegistrationInline]
     list_filter = ('theme', 'date', 'location', 'concludedevents')
     search_fields = ("theme", 'location', 'date')
+
+
+    def has_concluded_event(self, obj):
+       return "Yes" if obj.concludedevents is not None else "No"
+
+    has_concluded_event.short_description = "Concluded?"
 
     # def formfield_for_dbfield(self, db_field, request, **kwargs):
     #     """
