@@ -1,7 +1,7 @@
 from .base import BASE_DIR
 
 DEBUG = True
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
 
 DATABASES = {
