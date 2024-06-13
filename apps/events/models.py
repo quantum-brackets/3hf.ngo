@@ -25,6 +25,7 @@ class UpcomingEvents(models.Model):
     class Meta:
         verbose_name = "event"
         verbose_name_plural = "events"
+        ordering = ('-date', '-time')
 
     def __str__(self):
         return f"{self.theme.title()}"
