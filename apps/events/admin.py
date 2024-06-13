@@ -20,6 +20,8 @@ class UpcomingEventsAdmin(admin.ModelAdmin):
     form = CreateUpcomingEventForm
     list_display = ['theme', 'date', 'location']
     inlines = [ConcludedEventsInline, EventRegistrationInline]
+    list_filter = ('theme', 'date', 'location', 'concludedevents')
+    search_fields = ("theme", 'location', 'date')
 
     # def formfield_for_dbfield(self, db_field, request, **kwargs):
     #     """
