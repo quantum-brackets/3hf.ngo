@@ -1,0 +1,6 @@
+{
+  "forwardPorts": [
+    8000
+  ],
+  "postAttachCommand": "bash .devcontainer/scripts/postAttach.sh"
+}
