@@ -1375,11 +1375,6 @@ input:checked + .toggle-bg {
   height: max-content;
 }
 
-.max-h-fit {
-  max-height: -moz-fit-content;
-  max-height: fit-content;
-}
-
 .max-h-full {
   max-height: 100%;
 }
@@ -3134,20 +3129,8 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 954px) {
-  .mdLg\:absolute {
-    position: absolute;
-  }
-
-  .mdLg\:relative {
-    position: relative;
-  }
-
   .mdLg\:left-\[25\%\] {
     left: 25%;
-  }
-
-  .mdLg\:top-\[-6rem\] {
-    top: -6rem;
   }
 
   .mdLg\:top-\[10\%\] {
