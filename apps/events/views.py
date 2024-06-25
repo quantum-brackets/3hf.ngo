@@ -7,9 +7,9 @@ from datetime import datetime, date
 from django.db.models import Q
 
 
-class UpcomingEventsView(ListView):
+class EventsView(ListView):
     model = UpcomingEvents
-    template_name = "events/upcoming_events.html"
+    template_name = "events/events.html"
     context_object_name = "upcoming_events"
 
     def get_queryset(self):
@@ -21,7 +21,6 @@ class UpcomingEventsView(ListView):
         #     Q(date__gt=today) | (Q(date=today) & Q(time__gt=formatted_time))
         # ).order_by('date', 'time').se
         events =  self.model.objects.select_related('concludedevents')
-        # print(events)
         for event in events:
             print(f"Upcoming Event: {event.theme}")
             print(f"Date: {event.date}")
@@ -57,21 +56,8 @@ def event_detail_json(request, slug):
         data['content'] = concluded_event.content
     else:
         data['content'] = ''
-    print("Data: ", data)
 
     return JsonResponse(data)
-
-
-class ConcludedEventsListView(ListView):
-    model = ConcludedEvents
-    template_name = 'events/concluded_events_list.html'
-    context_object_name = 'concluded_events'
-
-
-class ConcludedEventsDetailsView(DetailView):
-    model = ConcludedEvents
-    template_name = 'events/concluded_event_details.html'
-    context_object_name = 'concluded_event'
 
 
 def register_for_event(request, event_id):
