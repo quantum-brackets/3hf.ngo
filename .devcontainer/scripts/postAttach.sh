@@ -1,6 +1,7 @@
 #!/bin/env bash
 set -eux
 
+cp env.example .env
 npm install
 python -m venv venv
 . venv/bin/activate
