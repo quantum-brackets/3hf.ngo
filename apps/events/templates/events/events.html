@@ -89,7 +89,7 @@
             class="md:grid md:grid-cols-2 lg:grid-cols-4 gap-[2rem] space-y-[1.4rem] md:space-y-0 mt-[2rem]">
             {% for event in upcoming_events %}
 
-            {% include 'events/_upcoming_events_list.html' %}
+            {% include 'events/_events_list.html' %}
             {% endfor %}
 
             {% else %}
@@ -106,7 +106,7 @@
     {% include 'events/_event_registration.html' %}
 </main>
 
-<script src="{% static 'js/getUpcomingEvent.js' %}"></script>
+<script src="{% static 'js/fetchtEventDetails.js' %}"></script>
 <!-- <script src="{% static 'js/locationMapHandler.js' %}"></script> -->
 <script type="text/javascript" src="https://cdn.addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
 

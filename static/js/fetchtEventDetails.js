@@ -112,16 +112,21 @@ function handleLocationMap() {
 
 function toggleEventActions(data) {
   /*Display the add to calendar and event registration buttons
-  if data.content is an empty string. 
+  if event is in the past
   */
   const addToCalendarSection = $("#add-to-calendar");
   const eventRegButton = $("#show-event-reg-form");
 
-  if (data.content.trim() == "") {
-    addToCalendarSection.show();
-    eventRegButton.show();
-  } else {
+  const eventDate = new Date(data.date + " " + data.time);
+  const currentDate = new Date();
+
+  if (eventDate < currentDate) {
+    // Event is in the past, hide buttons
     addToCalendarSection.hide();
     eventRegButton.hide();
+  } else {
+    // Event is upcoming, show buttons
+    addToCalendarSection.show();
+    eventRegButton.show();
   }
 }
