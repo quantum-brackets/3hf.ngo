@@ -1,7 +1,7 @@
 from .base import BASE_DIR
 from decouple import config
 
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ["3hf.ngo", "www.3hf.ngo",]
 
 DATABASES = {
