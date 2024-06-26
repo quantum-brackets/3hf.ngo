@@ -27,4 +27,4 @@ Website repository for the hearts and hands humanitarian [project](https://githu
 
 ## Logs
 
-- `File manager > Logs > passenger.logs`
+- [`File manager > Logs > passenger.logs`](https://3hf.ngo:2083/cpsess2857681328/frontend/jupiter/filemanager/showfile.html?file=passenger.log&fileop=&dir=%2Fhome%2Fhnhhfoun%2Flogs&dirop=&charset=&file_charset=&baseurl=&basedir=)
