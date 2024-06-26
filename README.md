@@ -23,7 +23,8 @@ Website repository for the hearts and hands humanitarian [project](https://githu
 
 [![Backup](https://github.com/hengage/hearts-and-hands/actions/workflows/database.yml/badge.svg)](https://github.com/hengage/hearts-and-hands/actions/workflows/database.yml)
 
-- Backed up everyday at 12am as a repository artifact
+- Backed up as a repository artifact, on every deployment and daily at 12am.
+- All DB schema changes should be [N-1 compatible](https://stackoverflow.blog/2020/05/13/ensuring-backwards-compatibility-in-distributed-systems/)
 
 ## Logs
 

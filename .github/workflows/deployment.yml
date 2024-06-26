@@ -11,13 +11,42 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Setup
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python Setup
+        uses: actions/setup-python@v5
+      - name: Node Setup
         uses: actions/setup-node@v4
         with:
-          node-version: 16.x
-      - run: npm install
-      - name: Upload
+          node-version-file: '.node-version'
+      - name: Install Packages
+        run: |
+          npm install
+          pip install -r requirements.txt
+      - name: Download Production DB
+        uses: iamogbz/ftp-transfer@9ca73bb82fcd0c9fa9475e63997b21481d770c2d
+        with:
+          port: ${{ secrets.FTP_PORT }}
+          host: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          commands: |
+            get 'public_html/hearts_and_hands/db/prod.sqlite3' 'db/prod.sqlite3'
+            get 'public_html/hearts_and_hands/.env' '.env'
+      - name: Backup Production DB
+        uses: actions/upload-artifact@v4
+        with:
+          name: db-production
+          path: ./db/prod.sqlite3
+      - name: Migrate Production DB
+        run: |
+          # Make migrations for expected apps
+          python -m manage makemigrations django_summernote
+          # Check if there are any ungenerated migrations and fail if true
+          python -m manage makemigrations --check --dry-run
+          # Run the migrations on the production DB (needs N-1 compatibility)
+          python -m manage migrate
+      - name: Upload Website
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           dry-run: ${{ github.ref == 'refs/heads/main' && 'false' || 'true' }}
