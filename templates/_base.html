@@ -13,19 +13,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@100..900&display=swap"
         rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="{% static '/heartsandhands/media/logo.png' %}" type="image/x-icon">
+    <link rel="shortcut icon" type="image/png" href="{% static 'heartsandhands/media/logo.png' %}" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body class="box-border">
     <header class="flex justify-between pt-[1rem] md:pt-0 font-inter" styl="border: 2px solid gray">
-        <div class="flex flex-col mdLg:flex-row mdLg:justify-between basis-[100%] p-[0.7rem] md:pl-[3rem] 
+        <div class="flex flex-col mdLg:flex-row mdLg:justify-between basis-[100%] p-[0.7rem] md:pl-[3rem]
         mdLg:pl-[5rem] space-y[8rem]" styl="border: 3px dashed lawngreen;">
 
             <div class="flex justify-between" styl="border: 3px solid black;">
                 <a href="{% url 'home' %}" class="flex w-max gap-[1rem] md:ml[2rem] xl:ml[6rem]  md:pt-[1rem]"
                     styl="border: 3px solid #000000;">
-                    <img src="{% static '/heartsandhands/media/logo.png' %}" alt="3hf logo" class="h-[58px] w-[58px]">
+                    <img src="{% static 'heartsandhands/media/logo.png' %}" alt="3hf logo" class="h-[58px] w-[58px]">
                     <div class="hidden mdLg:block capitalize font-delaGothic font-[400] text-[13px]">
                         <span class="block">hearts & hands </span>
                         <span class="block">humanitarian </span>
@@ -33,7 +33,7 @@
                     </div>
                 </a>
 
-                <button data-collapse-toggle="navbar-list" type="button" class="inline-flex items-center mr-[0.7rem] md:mr-[2rem] mt-[0.7rem] md:mt-[1.7rem] p-2 w-10 h-10 justify-center text-sm text-gray-500 
+                <button data-collapse-toggle="navbar-list" type="button" class="inline-flex items-center mr-[0.7rem] md:mr-[2rem] mt-[0.7rem] md:mt-[1.7rem] p-2 w-10 h-10 justify-center text-sm text-gray-500
         rounded-lg mdLg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                     aria-controls="navbar-list" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
@@ -70,10 +70,10 @@
 
                 <div class="basis-[43.7%] text-center py-9 bg-[{{bg_color}} capitalize font-[650] mt[2rem]"
                     styl="border: 2px dashed #000000;">
-                    <a href="{% url 'donate' %}" class="bg-[#356abb] text-[#FFFFFF] py-[12px] px-[32px] border-solid 
+                    <a href="{% url 'donate' %}" class="bg-[#356abb] text-[#FFFFFF] py-[12px] px-[32px] border-solid
                     border-[1px] rounded-[40px] w-full md:w-[50% mdLg:w-auto inline-block">
                         donate now
-                        <img src="{% static '/heartsandhands/media/arrow.png' %}" alt="arrow" class="inline w-[21.5px]">
+                        <img src="{% static 'heartsandhands/media/arrow.png' %}" alt="arrow" class="inline w-[21.5px]">
                     </a>
                 </div>
             </div>

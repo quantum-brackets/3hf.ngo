@@ -4,7 +4,7 @@
 {% block content %}
 
 <main class="mt-0 md:mt-[3rem] mdLg:mt-[1rem]">
-    <section class="lg:flex relative px-[1rem] md:px-[3rem] lg:pl-[1.5rem] xl:pl-[2rem] 
+    <section class="lg:flex relative px-[1rem] md:px-[3rem] lg:pl-[1.5rem] xl:pl-[2rem]
     py-[3rem] md:py-[4rem] bg-[#F2F2F2] space-y-[2rem] lg:space-y-0" styl="border: 4px solid yellowgreen;">
 
         <div class="lg:basis-[45%] space-y-[1.2rem] md:pr-[4rem] lg:pr-0" styl="border: 2px dashed black;">
@@ -18,8 +18,8 @@
         </div>
 
 
-        <div class="lg:absolute lg:right-[1.5rem] lg:top-[4.7rem] xl:right-[4rem] lg:bottom-[-2rem] h-max 
-        space-y[1rem] lg:w-[609px] basis-[49%] bg-[#FFFFFF] border-[1px] border-[#D9D9D9] 
+        <div class="lg:absolute lg:right-[1.5rem] lg:top-[4.7rem] xl:right-[4rem] lg:bottom-[-2rem] h-max
+        space-y[1rem] lg:w-[609px] basis-[49%] bg-[#FFFFFF] border-[1px] border-[#D9D9D9]
         rounded-[16px] px-[0.7rem] md:px-[8rem] lg:px-[2rem] py-[2.3rem]" styl="border: 3px solid saddlebrown;">
             {% if error %}
             {{ error }}
@@ -30,16 +30,16 @@
                     class="w-full border-[1px] border-[#2b599c] rounded-[8px] px-[15px] py-[16px]"
                     onclick="showPaystackForm()">
                     Donate with
-                    <img class="inline" src="{% static '/heartsandhands/media/donate/paystack_logo.png' %}"
+                    <img class="inline" src="{% static 'heartsandhands/media/donate/paystack_logo.png' %}"
                         alt="paystack logo">
 
-                    <img src="{% static '/heartsandhands/media/donate/paystack.png' %}" class="inline" alt="">
+                    <img src="{% static 'heartsandhands/media/donate/paystack.png' %}" class="inline" alt="">
                 </button>
 
                 <button type="button" id="show-stripe-form"
                     class="w-full border-[1px] border-[#DFDFDF] rounded-[8px] px-[32px] py-[16px]"
                     onclick="showStripeForm()">
-                    Donate with <img class="inline" src="{% static '/heartsandhands/media/donate/stripe_logo.png' %}"
+                    Donate with <img class="inline" src="{% static 'heartsandhands/media/donate/stripe_logo.png' %}"
                         alt="stripe logo">
                 </button>
             </div>
@@ -99,7 +99,7 @@
                 </form>
             </div>
             <div class="text-center mt-[3rem] font-inter">
-                <img src="{% static '/heartsandhands/media/donate/shieldcheck.png' %}" alt="" class="inline">
+                <img src="{% static 'heartsandhands/media/donate/shieldcheck.png' %}" alt="" class="inline">
                 <span>Your information is protected</span>
             </div>
         </div>
@@ -107,7 +107,7 @@
 
     </section>
 
-    <img src="{% static '/heartsandhands/media/donate/kids.png' %}" class="hidden lg:block w-full" alt="">
+    <img src="{% static 'heartsandhands/media/donate/kids.png' %}" class="hidden lg:block w-full" alt="">
 
 </main>
 
