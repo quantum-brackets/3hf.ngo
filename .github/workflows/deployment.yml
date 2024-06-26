@@ -46,6 +46,8 @@ jobs:
           python -m manage makemigrations --check --dry-run
           # Run the migrations on the production DB (needs N-1 compatibility)
           python -m manage migrate
+          # Collect static files for website upload
+          python -m manage collectstatic --noinput
       - name: Upload Website
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:

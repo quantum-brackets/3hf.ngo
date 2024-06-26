@@ -12,6 +12,8 @@ Website repository for the hearts and hands humanitarian [project](https://githu
   - `python -m manage makemigrate`
   - `python -m manage migrate`
 - `python -m manage runserver`
+- Static files
+  - `python -m manage collectstatic`
 
 ## Deployment
 
