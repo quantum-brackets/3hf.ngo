@@ -56,7 +56,6 @@ function payWithPaystack() {
 
 function handlePaymentCallback(response) {
   var reference = response.reference;
-  alert("Payment complete! Reference: " + reference);
   console.log({ reference: response.reference });
 
   if (response.status === "success") {
@@ -78,7 +77,8 @@ function verifyPayment(reference) {
   }).then((response) => {
     if (response.ok) {
       console.log({ "Server response": response });
-      alert("Donation successful! Thank you.");
+      // alert("Donation successful! Thank you.");
+      window.location.href = '/donation-successful/'
     } else {
       console.error("Error submitting donation data:", response.statusText);
       alert("An error occurred. Please try again later.");
