@@ -88,13 +88,16 @@ class DonationSuccessFul(TemplateView):
         stripe.api_key = settings.STRIPE_SECRET_KEY
         context = super().get_context_data(**kwargs)
         session_id = self.request.GET.get('session_id')
-        session = stripe.checkout.Session.retrieve(session_id)
-        # customer = stripe.Customer.retrieve(session)
-        customer = session.customer_details
+        if session_id:
 
-        context['session'] = session
-        context['customer'] = customer
+            session = stripe.checkout.Session.retrieve(session_id)
+            # customer = stripe.Customer.retrieve(session)
+            customer = session.customer_details
 
+            context['session'] = session
+            context['customer'] = customer
+
+            return context
         return context
 
 
