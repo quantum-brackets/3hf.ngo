@@ -45,7 +45,6 @@ function payWithPaystack() {
     amount: document.getElementById("amount").value * 100, // the amount value is multiplied by 100 to convert to the lowest currency unit
     currency: document.getElementById("currency").value,
     // csrfmiddlewaretoken: document.getElementsByName('csrfmiddlewaretoken')[0].value
-    ref: generateReference,
     callback: handlePaymentCallback,
     onClose: function () {
       alert("Transaction was not completed, window closed.");
@@ -67,6 +66,7 @@ function handlePaymentCallback(response) {
 }
 
 function verifyPayment(reference) {
+  console.log({reference})
   fetch("/verify-paystack-payment/", {
     method: "POST",
     headers: {
@@ -78,7 +78,7 @@ function verifyPayment(reference) {
     if (response.ok) {
       console.log({ "Server response": response });
       // alert("Donation successful! Thank you.");
-      window.location.href = '/donation-successful/'
+      // window.location.href = '/donation-successful/'
     } else {
       console.error("Error submitting donation data:", response.statusText);
       alert("An error occurred. Please try again later.");
@@ -86,24 +86,6 @@ function verifyPayment(reference) {
   });
 }
 
-async function generateReference() {
-  const characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  let reference = "";
-
-  // Generate reference with a combination of numbers and letters
-  for (let i = 0; i < length; i++) {
-    const randomIndex = Math.floor(Math.random() * characters.length);
-    reference += characters.charAt(randomIndex);
-  }
-
-  // Add current timestamp to the reference
-  const timestamp = new Date().getTime().toString();
-  reference += timestamp;
-  console.log({ reference });
-
-  return reference;
-}
 
 function validatePaystackForm(e) {
   console.log("Performing validation");
