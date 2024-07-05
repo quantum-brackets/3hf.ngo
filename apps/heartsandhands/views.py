@@ -107,6 +107,7 @@ def verify_paystack_success(request):
         try:
             data = json.loads(request.body.decode('utf-8'))
             reference = data.get('reference')
+            print('Reference: ', reference)
             verification_url = f"https://api.paystack.co/transaction/verify/{reference}"
             response = requests.get(verification_url, headers={
                 "Authorization": f"Bearer {settings.PAYSTACK_SECRET_KEY}"
@@ -114,6 +115,9 @@ def verify_paystack_success(request):
 
             if response.status_code == 200:
                 data = response.json()
+                # print('Verify Paystack Donation Response: ', response.json())
+                print('Verify Paystack Donation Response DATA: ', data['data']['reference'])
+
                 if data["data"]['status'] == 'success':
                     print("succesfulpayment")
                 else:
