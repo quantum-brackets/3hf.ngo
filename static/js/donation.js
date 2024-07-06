@@ -40,7 +40,7 @@ function payWithPaystack() {
   }
 
   var handler = PaystackPop.setup({
-    key: "pk_test_a6f071d81735bf046577b42fa9ffaaaced47f1db",
+    key: "pk_live_fd688998dfd590409c17a3e5787ab670ef0c799a",
     email: document.getElementById("email").value,
     amount: document.getElementById("amount").value * 100, // the amount value is multiplied by 100 to convert to the lowest currency unit
     currency: document.getElementById("currency").value,
