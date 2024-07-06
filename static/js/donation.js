@@ -77,8 +77,7 @@ function verifyPayment(reference) {
   }).then((response) => {
     if (response.ok) {
       console.log({ "Server response": response });
-      // alert("Donation successful! Thank you.");
-      // window.location.href = '/donation-successful/'
+      window.location.href = '/donation-successful/'
     } else {
       console.error("Error submitting donation data:", response.statusText);
       alert("An error occurred. Please try again later.");
