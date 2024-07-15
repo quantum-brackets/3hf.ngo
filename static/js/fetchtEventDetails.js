@@ -7,6 +7,10 @@ $(document).ready(function () {
       url: `/events/json/${eventSlug}/`,
       type: "GET",
       success: function (data) {
+        console.log(data);
+        // Set document title
+        document.title = `${formatTitle(data.theme)} - Event | ${websiteTitle}`;
+
         $("#event-theme").text(data.theme);
         $("#event-description").text(data.description);
         $("#event-time").text(data.time);
@@ -59,21 +63,23 @@ $(document).ready(function () {
 
   // Handle browser back/forward buttons
   window.onpopstate = function (event) {
-      var url = window.location.origin + window.location.pathname;
-      
-      const segments = url.split("/");
-      if(segments.length === 6) {
-        // There could an empty string at the end, we pop that off
-        // so the slug is the last item
-        segments.pop()
-      }
-      var lastIndex = segments[segments.length - 1];
-      if (lastIndex !== "events" && lastIndex !== '') {
-        // then last index is the slug
-        fetchEventDetails(lastIndex);
-      } else {
-        $("#event-details").addClass('hidden');
-      }
+    var url = window.location.origin + window.location.pathname;
+
+    const segments = url.split("/");
+    if (segments.length === 6) {
+      // There could an empty string at the end, we pop that off
+      // so the slug is the last item
+      segments.pop();
+    }
+    var lastIndex = segments[segments.length - 1];
+    if (lastIndex !== "events" && lastIndex !== "") {
+      // then last index is the slug
+      fetchEventDetails(lastIndex);
+    } else {
+      // Reset document title to events template default
+      document.title = `${websiteTitle} - Events`;
+      $("#event-details").addClass("hidden");
+    }
   };
 
   $(document).on(
@@ -95,6 +101,16 @@ function scrollToEventDetail() {
     },
     "slow"
   );
+}
+
+const websiteTitle = "Heart and Hands Humanitarian Foundation";
+
+/** Capitalise each word in the phrase */
+function formatTitle(pageTitle) {
+  return pageTitle
+    .split(" ")
+    .map((s) => `${s.substring(0, 1).toUpperCase()}${s.substring(1)}`)
+    .join(" ");
 }
 
 function formatDate(dateString) {
