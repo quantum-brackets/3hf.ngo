@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from django.http.response import HttpResponse as HttpResponse
+from django.http.response import HttpResponse
 from django.views.generic import TemplateView
 from django.http import HttpResponseBadRequest
 from django.conf import settings
@@ -9,7 +9,6 @@ import requests
 
 import stripe
 
-from .forms import ContactUsForm
 from utils import payment_utils, contact_utils
 
 
@@ -134,3 +133,10 @@ def verify_paystack_success(request):
             return JsonResponse({'error': 'An error occurred.'}, status=500)
 
     return JsonResponse({'error': 'Invalid request method.'}, status=405)
+
+
+def ads_txt(_):
+    return HttpResponse(
+        "google.com, pub-3505239651298035, DIRECT, f08c47fec0942fa0",
+        content_type="text/plain",
+    )
