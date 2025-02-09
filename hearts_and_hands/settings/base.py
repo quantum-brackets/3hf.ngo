@@ -2,13 +2,13 @@ from pathlib import Path
 import os
 import sys
 from decouple import config
+from utils.paths import get_project_root, get_apps_dir
 
-BASE_DIR = os.path.dirname(os.path.dirname(
-    os.path.dirname(os.path.abspath(__file__))))
-sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+# Defines the project's root directory and adds the "apps" subdirectory  
+# to Python's module search path (temporary workaround for local imports).  
+BASE_DIR = get_project_root()
+sys.path.insert(0, str(get_apps_dir()))
 
 ENVIRONMENT = config('ENVIRONMENT')
 

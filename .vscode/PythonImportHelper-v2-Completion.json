@@ -1,0 +1,1633 @@
+[
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "cloudinary.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cloudinary.models",
+        "description": "cloudinary.models",
+        "detail": "cloudinary.models",
+        "documentation": {}
+    },
+    {
+        "label": "CloudinaryField",
+        "importPath": "cloudinary.models",
+        "description": "cloudinary.models",
+        "isExtraImport": true,
+        "detail": "cloudinary.models",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "SummernoteWidget",
+        "importPath": "django_summernote.widgets",
+        "description": "django_summernote.widgets",
+        "isExtraImport": true,
+        "detail": "django_summernote.widgets",
+        "documentation": {}
+    },
+    {
+        "label": "ModelForm",
+        "importPath": "django.forms",
+        "description": "django.forms",
+        "isExtraImport": true,
+        "detail": "django.forms",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "slugify",
+        "importPath": "django.template.defaultfilters",
+        "description": "django.template.defaultfilters",
+        "isExtraImport": true,
+        "detail": "django.template.defaultfilters",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractAttachment",
+        "importPath": "django_summernote.models",
+        "description": "django_summernote.models",
+        "isExtraImport": true,
+        "detail": "django_summernote.models",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponseBadRequest",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "ListView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "DetailView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "TemplateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Q",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http.response",
+        "description": "django.http.response",
+        "isExtraImport": true,
+        "detail": "django.http.response",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "stripe",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "stripe",
+        "description": "stripe",
+        "detail": "stripe",
+        "documentation": {}
+    },
+    {
+        "label": "payment_utils",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "contact_utils",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "users.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "users.models",
+        "description": "users.models",
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserAdmin",
+        "importPath": "django.contrib.auth.admin",
+        "description": "django.contrib.auth.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.admin",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "BaseUserManager",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractBaseUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "PermissionsMixin",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "gettext_lazy",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
+        "label": "gettext_lazy",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "EmailMessage",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "importPath": "hearts_and_hands.wsgi",
+        "description": "hearts_and_hands.wsgi",
+        "isExtraImport": true,
+        "detail": "hearts_and_hands.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.events.migrations.0001_initial",
+        "description": "apps.events.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='UpcomingEvents',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('theme', models.CharField(max_length=200)),",
+        "detail": "apps.events.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.events.migrations.0002_alter_upcomingevents_image",
+        "description": "apps.events.migrations.0002_alter_upcomingevents_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('events', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='upcomingevents',\n            name='image',\n            field=models.ImageField(upload_to='static/uploads'),\n        ),",
+        "detail": "apps.events.migrations.0002_alter_upcomingevents_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.events.migrations.0003_pastevents",
+        "description": "apps.events.migrations.0003_pastevents",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('events', '0002_alter_upcomingevents_image'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='PastEvents',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('content', models.TextField()),",
+        "detail": "apps.events.migrations.0003_pastevents",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.events.migrations.0004_summernoteattachment",
+        "description": "apps.events.migrations.0004_summernoteattachment",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('events', '0003_pastevents'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='SummernoteAttachment',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(blank=True, help_text='Defaults to filename, if left blank', max_length=255, null=True)),",
+        "detail": "apps.events.migrations.0004_summernoteattachment",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.events.migrations.0005_concludedevents_delete_pastevents",
+        "description": "apps.events.migrations.0005_concludedevents_delete_pastevents",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('events', '0004_summernoteattachment'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='ConcludedEvents',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('content', models.TextField()),",
+        "detail": "apps.events.migrations.0005_concludedevents_delete_pastevents",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.events.migrations.0006_alter_concludedevents_options_and_more",
+        "description": "apps.events.migrations.0006_alter_concludedevents_options_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('events', '0005_concludedevents_delete_pastevents'),\n    ]\n    operations = [\n        migrations.AlterModelOptions(\n            name='concludedevents',\n            options={'verbose_name': 'Concluded event', 'verbose_name_plural': 'Concluded events'},\n        ),\n        migrations.AlterModelOptions(",
+        "detail": "apps.events.migrations.0006_alter_concludedevents_options_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.events.migrations.0007_alter_eventregistration_options_and_more",
+        "description": "apps.events.migrations.0007_alter_eventregistration_options_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"events\", \"0006_alter_concludedevents_options_and_more\"),\n    ]\n    operations = [\n        migrations.AlterModelOptions(\n            name=\"eventregistration\",\n            options={\n                \"verbose_name\": \"Registered person\",\n                \"verbose_name_plural\": \"registered persons\",",
+        "detail": "apps.events.migrations.0007_alter_eventregistration_options_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "ConcludedEventsInline",
+        "kind": 6,
+        "importPath": "apps.events.admin",
+        "description": "apps.events.admin",
+        "peekOfCode": "class ConcludedEventsInline(admin.StackedInline):\n    model = ConcludedEvents\n    extra = 1\n    form = ConcludedEventsForm\nclass EventRegistrationInline(admin.StackedInline):\n    model = EventRegistration\n    extra= 0\n@admin.register(UpcomingEvents)\nclass UpcomingEventsAdmin(admin.ModelAdmin):\n    model = UpcomingEvents",
+        "detail": "apps.events.admin",
+        "documentation": {}
+    },
+    {
+        "label": "EventRegistrationInline",
+        "kind": 6,
+        "importPath": "apps.events.admin",
+        "description": "apps.events.admin",
+        "peekOfCode": "class EventRegistrationInline(admin.StackedInline):\n    model = EventRegistration\n    extra= 0\n@admin.register(UpcomingEvents)\nclass UpcomingEventsAdmin(admin.ModelAdmin):\n    model = UpcomingEvents\n    form = CreateUpcomingEventForm\n    list_display = ['theme', 'date', 'location', 'has_concluded_event']\n    inlines = [ConcludedEventsInline, EventRegistrationInline]\n    list_filter = ('theme', 'date', 'location', 'concludedevents')",
+        "detail": "apps.events.admin",
+        "documentation": {}
+    },
+    {
+        "label": "UpcomingEventsAdmin",
+        "kind": 6,
+        "importPath": "apps.events.admin",
+        "description": "apps.events.admin",
+        "peekOfCode": "class UpcomingEventsAdmin(admin.ModelAdmin):\n    model = UpcomingEvents\n    form = CreateUpcomingEventForm\n    list_display = ['theme', 'date', 'location', 'has_concluded_event']\n    inlines = [ConcludedEventsInline, EventRegistrationInline]\n    list_filter = ('theme', 'date', 'location', 'concludedevents')\n    search_fields = (\"theme\", 'location', 'date')\n    def has_concluded_event(self, obj):\n       return \"Yes\" if obj.concludedevents is not None else \"No\"\n    has_concluded_event.short_description = \"Concluded?\"",
+        "detail": "apps.events.admin",
+        "documentation": {}
+    },
+    {
+        "label": "EventsConfig",
+        "kind": 6,
+        "importPath": "apps.events.apps",
+        "description": "apps.events.apps",
+        "peekOfCode": "class EventsConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'events'",
+        "detail": "apps.events.apps",
+        "documentation": {}
+    },
+    {
+        "label": "CreateUpcomingEventForm",
+        "kind": 6,
+        "importPath": "apps.events.forms",
+        "description": "apps.events.forms",
+        "peekOfCode": "class CreateUpcomingEventForm(ModelForm):\n    description = forms.CharField(\n        widget=forms.Textarea(attrs={'maxlength': 250}),\n    )\n    class Meta:\n        model = UpcomingEvents\n        fields = ['theme', 'description', 'date', \"time\", \"location\", \"image\"]\nclass ConcludedEventsForm(forms.ModelForm):\n    class Meta:\n        model = ConcludedEvents",
+        "detail": "apps.events.forms",
+        "documentation": {}
+    },
+    {
+        "label": "ConcludedEventsForm",
+        "kind": 6,
+        "importPath": "apps.events.forms",
+        "description": "apps.events.forms",
+        "peekOfCode": "class ConcludedEventsForm(forms.ModelForm):\n    class Meta:\n        model = ConcludedEvents\n        fields = ('content',)\n        widgets = {\n            'content': SummernoteWidget(),\n        }\nclass EventRegistrationForm(forms.ModelForm):\n    class Meta:\n        model = EventRegistration",
+        "detail": "apps.events.forms",
+        "documentation": {}
+    },
+    {
+        "label": "EventRegistrationForm",
+        "kind": 6,
+        "importPath": "apps.events.forms",
+        "description": "apps.events.forms",
+        "peekOfCode": "class EventRegistrationForm(forms.ModelForm):\n    class Meta:\n        model = EventRegistration\n        fields = ['registrant_email', 'registrant_name',\n              'registrant_phone_number', 'additional_message']",
+        "detail": "apps.events.forms",
+        "documentation": {}
+    },
+    {
+        "label": "EventRegistrationManager",
+        "kind": 6,
+        "importPath": "apps.events.managers",
+        "description": "apps.events.managers",
+        "peekOfCode": "class EventRegistrationManager(models.Manager):\n    def create_registrant(self, **kwargs):\n        event_id = kwargs.pop('event_id')\n        registrant_name = kwargs.pop('registrant_name')\n        registrant_email = kwargs.pop('registrant_email')\n        registrant_phone_number = kwargs.pop('registrant_phone_number')\n        additional_message = kwargs.pop('additional_message')\n        if not registrant_email:\n            raise ValidationError('Email is required')\n        if not registrant_name:",
+        "detail": "apps.events.managers",
+        "documentation": {}
+    },
+    {
+        "label": "UpcomingEvents",
+        "kind": 6,
+        "importPath": "apps.events.models",
+        "description": "apps.events.models",
+        "peekOfCode": "class UpcomingEvents(models.Model):\n    theme = models.CharField(max_length=200)\n    description = models.TextField()\n    time = models.TimeField()\n    date = models.DateField()\n    location = models.CharField(max_length=200)\n    image = CloudinaryField()\n    createdAt = models.DateTimeField(auto_now_add=True)\n    updatedAt = models.DateTimeField(auto_now=True)\n    slug = models.SlugField(",
+        "detail": "apps.events.models",
+        "documentation": {}
+    },
+    {
+        "label": "ConcludedEvents",
+        "kind": 6,
+        "importPath": "apps.events.models",
+        "description": "apps.events.models",
+        "peekOfCode": "class ConcludedEvents(models.Model):\n    event = models.OneToOneField(UpcomingEvents, on_delete=models.CASCADE)\n    content = models.TextField(blank=False, null=False)\n    created_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now=True)\n    slug = models.SlugField()\n    class Meta:\n        verbose_name = \"Concluded event\"\n        verbose_name_plural = \"Concluded events\"\n    def __str__(self):",
+        "detail": "apps.events.models",
+        "documentation": {}
+    },
+    {
+        "label": "EventRegistration",
+        "kind": 6,
+        "importPath": "apps.events.models",
+        "description": "apps.events.models",
+        "peekOfCode": "class EventRegistration(models.Model):\n    event = models.ForeignKey(\n        UpcomingEvents, related_name='events', on_delete=models.SET_NULL, null=True)\n    registrant_name = models.CharField(blank=False, max_length=250)\n    registrant_email = models.EmailField(blank=False, max_length=250)\n    registrant_phone_number = models.CharField(blank=False, max_length=25)\n    additional_message = models.TextField(\n        blank=True, null=True, max_length=250)\n    registered_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now=True)",
+        "detail": "apps.events.models",
+        "documentation": {}
+    },
+    {
+        "label": "SummernoteAttachment",
+        "kind": 6,
+        "importPath": "apps.events.models",
+        "description": "apps.events.models",
+        "peekOfCode": "class SummernoteAttachment(AbstractAttachment):\n    file = CloudinaryField('image')",
+        "detail": "apps.events.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "apps.events.urls",
+        "description": "apps.events.urls",
+        "peekOfCode": "urlpatterns = [\n   path('', views.EventsView.as_view(), name='events'),\n   path('<slug:slug>/', views.EventsView.as_view(), name='events'),\n   path('json/<slug:slug>/', views.event_detail_json, name='event-detail-json'),\n   path('<int:event_id>/register/', views.register_for_event, name='event_registration'),\n]",
+        "detail": "apps.events.urls",
+        "documentation": {}
+    },
+    {
+        "label": "validate_date",
+        "kind": 2,
+        "importPath": "apps.events.validators",
+        "description": "apps.events.validators",
+        "peekOfCode": "def validate_date(value):\n    if value <= timezone.now().date():\n        raise ValidationError('Date must be greater than the current date')",
+        "detail": "apps.events.validators",
+        "documentation": {}
+    },
+    {
+        "label": "EventsView",
+        "kind": 6,
+        "importPath": "apps.events.views",
+        "description": "apps.events.views",
+        "peekOfCode": "class EventsView(ListView):\n    model = UpcomingEvents\n    template_name = \"events/events.html\"\n    context_object_name = \"upcoming_events\"\n    def get_queryset(self):\n        today = date.today()\n        current_time = datetime.now()\n        formatted_time = current_time.strftime(\"%H:%M:%S\")\n        # return self.model.objects.filter(\n        #     Q(date__gt=today) | (Q(date=today) & Q(time__gt=formatted_time))",
+        "detail": "apps.events.views",
+        "documentation": {}
+    },
+    {
+        "label": "event_detail_json",
+        "kind": 2,
+        "importPath": "apps.events.views",
+        "description": "apps.events.views",
+        "peekOfCode": "def event_detail_json(request, slug):\n    print('Slug', slug)\n    event = get_object_or_404(UpcomingEvents, slug=slug)\n    data = {\n        'id': event.id,\n        'theme': event.theme,\n        'description': event.description,\n        \"location\": event.location,\n        \"time\": event.time,\n        \"date\": event.date,",
+        "detail": "apps.events.views",
+        "documentation": {}
+    },
+    {
+        "label": "register_for_event",
+        "kind": 2,
+        "importPath": "apps.events.views",
+        "description": "apps.events.views",
+        "peekOfCode": "def register_for_event(request, event_id):\n    body = json.loads(request.body.decode('utf-8'))\n    event = UpcomingEvents.objects.get(id=event_id)\n    if not event:\n        return JsonResponse({'success': False, 'message': 'Event not found'}, status=404)\n    if request.method == 'POST':\n        try:\n            registrant = EventRegistration.objects.create_registrant(**body)\n            return JsonResponse({\n                'success': True,",
+        "detail": "apps.events.views",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "apps.heartsandhands.templates.heartsandhands.urls",
+        "description": "apps.heartsandhands.templates.heartsandhands.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.HomeView.as_view(), name='home'),\n]",
+        "detail": "apps.heartsandhands.templates.heartsandhands.urls",
+        "documentation": {}
+    },
+    {
+        "label": "HeartsandhandsConfig",
+        "kind": 6,
+        "importPath": "apps.heartsandhands.apps",
+        "description": "apps.heartsandhands.apps",
+        "peekOfCode": "class HeartsandhandsConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'heartsandhands'",
+        "detail": "apps.heartsandhands.apps",
+        "documentation": {}
+    },
+    {
+        "label": "ContactUsForm",
+        "kind": 6,
+        "importPath": "apps.heartsandhands.forms",
+        "description": "apps.heartsandhands.forms",
+        "peekOfCode": "class ContactUsForm(forms.Form):\n    name = forms.CharField(max_length=100)\n    email = forms.EmailField()\n    phone_number = forms.CharField(max_length=13, required=False)\n    message = forms.CharField(widget=forms.Textarea)\n    # def clean_phone_number(self):\n    #     phone_number = self.cleaned_data['phone_number']\n    #     # Add any custom phone number validation here if needed\n    #     return phone_number",
+        "detail": "apps.heartsandhands.forms",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "apps.heartsandhands.urls",
+        "description": "apps.heartsandhands.urls",
+        "peekOfCode": "urlpatterns = [\n   path('', views.HomeView.as_view(), name='home'),\n   path('contact/', views.ContactUsView.as_view(), name='contact_us'),\n   path('about-us/', views.AboutUsView.as_view(), name='about_us'),\n   path('donate/', views.DonateView.as_view(), name='donate'),\n   path('donation-successful/', views.DonationSuccessFul.as_view(), name='donation-successful'),\n   path(\"verify-paystack-payment/\", views.verify_paystack_success, name=\"verify-paystack-payment\")\n]",
+        "detail": "apps.heartsandhands.urls",
+        "documentation": {}
+    },
+    {
+        "label": "HomeView",
+        "kind": 6,
+        "importPath": "apps.heartsandhands.views",
+        "description": "apps.heartsandhands.views",
+        "peekOfCode": "class HomeView(TemplateView):\n    template_name = 'heartsandhands/home.html'\n    def post(self, request, *args, **kwargs):\n        body = json.loads(request.body.decode('utf-8'))\n        try:\n            contact_utils.send_message(self, body)\n            print(\"success\")\n            return JsonResponse(contact_utils.successResponse)\n        except Exception as e:\n            print('error:', e)",
+        "detail": "apps.heartsandhands.views",
+        "documentation": {}
+    },
+    {
+        "label": "ContactUsView",
+        "kind": 6,
+        "importPath": "apps.heartsandhands.views",
+        "description": "apps.heartsandhands.views",
+        "peekOfCode": "class ContactUsView(TemplateView):\n    template_name = \"heartsandhands/contact_us.html\"\n    def post(self, request, *args, **kwargs):\n        body = json.loads(request.body.decode('utf-8'))\n        try:\n            contact_utils.send_message(self, body)\n            print(\"success\")\n            return JsonResponse(contact_utils.successResponse(body))\n        except Exception as e:\n            print('error:', e)",
+        "detail": "apps.heartsandhands.views",
+        "documentation": {}
+    },
+    {
+        "label": "AboutUsView",
+        "kind": 6,
+        "importPath": "apps.heartsandhands.views",
+        "description": "apps.heartsandhands.views",
+        "peekOfCode": "class AboutUsView(TemplateView):\n    template_name = \"heartsandhands/about_us.html\"\n    def get_context_data(self, **kwargs):\n        context = super().get_context_data(**kwargs)\n        context['bg_color'] = '#FFFFFF'\n        return context\nclass DonateView(TemplateView):\n    template_name = \"heartsandhands/donate.html\"\n    def post(self, request, *args, **kwargs):\n        stripe.api_key = settings.STRIPE_SECRET_KEY",
+        "detail": "apps.heartsandhands.views",
+        "documentation": {}
+    },
+    {
+        "label": "DonateView",
+        "kind": 6,
+        "importPath": "apps.heartsandhands.views",
+        "description": "apps.heartsandhands.views",
+        "peekOfCode": "class DonateView(TemplateView):\n    template_name = \"heartsandhands/donate.html\"\n    def post(self, request, *args, **kwargs):\n        stripe.api_key = settings.STRIPE_SECRET_KEY\n        DOMAIN = settings.DOMAIN\n        if request.POST.get(\"amount\") == \"\" or request.POST.get(\"amount\") == None:\n            return HttpResponseBadRequest(\"amount cannot be empty\")\n        amount = int(request.POST.get('amount'))\n        payment_gateway = request.POST.get('payment_gateway')\n        if payment_gateway == 'stripe':",
+        "detail": "apps.heartsandhands.views",
+        "documentation": {}
+    },
+    {
+        "label": "DonationSuccessFul",
+        "kind": 6,
+        "importPath": "apps.heartsandhands.views",
+        "description": "apps.heartsandhands.views",
+        "peekOfCode": "class DonationSuccessFul(TemplateView):\n    template_name = \"heartsandhands/donation_success.html\"\n    def get_context_data(self, **kwargs):\n        stripe.api_key = settings.STRIPE_SECRET_KEY\n        context = super().get_context_data(**kwargs)\n        session_id = self.request.GET.get('session_id')\n        if session_id:\n            session = stripe.checkout.Session.retrieve(session_id)\n            # customer = stripe.Customer.retrieve(session)\n            customer = session.customer_details",
+        "detail": "apps.heartsandhands.views",
+        "documentation": {}
+    },
+    {
+        "label": "verify_paystack_success",
+        "kind": 2,
+        "importPath": "apps.heartsandhands.views",
+        "description": "apps.heartsandhands.views",
+        "peekOfCode": "def verify_paystack_success(request):\n    if request.method == 'POST':\n        print(\"POST data:\", request.POST)\n        try:\n            data = json.loads(request.body.decode('utf-8'))\n            reference = data.get('reference')\n            print('Reference: ', reference)\n            verification_url = f\"https://api.paystack.co/transaction/verify/{reference}\"\n            response = requests.get(verification_url, headers={\n                \"Authorization\": f\"Bearer {settings.PAYSTACK_SECRET_KEY}\"",
+        "detail": "apps.heartsandhands.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.users.migrations.0001_initial",
+        "description": "apps.users.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='CustomUser',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "apps.users.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.users.migrations.0002_auto_20240430_1325",
+        "description": "apps.users.migrations.0002_auto_20240430_1325",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('users', '0001_initial'),\n    ]\n    operations = [\n    ]",
+        "detail": "apps.users.migrations.0002_auto_20240430_1325",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUserAdmin",
+        "kind": 6,
+        "importPath": "apps.users.admin",
+        "description": "apps.users.admin",
+        "peekOfCode": "class CustomUserAdmin(UserAdmin):\n    model = User\n    list_display = [\n        'email', \"first_name\", 'last_name', 'is_staff',\n    ]\n    fieldsets = [\n        (\"Basic User Details\", {\n            \"fields\": ['email', 'first_name', 'last_name', \"phone_number\", 'password',]\n        }),\n        (",
+        "detail": "apps.users.admin",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 5,
+        "importPath": "apps.users.admin",
+        "description": "apps.users.admin",
+        "peekOfCode": "User = get_user_model()\n@admin.register(User)\nclass CustomUserAdmin(UserAdmin):\n    model = User\n    list_display = [\n        'email', \"first_name\", 'last_name', 'is_staff',\n    ]\n    fieldsets = [\n        (\"Basic User Details\", {\n            \"fields\": ['email', 'first_name', 'last_name', \"phone_number\", 'password',]",
+        "detail": "apps.users.admin",
+        "documentation": {}
+    },
+    {
+        "label": "UsersConfig",
+        "kind": 6,
+        "importPath": "apps.users.apps",
+        "description": "apps.users.apps",
+        "peekOfCode": "class UsersConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'users'",
+        "detail": "apps.users.apps",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUserManager",
+        "kind": 6,
+        "importPath": "apps.users.managers",
+        "description": "apps.users.managers",
+        "peekOfCode": "class CustomUserManager(BaseUserManager):\n    def create_user(\n        self,\n        email,\n        first_name, \n        last_name, \n        phone_number,\n        password,\n        **extra_fields\n    ):",
+        "detail": "apps.users.managers",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUser",
+        "kind": 6,
+        "importPath": "apps.users.models",
+        "description": "apps.users.models",
+        "peekOfCode": "class CustomUser(AbstractBaseUser, PermissionsMixin):\n    username = None\n    email = models.EmailField(_(\"email address\"), unique=True)\n    first_name = models.CharField(max_length=150, validators=[ validate_field_has_no_whitesapce ])\n    last_name = models.CharField(max_length=150,  validators=[ validate_field_has_no_whitesapce ])\n    phone_number = models.CharField(max_length=11, validators=[ validate_field_has_no_whitesapce ])\n    date_joined = models.DateTimeField(default=timezone.now)\n    is_staff = models.BooleanField(default=False)\n    is_superuser = models.BooleanField(default=False)\n    is_active = models.BooleanField(default=True)",
+        "detail": "apps.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "validate_field_has_no_whitesapce",
+        "kind": 2,
+        "importPath": "apps.users.models",
+        "description": "apps.users.models",
+        "peekOfCode": "def validate_field_has_no_whitesapce(value):\n    \"\"\"\n    Check if model fields have whitespaces\"\"\"\n    if value.find(' ') != -1:\n    # t = value.split()\n    # if len(t) > 1:\n        raise ValidationError(\n            _(\"This field cannot contain spaces\")\n        )\nclass CustomUser(AbstractBaseUser, PermissionsMixin):",
+        "detail": "apps.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "BASE_DIR = os.path.dirname(os.path.dirname(\n    os.path.dirname(os.path.abspath(__file__))))\nsys.path.insert(0, os.path.join(BASE_DIR, 'apps'))\n# Build paths inside the project like this: BASE_DIR / 'subdir'.\nBASE_DIR = Path(__file__).resolve().parent.parent.parent\nENVIRONMENT = config('ENVIRONMENT')\nif ENVIRONMENT == 'prod':\n    from .prod import *\nelse:\n    from .dev import *",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent.parent\nENVIRONMENT = config('ENVIRONMENT')\nif ENVIRONMENT == 'prod':\n    from .prod import *\nelse:\n    from .dev import *\n# Application definition\nINSTALLED_APPS = [\n    # Local apps\n    \"users.apps.UsersConfig\",",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "ENVIRONMENT",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "ENVIRONMENT = config('ENVIRONMENT')\nif ENVIRONMENT == 'prod':\n    from .prod import *\nelse:\n    from .dev import *\n# Application definition\nINSTALLED_APPS = [\n    # Local apps\n    \"users.apps.UsersConfig\",\n    \"heartsandhands.apps.HeartsandhandsConfig\",",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "INSTALLED_APPS = [\n    # Local apps\n    \"users.apps.UsersConfig\",\n    \"heartsandhands.apps.HeartsandhandsConfig\",\n    \"events.apps.EventsConfig\",\n    # Default apps\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'whitenoise.middleware.WhiteNoiseMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "ROOT_URLCONF = 'hearts_and_hands.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "WSGI_APPLICATION = 'hearts_and_hands.wsgi.application'\n# Password validation\n# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))\nSTATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))\nSTATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))\nSTATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media/')",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))\nSTATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media/')\n# Default primary key field type",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))\nSTATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media/')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.CustomUser'",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))\nSTATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media/')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.CustomUser'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media/')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.CustomUser'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = config('EMAIL_HOST')",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_STORAGE",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media/')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.CustomUser'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = config('EMAIL_HOST')\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media/')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.CustomUser'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = config('EMAIL_HOST')\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.CustomUser'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = config('EMAIL_HOST')\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = config('EMAIL_PORT')",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.CustomUser'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = config('EMAIL_HOST')\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = config('EMAIL_PORT')\nEMAIL_USE_TLS = True\nSTRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')\nPAYSTACK_SECRET_KEY = config(\"PAYSTACK_SECRET_KEY\")",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_USER_MODEL",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "AUTH_USER_MODEL = 'users.CustomUser'\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = config('EMAIL_HOST')\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = config('EMAIL_PORT')\nEMAIL_USE_TLS = True\nSTRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')\nPAYSTACK_SECRET_KEY = config(\"PAYSTACK_SECRET_KEY\")\nSUMMERNOTE_CONFIG = {",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = config('EMAIL_HOST')\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = config('EMAIL_PORT')\nEMAIL_USE_TLS = True\nSTRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')\nPAYSTACK_SECRET_KEY = config(\"PAYSTACK_SECRET_KEY\")\nSUMMERNOTE_CONFIG = {\n    'iframe': True,",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "EMAIL_HOST = config('EMAIL_HOST')\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = config('EMAIL_PORT')\nEMAIL_USE_TLS = True\nSTRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')\nPAYSTACK_SECRET_KEY = config(\"PAYSTACK_SECRET_KEY\")\nSUMMERNOTE_CONFIG = {\n    'iframe': True,\n     'toolbar': [",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "EMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = config('EMAIL_PORT')\nEMAIL_USE_TLS = True\nSTRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')\nPAYSTACK_SECRET_KEY = config(\"PAYSTACK_SECRET_KEY\")\nSUMMERNOTE_CONFIG = {\n    'iframe': True,\n     'toolbar': [\n        ['style', ['style']],",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASSWORD",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = config('EMAIL_PORT')\nEMAIL_USE_TLS = True\nSTRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')\nPAYSTACK_SECRET_KEY = config(\"PAYSTACK_SECRET_KEY\")\nSUMMERNOTE_CONFIG = {\n    'iframe': True,\n     'toolbar': [\n        ['style', ['style']],\n        ['font', ['bold', 'italic', 'underline', 'clear']],",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "EMAIL_PORT = config('EMAIL_PORT')\nEMAIL_USE_TLS = True\nSTRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')\nPAYSTACK_SECRET_KEY = config(\"PAYSTACK_SECRET_KEY\")\nSUMMERNOTE_CONFIG = {\n    'iframe': True,\n     'toolbar': [\n        ['style', ['style']],\n        ['font', ['bold', 'italic', 'underline', 'clear']],\n        ['fontname', ['fontname']],",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "EMAIL_USE_TLS = True\nSTRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')\nPAYSTACK_SECRET_KEY = config(\"PAYSTACK_SECRET_KEY\")\nSUMMERNOTE_CONFIG = {\n    'iframe': True,\n     'toolbar': [\n        ['style', ['style']],\n        ['font', ['bold', 'italic', 'underline', 'clear']],\n        ['fontname', ['fontname']],\n        ['color', ['color']],",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "STRIPE_SECRET_KEY",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')\nPAYSTACK_SECRET_KEY = config(\"PAYSTACK_SECRET_KEY\")\nSUMMERNOTE_CONFIG = {\n    'iframe': True,\n     'toolbar': [\n        ['style', ['style']],\n        ['font', ['bold', 'italic', 'underline', 'clear']],\n        ['fontname', ['fontname']],\n        ['color', ['color']],\n        ['para', ['ul', 'ol', 'paragraph']],",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "PAYSTACK_SECRET_KEY",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "PAYSTACK_SECRET_KEY = config(\"PAYSTACK_SECRET_KEY\")\nSUMMERNOTE_CONFIG = {\n    'iframe': True,\n     'toolbar': [\n        ['style', ['style']],\n        ['font', ['bold', 'italic', 'underline', 'clear']],\n        ['fontname', ['fontname']],\n        ['color', ['color']],\n        ['para', ['ul', 'ol', 'paragraph']],\n        ['table', ['table']],",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "SUMMERNOTE_CONFIG",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "SUMMERNOTE_CONFIG = {\n    'iframe': True,\n     'toolbar': [\n        ['style', ['style']],\n        ['font', ['bold', 'italic', 'underline', 'clear']],\n        ['fontname', ['fontname']],\n        ['color', ['color']],\n        ['para', ['ul', 'ol', 'paragraph']],\n        ['table', ['table']],\n        ['insert', ['link', 'picture', 'video']],",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_FILE_STORAGE",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'\nCLOUDINARY_STORAGE = {\n    'CLOUD_NAME': config(\"CLOUDINARY_CLOUD_NAME\"),\n    'API_KEY': config(\"CLOUDINARY_API_KEY\"),\n    'API_SECRET': config(\"CLOUDINARY_API_SECRET\")\n}",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "CLOUDINARY_STORAGE",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.base",
+        "description": "hearts_and_hands.settings.base",
+        "peekOfCode": "CLOUDINARY_STORAGE = {\n    'CLOUD_NAME': config(\"CLOUDINARY_CLOUD_NAME\"),\n    'API_KEY': config(\"CLOUDINARY_API_KEY\"),\n    'API_SECRET': config(\"CLOUDINARY_API_SECRET\")\n}",
+        "detail": "hearts_and_hands.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.dev",
+        "description": "hearts_and_hands.settings.dev",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"127.0.0.1\", \"localhost\", '8000']\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db/dev.sqlite3',\n    }\n}\nDOMAIN = \"http://127.0.0.1:8000\"\nSECRET_KEY = 'django-insecure-%j6(p4+my8+$9akwa-%_n$o$q6zg&akgxl03#rucde!*-i-$-c'",
+        "detail": "hearts_and_hands.settings.dev",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.dev",
+        "description": "hearts_and_hands.settings.dev",
+        "peekOfCode": "ALLOWED_HOSTS = [\"127.0.0.1\", \"localhost\", '8000']\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db/dev.sqlite3',\n    }\n}\nDOMAIN = \"http://127.0.0.1:8000\"\nSECRET_KEY = 'django-insecure-%j6(p4+my8+$9akwa-%_n$o$q6zg&akgxl03#rucde!*-i-$-c'",
+        "detail": "hearts_and_hands.settings.dev",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.dev",
+        "description": "hearts_and_hands.settings.dev",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db/dev.sqlite3',\n    }\n}\nDOMAIN = \"http://127.0.0.1:8000\"\nSECRET_KEY = 'django-insecure-%j6(p4+my8+$9akwa-%_n$o$q6zg&akgxl03#rucde!*-i-$-c'",
+        "detail": "hearts_and_hands.settings.dev",
+        "documentation": {}
+    },
+    {
+        "label": "DOMAIN",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.dev",
+        "description": "hearts_and_hands.settings.dev",
+        "peekOfCode": "DOMAIN = \"http://127.0.0.1:8000\"\nSECRET_KEY = 'django-insecure-%j6(p4+my8+$9akwa-%_n$o$q6zg&akgxl03#rucde!*-i-$-c'",
+        "detail": "hearts_and_hands.settings.dev",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.dev",
+        "description": "hearts_and_hands.settings.dev",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-%j6(p4+my8+$9akwa-%_n$o$q6zg&akgxl03#rucde!*-i-$-c'",
+        "detail": "hearts_and_hands.settings.dev",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.prod",
+        "description": "hearts_and_hands.settings.prod",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = [\"3hf.ngo\", \"www.3hf.ngo\",]\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db/prod.sqlite3',\n    }\n}\nDOMAIN = config(\"DOMAIN\")\nSECRET_KEY = config(\"SECRET_KEY\")",
+        "detail": "hearts_and_hands.settings.prod",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.prod",
+        "description": "hearts_and_hands.settings.prod",
+        "peekOfCode": "ALLOWED_HOSTS = [\"3hf.ngo\", \"www.3hf.ngo\",]\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db/prod.sqlite3',\n    }\n}\nDOMAIN = config(\"DOMAIN\")\nSECRET_KEY = config(\"SECRET_KEY\")",
+        "detail": "hearts_and_hands.settings.prod",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.prod",
+        "description": "hearts_and_hands.settings.prod",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db/prod.sqlite3',\n    }\n}\nDOMAIN = config(\"DOMAIN\")\nSECRET_KEY = config(\"SECRET_KEY\")",
+        "detail": "hearts_and_hands.settings.prod",
+        "documentation": {}
+    },
+    {
+        "label": "DOMAIN",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.prod",
+        "description": "hearts_and_hands.settings.prod",
+        "peekOfCode": "DOMAIN = config(\"DOMAIN\")\nSECRET_KEY = config(\"SECRET_KEY\")",
+        "detail": "hearts_and_hands.settings.prod",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "hearts_and_hands.settings.prod",
+        "description": "hearts_and_hands.settings.prod",
+        "peekOfCode": "SECRET_KEY = config(\"SECRET_KEY\")",
+        "detail": "hearts_and_hands.settings.prod",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "hearts_and_hands.asgi",
+        "description": "hearts_and_hands.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "hearts_and_hands.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "hearts_and_hands.urls",
+        "description": "hearts_and_hands.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('heartsandhands.urls')),\n    path('events/', include(\"events.urls\")),\n    path('summernote/', include('django_summernote.urls'))\n]\nif settings.DEBUG: \n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nadmin.site.site_title = '3hf Admin'\nadmin.site.site_header = 'Hearts and Hands Humanitarian Foundation'",
+        "detail": "hearts_and_hands.urls",
+        "documentation": {}
+    },
+    {
+        "label": "admin.site.site_title",
+        "kind": 5,
+        "importPath": "hearts_and_hands.urls",
+        "description": "hearts_and_hands.urls",
+        "peekOfCode": "admin.site.site_title = '3hf Admin'\nadmin.site.site_header = 'Hearts and Hands Humanitarian Foundation'",
+        "detail": "hearts_and_hands.urls",
+        "documentation": {}
+    },
+    {
+        "label": "admin.site.site_header",
+        "kind": 5,
+        "importPath": "hearts_and_hands.urls",
+        "description": "hearts_and_hands.urls",
+        "peekOfCode": "admin.site.site_header = 'Hearts and Hands Humanitarian Foundation'",
+        "detail": "hearts_and_hands.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "hearts_and_hands.wsgi",
+        "description": "hearts_and_hands.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "hearts_and_hands.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "successResponse",
+        "kind": 2,
+        "importPath": "utils.contact_utils",
+        "description": "utils.contact_utils",
+        "peekOfCode": "def successResponse(body):\n    return {\n        'message':\n        f\"Hi, {body['name'].title()}, thank you for reaching out to us. We'll be in touch shortly.\",\n        \"success\": True\n    }\ndef send_message(self, body):\n    name = body[\"name\"]\n    email = body['email']\n    phone_number = body['phoneNumber']",
+        "detail": "utils.contact_utils",
+        "documentation": {}
+    },
+    {
+        "label": "send_message",
+        "kind": 2,
+        "importPath": "utils.contact_utils",
+        "description": "utils.contact_utils",
+        "peekOfCode": "def send_message(self, body):\n    name = body[\"name\"]\n    email = body['email']\n    phone_number = body['phoneNumber']\n    message = body['message']\n    print('contactMessageData: ', body)\n    send_contact_message(\n        name, email, phone_number, message)",
+        "detail": "utils.contact_utils",
+        "documentation": {}
+    },
+    {
+        "label": "send_contact_message",
+        "kind": 2,
+        "importPath": "utils.email_utils",
+        "description": "utils.email_utils",
+        "peekOfCode": "def send_contact_message(name, email, phone_number, message):\n    subject = 'Contact message from 3hf'\n    message_body = f\"Name: {name}\\nEmail: {email}\\nPhone Number: {phone_number}\\n\\nMessage: {message}\"\n    from_email = settings.EMAIL_HOST_USER\n    recipient_list = [settings.EMAIL_HOST_USER]\n    reply_to = [email,]\n    email_message = EmailMessage(\n        subject=subject,\n        body=message_body,\n        from_email=from_email,",
+        "detail": "utils.email_utils",
+        "documentation": {}
+    },
+    {
+        "label": "create_stripe_checkout_session",
+        "kind": 2,
+        "importPath": "utils.payment_utils",
+        "description": "utils.payment_utils",
+        "peekOfCode": "def create_stripe_checkout_session(amount, domain):\n    stripe.api_key = settings.STRIPE_SECRET_KEY\n    try:\n        checkout_session = stripe.checkout.Session.create(\n            line_items=[\n                {\n                    'price_data': {\n                        'currency': 'usd',\n                        'unit_amount': amount * 100,\n                        'product_data': {",
+        "detail": "utils.payment_utils",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hearts_and_hands.settings.base')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]
