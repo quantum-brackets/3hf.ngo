@@ -1,7 +1,9 @@
 $(document).ready(function () {
   let eventId;
 
-  // Fetch and display event details
+  /** Fetch event details from the server 
+   * and populate the event details section 
+  */
   function fetchEventDetails(eventSlug) {
     $.ajax({
       url: `/events/json/${eventSlug}/`,
@@ -39,6 +41,7 @@ $(document).ready(function () {
     });
   }
 
+  // Check if the current url path is an event detail slug and fetch event details
   if (window.location.pathname.split("/").length > 2) {
     // Extract event slug from path (handling trailing slash)
     var pathSegments = window.location.pathname.split("/");
@@ -86,13 +89,13 @@ $(document).ready(function () {
     "click",
     "[data-modal-target='event-registration-form']",
     function () {
-      // Set the value of the hidden event_id field, in the event registration
-      // form to the event ID for event registration
+      // Set the event id in the registration form for submission
       $("#event-id-input").val(eventId);
     }
   );
 });
 
+/** Scroll to the event details section */
 function scrollToEventDetail() {
   var eventDetailsOffset = $("#event-details").offset().top;
   $("html, body").animate(
@@ -113,12 +116,16 @@ function formatTitle(pageTitle) {
     .join(" ");
 }
 
+
 function formatDate(dateString) {
   const date = new Date(dateString);
   const options = { month: "long", day: "numeric", year: "numeric" };
   return date.toLocaleDateString("en-US", options);
 }
 
+/** Handle the event location map link
+ * by setting the href attribute to Google Maps with the event address 
+ */
 function handleLocationMap() {
   const address = document.getElementById("event-location").innerHTML;
   const mapLink = document.getElementById("map-link");
@@ -126,10 +133,8 @@ function handleLocationMap() {
   mapLink.href = `https://www.google.com/maps?q=${encodeURIComponent(address)}`;
 }
 
+/** Toggle the display of event actions based on event date */
 function toggleEventActions(data) {
-  /*Display the add to calendar and event registration buttons
-  if event is in the past
-  */
   const addToCalendarSection = $("#add-to-calendar");
   const eventRegButton = $("#show-event-reg-form");
 

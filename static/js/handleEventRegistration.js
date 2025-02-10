@@ -4,6 +4,7 @@ $(document).ready(function () {
   $("#event-register-form").on("submit", function (event) {
     event.preventDefault();
 
+    // Get the event id from the form
     const event_id = $("#event-id-input").val();
 
     const formData = {
@@ -16,8 +17,7 @@ $(document).ready(function () {
 
     var form = $(this);
     const submitButton = $("#event-registration-button");
-    submitButton.addClass("disabled");
-    submitButton.text("Registering...");
+    setSubmitButtonState(submitButton, false);
 
     const url = `${window.location.origin}/events/${event_id}/register/`;
     $.ajax({
@@ -28,16 +28,16 @@ $(document).ready(function () {
       success: function (response) {
         if (response.success) {
           showResponseModal("Registration successful!", response);
-          removeDisabled(submitButton);
+          setSubmitButtonState(submitButton, true);
           form[0].reset();
         } else {
           showResponseModal("Oops!", response);
-          removeDisabled(submitButton);
+          setSubmitButtonState(submitButton, true);
         }
       },
       error: function (xhr, errmsg, err) {
         showResponseModal("Server error ");
-        removeDisabled(submitButton);
+        setSubmitButtonState(submitButton, true);
       },
     });
   });
@@ -57,6 +57,11 @@ function showResponseModal(headerResponse, data = undefined) {
   modalToggle.click();
 }
 
+/**
+ * Get the CSRF token value from the cookie
+ * @param {string} name - The name of the CSRF token cookie
+ * @returns {string} The CSRF token value
+ */
 function getCookie(name) {
   var cookieValue = null;
   if (document.cookie && document.cookie !== "") {
@@ -74,7 +79,18 @@ function getCookie(name) {
   return cookieValue;
 }
 
-function removeDisabled(submitButton) {
-  submitButton.removeClass("disabled");
-  submitButton.text("Register");
+
+/**
+ * Set the state of the submit button
+ * @param {object} submitButton - The submit button element
+ * @param {boolean} isDisabled - true to enable the button, false to disable
+ */
+function setSubmitButtonState(submitButton, isEnabled) {
+  if (isEnabled) {
+    submitButton.removeClass("disabled");
+    submitButton.text("Register");
+  } else {
+    submitButton.addClass("disabled");
+    submitButton.text("Registering...");
+  }
 }
