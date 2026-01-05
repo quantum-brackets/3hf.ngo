@@ -5,7 +5,7 @@ test_forms.py
 *.pyc
 __pycache__/
 local_settings.py
-db.sqlite3
+/db.sqlite3
 db.sqlite3-journal
 db/prod.sqlite3
 
