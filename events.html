@@ -527,9 +527,12 @@
     <script type="text/javascript" src="./events_files/atc.min.js" async="" defer=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
     <script>
-        function generateEventCardHTML(/** @type {{theme: string}} */ event) {
+
+        function generateEventCardHTML(/** @type {{content: string; date: string, image: string, theme: string, social_url: string}} */ event) {
+            const [social_url] = event.content.match(/https:\/\/www\.instagram\.com\/p\/[a-zA-Z0-9_-]+\//) || [];
+            console.log(event.slug, event.social_url, social_url);
             return `
-                <div id="show-event-detail"
+                <a href=${event.social_url || social_url || 'https://www.instagram.com/heartsandhandshf/'}><div id="show-event-detail"
                     class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
                     data-event-slug="child-rights-and-safeguarding-vol-2-2025-11-20">
                     <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
@@ -543,7 +546,7 @@
             })}</p>
                         <p class="text-text-color text-justify">${event.description}</p>
                     </div>
-                </div>`;
+                </div></a>`;
         }
 
         function addEventCardToPage(cardHTML) {
@@ -585,7 +588,7 @@
                     })
                         .sort((a, b) => b.date.localeCompare(a.date))
                         .forEach(rowData => {
-                            console.log("Row Data:", rowData);
+                            // console.log("Row Data:", rowData);
                             const eventCardHTML = generateEventCardHTML(rowData);
                             addEventCardToPage(eventCardHTML);
                         });
