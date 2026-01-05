@@ -101,8 +101,8 @@
 
 
                 <form method="post" class="space-y-[1.3rem]" id="contact-form" styl="border: 4px dashed blue;">
-                    <input type="hidden" name="csrfmiddlewaretoken"
-                        value="uhTRgGbyPAxJIXE0BTadtq7qRt5dFF2Pi5rIqqDkv1m6EWITXNm5iQxCHMe5WEQm">
+                    <!-- <input type="hidden" name="csrfmiddlewaretoken"
+                        value="uhTRgGbyPAxJIXE0BTadtq7qRt5dFF2Pi5rIqqDkv1m6EWITXNm5iQxCHMe5WEQm"> -->
 
                     <p class="hidden text-red-600 text-[1.4rem]" id="contact-form-error">Please enter the needed
                         field(s)</p>
@@ -183,7 +183,7 @@
                 </div>
 
 
-                <script src="./contact_files/handleContactForm.js"></script>
+                <!-- <script src="./contact_files/handleContactForm.js"></script> -->
             </div>
 
         </section>
@@ -218,7 +218,8 @@
                     <div class="space-y-[1rem] pl-[2.3rem]">
                         <p class="text-[#ACCDE8]">Come say hello at our office.</p>
                         <p class="text-white font-bold capitalize">No 6 Douglas Avenue, off atekong drive, state housing
-                            <span class="uppercase">gra</span>, Calabar, Nigeria.</p>
+                            <span class="uppercase">gra</span>, Calabar, Nigeria.
+                        </p>
                     </div>
                 </li>
 
@@ -292,7 +293,7 @@
         <section class="border-t-[2px] border-solid border-[#3083C6] pt-[1.8rem] font-inter">
             <p class="text-[#EAECF0]">
                 <script>document.write((new Date()).getFullYear())</script>
-                ©  Hearts &amp; Hands Humanitarian
+                © Hearts &amp; Hands Humanitarian
                 Foundation. <span class="block"> All rights reserved.</span>
             </p>
         </section>
@@ -305,7 +306,44 @@
     <script src="./contact_files/flowbite.min.js"></script>
     <script async="" src="./contact_files/f.txt" crossorigin="anonymous"></script>
 
+    <script>
+        function setButtonValue(btn, value) {
+            btn.innerHTML = value;
+            btn.value = value;
+            if (value) {
+                btn.setAttribute("value", value)
+            } else {
+                btn.removeAttribute("value")
+            }
+        }
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            const submitBtn = document.getElementById("contact-form-button");
 
+            try {
+                submitBtn.setAttribute("disabled", "true");
+                setButtonValue(submitBtn, "Sending Message...");
+                // Get form values
+                const name = document.getElementById('id_name').value;
+                const email = document.getElementById('id_email').value;
+                const phone = document.getElementById('id_phone_number').value;
+                const message = document.getElementById('id_message').value;
+
+                // Construct the mailto link
+                const mailtoLink = `mailto:info@3hf.ngo?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0APhone:%20${encodeURIComponent(phone)}%0AMessage:%20${encodeURIComponent(message)}`;
+
+                // Open the mailto link
+                window.location.href = mailtoLink;
+            } catch (e) {
+                setButtonValue(submitBtn, "Send Message Failure");
+            } finally {
+                setTimeout(() => {
+                    setButtonValue(submitBtn, "Send Message");
+                    submitBtn.removeAttribute("disabled");
+                }, 3000);
+            }
+        });
+    </script>
 
     <div id="quick-start-container"></div>
 </body>
