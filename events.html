@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)events.html -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="emotion-insertion-point" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./events_files/output.css">
+    <title> Heart and Hands Humanitarian Foundation - Events</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./events_files/css2" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="./events_files/logo.png">
+    <script src="./events_files/jquery.min.js"></script>
+    <style type="text/css" id="ate_css">
+        @import url("https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap");
+
+        .addeventatc {
+            display: inline-block;
+            position: relative;
+            z-index: 99998;
+            font-family: "Open Sans", Roboto, "Helvetica Neue", Helvetica, Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+            color: #000 !important;
+            font-weight: 600;
+            line-height: 100%;
+            background: #fff;
+            font-size: 15px;
+            text-decoration: none;
+            border: 1px solid transparent;
+            padding: 13px 12px 12px 43px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            cursor: pointer;
+            -webkit-font-smoothing: antialiased !important;
+            outline-color: rgba(0, 78, 255, 0.5);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0.5px rgba(50, 50, 93, .17), 0 2px 5px 0 rgba(50, 50, 93, .1), 0 1px 1.5px 0 rgba(0, 0, 0, .07), 0 1px 2px 0 rgba(0, 0, 0, .08), 0 0 0 0 transparent !important;
+            background-image: url(https://cdn.addevent.com/libs/imgs/icon-calendar-t5.png), url(https://cdn.addevent.com/libs/imgs/icon-calendar-t1.svg), url(https://cdn.addevent.com/libs/imgs/icon-apple-t5.svg), url(https://cdn.addevent.com/libs/imgs/icon-facebook-t5.svg), url(https://cdn.addevent.com/libs/imgs/icon-google-t5.svg), url(https://cdn.addevent.com/libs/imgs/icon-office365-t5.svg), url(https://cdn.addevent.com/libs/imgs/icon-outlook-t5.svg), url(https://cdn.addevent.com/libs/imgs/icon-outlookcom-t5.svg), url(https://cdn.addevent.com/libs/imgs/icon-yahoo-t5.svg);
+            background-position: -9999px -9999px;
+            background-repeat: no-repeat;
+        }
+
+        .addeventatc:hover {
+            background-color: #fafafa;
+            color: #000;
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        .addeventatc:active {
+            border-width: 2px 1px 0px 1px;
+        }
+
+        .addeventatc-selected {
+            background-color: #f9f9f9;
+        }
+
+        .addeventatc .addeventatc_icon {
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            z-index: 1;
+            left: 12px;
+            top: 10px;
+            background: url(https://cdn.addevent.com/libs/imgs/icon-calendar-t1.svg) no-repeat;
+            background-size: 18px 18px;
+        }
+
+        .addeventatc .start,
+        .addeventatc .end,
+        .addeventatc .timezone,
+        .addeventatc .title,
+        .addeventatc .description,
+        .addeventatc .location,
+        .addeventatc .organizer,
+        .addeventatc .organizer_email,
+        .addeventatc .facebook_event,
+        .addeventatc .all_day_event,
+        .addeventatc .date_format,
+        .addeventatc .alarm_reminder,
+        .addeventatc .recurring,
+        .addeventatc .attendees,
+        .addeventatc .calname,
+        .addeventatc .uid,
+        .addeventatc .sequence,
+        .addeventatc .status,
+        .addeventatc .method,
+        .addeventatc .client,
+        .addeventatc .transp {
+            display: none !important;
+        }
+
+        .addeventatc br {
+            display: none;
+        }
+
+        .addeventatc_dropdown {
+            width: 230px;
+            position: absolute;
+            padding: 6px 0px 0px 0px;
+            font-family: "Open Sans", Roboto, "Helvetica Neue", Helvetica, Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+            color: #000 !important;
+            font-weight: 600;
+            line-height: 100%;
+            background: #fff;
+            font-size: 15px;
+            text-decoration: none;
+            text-align: left;
+            margin-left: -1px;
+            display: none;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 26px;
+            -moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 26px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 26px;
+            transform: scale(.98, .98) translateY(5px);
+            opacity: 0.5;
+            z-index: -1;
+            transition: transform .15s ease;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        .addeventatc_dropdown.topdown {
+            transform: scale(.98, .98) translateY(-5px) !important;
+        }
+
+        .addeventatc_dropdown span {
+            display: block;
+            line-height: 100%;
+            background: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 15px;
+            color: #333;
+            font-weight: 600;
+            padding: 14px 10px 14px 55px;
+            margin: -2px 0px;
+        }
+
+        .addeventatc_dropdown span:hover {
+            background-color: #f4f4f4;
+            color: #000;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .addeventatc_dropdown em {
+            color: #999 !important;
+            font-size: 12px !important;
+            font-weight: 400;
+        }
+
+        .addeventatc_dropdown .frs a {
+            background: #fff;
+            color: #cacaca !important;
+            cursor: pointer;
+            font-size: 9px !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            line-height: 110% !important;
+            padding-left: 10px;
+            position: absolute;
+            right: 10px;
+            text-align: right;
+            text-decoration: none;
+            top: 5px;
+            z-index: 101;
+        }
+
+        .addeventatc_dropdown .frs a:hover {
+            color: #999 !important;
+        }
+
+        .addeventatc_dropdown .ateappleical {
+            background: url(https://cdn.addevent.com/libs/imgs/icon-apple-t5.svg) 18px 40% no-repeat;
+            background-size: 22px 100%;
+        }
+
+        .addeventatc_dropdown .ategoogle {
+            background: url(https://cdn.addevent.com/libs/imgs/icon-google-t5.svg) 18px 50% no-repeat;
+            background-size: 22px 100%;
+        }
+
+        .addeventatc_dropdown .ateoffice365 {
+            background: url(https://cdn.addevent.com/libs/imgs/icon-office365-t5.svg) 19px 50% no-repeat;
+            background-size: 18px 100%;
+        }
+
+        .addeventatc_dropdown .ateoutlook {
+            background: url(https://cdn.addevent.com/libs/imgs/icon-outlook-t5.svg) 18px 50% no-repeat;
+            background-size: 22px 100%;
+        }
+
+        .addeventatc_dropdown .ateoutlookcom {
+            background: url(https://cdn.addevent.com/libs/imgs/icon-outlookcom-t5.svg) 18px 50% no-repeat;
+            background-size: 22px 100%;
+        }
+
+        .addeventatc_dropdown .ateyahoo {
+            background: url(https://cdn.addevent.com/libs/imgs/icon-yahoo-t5.svg) 18px 50% no-repeat;
+            background-size: 22px 100%;
+        }
+
+        .addeventatc_dropdown .atefacebook {
+            background: url(https://cdn.addevent.com/libs/imgs/icon-facebook-t5.svg) 18px 50% no-repeat;
+            background-size: 22px 100%;
+        }
+
+        .addeventatc_dropdown .copyx {
+            height: 21px;
+            display: block;
+            position: relative;
+            cursor: default;
+        }
+
+        .addeventatc_dropdown .brx {
+            height: 1px;
+            overflow: hidden;
+            background: #e8e8e8;
+            position: absolute;
+            z-index: 100;
+            left: 10px;
+            right: 10px;
+            top: 9px;
+        }
+
+        .addeventatc_dropdown.addeventatc-selected {
+            opacity: 1;
+            transform: scale(1, 1) translateY(0px);
+            z-index: 99999999;
+        }
+
+        .addeventatc_dropdown.topdown.addeventatc-selected {
+            transform: scale(1, 1) translateY(0px) !important;
+        }
+
+        .addeventatc_dropdown .drop_markup {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+
+<body class="box-border">
+    <header class="flex justify-between pt-[1rem] md:pt-0 font-inter" styl="border: 2px solid gray">
+        <div class="flex flex-col mdLg:flex-row mdLg:justify-between basis-[100%] p-[0.7rem] md:pl-[3rem]
+        mdLg:pl-[5rem] space-y[8rem]" styl="border: 3px dashed lawngreen;">
+
+            <div class="flex justify-between" styl="border: 3px solid black;">
+                <a href="/" class="flex w-max gap-[1rem] md:ml[2rem] xl:ml[6rem]  md:pt-[1rem]"
+                    styl="border: 3px solid #000000;">
+                    <img src="./events_files/logo.png" alt="3hf logo" class="h-[58px] w-[58px]">
+                    <div class="hidden mdLg:block capitalize font-delaGothic font-[400] text-[13px]">
+                        <span class="block">hearts &amp; hands </span>
+                        <span class="block">humanitarian </span>
+                        <span>foundation</span>
+                    </div>
+                </a>
+
+                <button data-collapse-toggle="navbar-list" type="button" class="inline-flex items-center mr-[0.7rem] md:mr-[2rem] mt-[0.7rem] md:mt-[1.7rem] p-2 w-10 h-10 justify-center text-sm text-gray-500
+        rounded-lg mdLg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    aria-controls="navbar-list" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden mdLg:flex mdLg:justify-between mdLg:basis-[74%] space-y-[-1.1rem] lg:space-y-[-0.6rem]"
+                id="navbar-list" styl="border: 4px solid chocolate;">
+                <ul class="mdLg:flex mdLg:justify-evenly lg:gap-[1.8rem] basis-[55%] py-6 capitalize text-[#2B2B2B] mdLg:text-[#6D6D6D] text-[18px]
+                leading-[3rem] font-[600] mdLg:font-[400]" styl="border: 4px dotted blueviolet;">
+                    <li class="">
+                        <a href="about-us.html" styl="border: 4px dotted blue;" class="">about us</a>
+                    </li>
+
+                    <li class="">
+                        <a href="events.html" styl="border: 4px dotted blue;" class="">events</a>
+                    </li>
+
+
+                    <li>
+                        <a href="donate.html" class="" styl="border: 4px dotted blue;">donations</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" class="" styl="border: 4px dotted blue;">contact us</a>
+
+                    </li>
+                </ul>
+
+                <div class="basis-[43.7%] text-center py-9 bg-[ capitalize font-[650] mt[2rem]"
+                    styl="border: 2px dashed #000000;">
+                    <a href="donate.html" class="bg-[#356abb] text-[#FFFFFF] py-[12px] px-[32px] border-solid
+                    border-[1px] rounded-[40px] w-full md:w-[50% mdLg:w-auto inline-block">
+                        donate now
+                        <img src="./events_files/arrow.png" alt="arrow" class="inline w-[21.5px]">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+
+    <main class="mt-[1.5rem] lg:mt-[2rem]" styl="border: 14px solid red;">
+
+        <section class="hidden px-[1.4rem] md:px-[2rem] mdLg:px-[4rem] pb-[2.5rem] mdLg:pb-[5rem]
+     space-y-[3rem] xl:space-y-[5.2rem] lg::space-y-[1.5rem] md:mt-[4.2rem]" id="event-details">
+            <span class="border border-[#076ABB] rounded-[64px] px-[32px] py-[12px] font-inter
+         text-[#076ABB] text-[16px] inline-block">
+                Charity Event</span>
+
+            <div class="flex gap-[4rem]" stye="border: 1px solid gold;">
+                <div class="basis-[100%] mdLg:basis-[50%] md:relative space-y-[5rem]" styl="border: 1px solid blue;">
+                    <div class="space-y-[1.6rem]">
+                        <h2 id="event-theme"
+                            class="font-delaGothic text-[32px] mdLg:text-[56px] mdLg:leading-[4rem] capitalize">
+                        </h2>
+                        <p id="event-description" class="font-inter text-[16px] text-[#6D6D6D] md:pr-[4rem] mdLg:pr-0">
+                        </p>
+
+                        <div class="text-[16px] text-[#6D6D6D] flex flex-col xl:flex-row gap-[1rem] xl:gap-[5rem]"
+                            styl="border: 2px dotted red;">
+                            <div class="space-y-[1rem] min-w-fit" styl="border: 1px solid green;">
+                                <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
+                                    <img src="./events_files/clock.png" alt="" class="w-[32px] h-[32px]">
+                                    <span id="event-time"></span>
+                                </div>
+
+                                <div class="flex gap-[0.5rem]" styl="border: 1px solid black;">
+                                    <img src="./events_files/calendar.png" alt="" class="w-[32px] h-[32px]">
+                                    <span id="event-date"></span>
+                                </div>
+                            </div>
+
+
+                            <div id="map-div" styl="border: 1px solid black;">
+                                <a id="map-link" target="_blank" class="cursor-pointer flex gap-[0.5rem]"
+                                    styl="border: 2px solid rebeccapurple;">
+
+                                    <img src="./events_files/location.png" alt="" class="w-[32px] h-[32px]">
+                                    <span id="event-location"></span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="" id="add-to-calendar">
+
+                            <div title="" class="addeventatc cursor-pointer block z-0"
+                                style="z-index: 0; visibility: visible;" "="" id=" addeventatc1" aria-haspopup="true"
+                                tabindex="0" translate="no" data-loaded="true">
+                                Add to calendar
+                                <span class=" start atc_node notranslate"></span>
+                                <span class="title atc_node notranslate"></span>
+                                <span class="location atc_node notranslate">Location of the event</span>
+                                <span class="addeventatc_icon atc_node notranslate"></span>
+                            </div>
+                        </div>
+
+                        <button type="button" id="show-event-reg-form" data-modal-target="event-registration-form"
+                            data-modal-toggle="event-registration-form" class="block bg-[#076ABB] text-[#FFFFFF] py-[20px] px-[32px] rounded-[8px] w-full md:w-[60%]
+                     mt-0 md:mt-[14rem] xl:absolut xl:bottom- font-inter font-[700]">
+                            Register For Event
+                        </button>
+                    </div>
+
+                    <div class="" styl="border: 1px dotted black;">
+                        <p id="event-content" class="font-inter text-[16px] text-[#6D6D6D]"
+                            styl="border: 1px dashed hotpink;"></p>
+                    </div>
+                </div>
+
+                <div class="hidden mdLg:block">
+                    <div class="">
+                        <img id="event-image" src="events.html" alt="Event Image"
+                            class="w-[540px] h[414px] h-full object-contain">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-[#F2F2F2] py-[4rem] px-[1.3rem] md:px-[2rem] lg:px-[5rem]">
+            <h2 class="text-[#06589C] text-[28px] font-inter font-[700]">Events</h2>
+
+
+
+            <div id="upcoming-events"
+                class="md:grid md:grid-cols-2 lg:grid-cols-4 gap-[2rem] space-y-[1.4rem] md:space-y-0 mt-[2rem]">
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="child-rights-and-safeguarding-vol-2-2025-11-20">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/qbmwmwnkpcutxz5vpfsi.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">Child Rights and Safeguarding
+                            workshop Vol. 2</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">Nov. 20, 2025</p>
+                        <p class="text-text-color text-justify">Hearts and Hands Humanitarian Foundation (3HF) hosted a
+                            powerful Child Rights and Safeguarding Workshop in Ikeja, Lagos, bringing together key
+                            government agencies, NGOs, and community leaders. With a keynote address from the NAPTIP
+                            Zonal Commander.</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="capacity-building-training-2025-10-27">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/uyvzakdcll8ncpl11rd3.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">Capacity Building Training
+                        </h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">Oct. 27, 2025</p>
+                        <p class="text-text-color text-justify">3HF organized a 4-day capacity-building workshop on
+                            Government Social Protection Schemes.
+
+                            The sessions brought together key stakeholders, community leaders, and social actors to
+                            deepen their understanding of existing social protection programs.</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="community-awareness-2025-10-16">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/o5k3wutx4mv12rx19bck.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">Community Awareness</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">Oct. 16, 2025</p>
+                        <p class="text-text-color text-justify">The Hearts and Hands Humanitarian Foundation (3HF)
+                            carried out a Community Awareness Campaign across Isolo and Ojo Local Government Areas of
+                            Lagos State, themed “Every Child Deserves a Childhood.”</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="3hf-play-day-2025-10-06">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/pzyyufexegym4c1y1o7t.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">3HF Play Day</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">Oct. 6, 2025</p>
+                        <p class="text-text-color text-justify">3HF Team in collaboration with Street Project Foundation
+                            hosted a vibrant PLAY DAY. Creating a safe space where fun and games meets education about
+                            children rights. At 3HF, we believe that play is more than just laughter, it's a pathway to
+                            learning.</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="child-rights-and-safeguarding-workshop-2025-08-21">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/vrhcoebsi0rxh5vauq8o.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">Child Rights and Safeguarding
+                            workshop Vol. 1</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">Aug. 21, 2025</p>
+                        <p class="text-text-color text-justify">Heart and Hands Humanitarian Foundation held a child
+                            rights and safeguarding workshop. The objective of this program was to bring together key
+                            stakeholders to discuss critical strategies and best practices for protecting children's
+                            rights.</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="capacity-building-workshop-for-community-watch-2025-06-19">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/z9dljhaqpxlhd46emyt4.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">Capacity Building Workshop
+                            For Community Watch</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">June 19, 2025</p>
+                        <p class="text-text-color text-justify">3HF and Freedom Fund conducted a 2 days Workshop to
+                            identify Community watch group to help protect house girls and boys from maltreatment. The
+                            workshop aimed to equip community members with the skills and knowledge to identify and
+                            prevent child abuse</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="3hf-play-day-2025-05-23">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/qjpf4kolospykzj5pnpu.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">3HF Play Day</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">May 23, 2025</p>
+                        <p class="text-text-color text-justify">3hf had an event commemorating Children's Day, “3HF Play
+                            Day,” in collaboration with MAEJT. Through our programs and initiatives, we strive to create
+                            a brighter future for children</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="capicity-building-on-government-social-protection-scheme-addressing-exploitative-child-domestic-work-2025-05-19">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/ornknwyaer2su0yg6ged.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">Addressing Exploitative Child
+                            Domestic Work</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">May 19, 2025</p>
+                        <p class="text-text-color text-justify">3HF carried out a capacity-building workshop on
+                            government social protection schemes equips stakeholders with the knowledge to safeguard
+                            children's rights and provide support to vulnerable families</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="3hf-in-partnership-with-freedom-fund-2025-02-07">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/jzulgv17cdafrrhgeluw.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">3HF In Partnership with
+                            Freedom Fund</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">Feb. 7, 2025</p>
+                        <p class="text-text-color text-justify">3HF, in partnership with Freedom Fund, is targeted to
+                            develop strategies to prevent and combat the domestic exploitation of child domestic
+                            workers.</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="sensitization-campaign-on-irregular-migration-and-exploitative-child-labor-2024-09-06">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/skxnfazyqozuiz57icey.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">Sensitization Campaign on
+                            Irregular Migration and Exploitative Child Labor</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">Sept. 6, 2024</p>
+                        <p class="text-text-color text-justify">Advocacy effort partnering with African Movement of
+                            Working Children and Youth (AMWCY) and Nigerian Immigration Service (NIS) to target parents,
+                            guardians and youth</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="guarding-child-domestic-workers-2024-07-20">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/m5ztvjw7bgsk2i1brv47.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">Guarding Child Domestic
+                            Workers</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">July 20, 2024</p>
+                        <p class="text-text-color text-justify">Child labor is a violation of children's rights and can
+                            have long-lasting, devastating effects on their physical, emotional, and psychological
+                            well-being. Communities need valuable insights and resources to empower parents and
+                            guardians.</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="discussion-nigerian-immigration-service-2024-07-11">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/lbjppncdbddnt98zfoqf.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">Meeting: Nigerian Immigration
+                            Service</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">July 11, 2024</p>
+                        <p class="text-text-color text-justify">The 3hf lagos team paid a successful courtesy visit to
+                            the Controller of the Nigerian Immigration Service at the Seme Border.</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="meeting-community-stakeholders-2024-07-10">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/zezhiqtihanevjne7tgi.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">Meeting: Community
+                            Stakeholders</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">July 10, 2024</p>
+                        <p class="text-text-color text-justify">The 3HF team successfully convened a stakeholder
+                            engagement workshop, bringing together Badagry community leaders and stakeholders to address
+                            child labor and exploitation.</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="international-day-of-the-african-child-2024-06-18">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/rnlrlfmksgpfatfjp2g1.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">International Day Of The
+                            African Child</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">June 18, 2024</p>
+                        <p class="text-text-color text-justify">In Collaboration with the African Movement of Working
+                            Children and youth-MAEJT joined forces to celebrate the DAY OF THE AFRICAN CHILD which was
+                            themed “Education for all African Children” as an act of school and community advocacy and
+                            sensitization.</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="unfccc-sb-60-2024-06-13">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/ccxanaia04wiwxyuvscr.png" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">UNFCCC | SB 60</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">June 13, 2024</p>
+                        <p class="text-text-color text-justify">3HF had the chance to participate in the sixtieth
+                            sessions of the Subsidiary Body for Scientific and Technological Advice and the Subsidiary
+                            Body for Implementation of the United Nations Framework Convention on Climate Change.
+                            https://unfccc.int/sb60</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="unwc-participation-2024-06-11">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/xq3nbuouwo2icyhbdoij.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">UNCSW | # 68</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">March 11, 2024</p>
+                        <p class="text-text-color text-justify">The 68th annual Commission on the Status of Women
+                            (CSW68),
+                            the UN’s largest annual gathering on gender equality and women’s empowerment,
+                            will take place this year from 11 - 22 March under the priority theme.</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="empowerment-of-vulnerable-families-2024-11-03">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/djpuvfh2oeevbxffeyeg.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">Empowerment of Vulnerable
+                            Families</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">Nov. 3, 2023</p>
+                        <p class="text-text-color text-justify">Providing essential support to vulnerable families in
+                            our community. We distributed vital items, offered financial assistance, and conducted
+                            skills training and health services.</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="international-day-of-the-girl-child-2023-10-11">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/uhmszsfracqiulb4jyzm.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">International Day Of The Girl
+                            Child</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">Oct. 11, 2023</p>
+                        <p class="text-text-color text-justify">Hearts and Hands humanitarian foundation Celebrated The
+                            2023 Girl Child Day in collaboration with Caritas Nigeria, MAEJT Nigeria, MJRD Bénin
+                            République, and UNHCR Nigeria.</p>
+                    </div>
+                </div>
+
+
+                <div id="show-event-detail"
+                    class="show-event-detail cursor-pointer rounded-[16px] border-[0.5px] border-[#CDE1F1]"
+                    data-event-slug="empowerment-program-2024-08-06">
+                    <div class="space-y-[0.7rem] px-[1rem] py-[1rem] font-inter" styl="border: 1px solid red;">
+                        <img src="./events_files/w725jonhys8fl5yd0pia.jpg" alt="Event Image"
+                            class="w-full lg:w[367px] h-[226px] rounded-[24px] object-cover">
+                        <h2 class="font-inter font-[700] text-[18px] text-left capitalize">Empowerment of Vulnerable
+                            Women</h2>
+                        <p class="text-[#6D6D6D] font-[700] text-left">Aug. 6, 2023</p>
+                        <p class="text-text-color text-justify">Under the Umbrella of the Police Officers’ Wives
+                            Association (POWA), 3HF implemented a comprehensive empowerment program aimed at enhancing
+                            the socio-economic resilience of marginalized women in a community.</p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </section>
+
+        <!-- / Event registration -->
+
+
+        <div id="event-registration-form" tabindex="-1" aria-hidden="true"
+            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full space-y-[2.4rem]">
+
+            <button type="button"
+                class="absolute top-[1.2rem] md:top-[5rem] lg:top-[1.2rem] end-[1rem] md:end-[3rem] lg:end-[4rem] text-gray-100 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                data-modal-hide="event-registration-form">
+                <svg class="w-[20px] md:w-[29px] h-[20px] md:h-[29px]" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+
+            <form id="event-register-form"
+                class="bg-[#FFFFFF] mx-auto p-[16px] md:py-[25px] w-[90%] lg:w-[50%] xl:w-[40%] rounded-[8px] space-y-[1rem] font-inter mt[2.4rem]"
+                method="post">
+                <input type="hidden" name="csrfmiddlewaretoken"
+                    value="NKwNE2sa58Oza0dzyrej53Bqvk2txmZMBy4EOMUWLzDW6ZhsUlqbUt1ClDblOlNj">
+                <h3 class="text-[20px] font-[700]">Enter your details below</h3>
+
+                <input type="hidden" name="event_id" id="event-id-input">
+
+                <div class="space-y-[1rem]">
+                    <div class="space-y-[0.1rem]">
+                        <label for="email" class="block font-inter font-[600]">Email
+                            <span class="text-red-500">*</span>
+                        </label>
+                        <input type="email" name="registrant-email" id="registrant-email"
+                            class="w-full h-[52px] rounded-[8px] border border-[#D0D5DD]">
+                    </div>
+
+                    <div class="space-y-[0.1rem]">
+                        <label for="name" class="block font-inter font-[600]">Full Name
+                            <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" name="registrant-name" id="registrant-name"
+                            class="w-full h-[52px] rounded-[8px] border border-[#D0D5DD]">
+                    </div>
+
+                    <div class="space-y-[0.1rem]">
+                        <label for="phone-number" class="block font-inter font-[600]">
+                            Phone Number<span class="text-red-500">*</span>
+                        </label>
+                        <input type="tel" name="registrant-phone-number" id="registrant-phone-number"
+                            class="w-full h-[52px] rounded-[8px] border border-[#D0D5DD]">
+                    </div>
+
+                    <div class="space-y-[0.1rem]">
+                        <label for="additional-message" class="block font-inter font-[600]">Anything you want us to
+                            know?</label>
+                        <textarea name="additional-message" id="additional-message" rows="5"
+                            class="w-full  rounded-[8px] border border-[#D0D5DD] resize-none"></textarea>
+                    </div>
+
+                </div>
+
+                <button type="submit" id="event-registration-button" class="bg-[#076ABB] text-[#FFFFFF] rounded-[8px] py-[16px] px-[32px] w-full
+        font-inter font-[600] text-[20px]">
+                    Register
+                </button>
+
+            </form>
+        </div>
+
+
+        <!-- modal -->
+
+
+        <!-- Modal toggle -->
+        <button data-modal-target="response-modal" data-modal-toggle="response-modal"
+            class="hidden text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            type="button">
+            Toggle modal
+        </button>
+
+        <div id="response-modal" tabindex="-1" aria-hidden="true"
+            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative p-4 w-full w[50%]  max-w-md max-h-ful">
+                <!-- Modal content -->
+                <div class="relative bg-[#003b4d] rounded-lg shadow dark:bg-gray-700">
+                    <button type="button"
+                        class="absolute top-3 end-2.5 text-white bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="response-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+
+                    <div class="p-4 md:p-5">
+                        <img src="./events_files/logo.png" class="w-10 h-10" alt="">
+                        <h3 id="modal-header" class="mb-1 mt-[1.5rem] text-xl font-bold text-white"></h3>
+                        <p id="modal-message" class="font-bold text-white mb-6"></p>
+                        <p>
+
+                            <!-- Modal footer -->
+                        </p>
+                        <div class="flex items-center mt-[3rem] space-x-4 rtl:space-x-reverse">
+                            <button data-modal-hide="response-modal" type="button"
+                                class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="./events_files/handleEventRegistration.js"></script>
+
+    </main>
+
+    <script src="./events_files/fetchtEventDetails.js"></script>
+    <!-- <script src="/static/js/locationMapHandler.js"></script> -->
+    <script type="text/javascript" src="./events_files/atc.min.js" async="" defer=""></script>
+
+
+
+
+    <main class="bg-[#04355E] py-[3.7rem] px-[1rem] md:pl-[5rem] lg:px-[7rem] space-y-[3rem]"
+        styl="border: 4px solid red;">
+        <section class="lg:flex lg:justify-between font-inter space-y-[2.2rem] lg:space-y-0">
+            <div class="text-[#EAECF0] md:pt-[3.08rem] font-bold lg:basis-[40%]
+        grid grid-cols-2 xl:flex xl:justify-around lg:order-last gap-[1rem]" styl="border: 2px dotted white;">
+                <a href="about-us.html" class="capitalize block w-[6rem]">about us</a>
+                <a href="events.html" class="capitalize block w-[6rem]">events</a>
+                <a href="donate.html" class="capitalize block w-[6rem]">donations</a>
+                <a href="contact.html" class="capitalize block w-[6rem]">contact us</a>
+            </div>
+
+
+            <div class="space-y-[0.55rem]" styl="border: 2px solid yellow;">
+                <div class="space-y-[0.45rem]">
+                    <img src="./events_files/logo.png" alt="" class="h-[52px] w-[52px]">
+                    <h3 class="text-white text-[1.3rem] block font-bold">Hearts &amp; Hands Humanitarian Foundation</h3>
+                </div>
+
+
+                <p class="text-[#EAECF0]">Helping hands since 2016</p>
+            </div>
+
+
+        </section>
+
+        <section class="border-t-[2px] border-solid border-[#3083C6] pt-[1.8rem] font-inter">
+            <p class="text-[#EAECF0]">
+                <script>document.write((new Date()).getFullYear())</script>2026 © Hearts &amp; Hands Humanitarian
+                Foundation. <span class="block"> All rights reserved.</span>
+            </p>
+        </section>
+    </main>
+
+
+
+
+
+    <script src="./events_files/flowbite.min.js"></script>
+    <script async="" src="./events_files/f.txt" crossorigin="anonymous"></script>
+
+
+
+    <div id="quick-start-container"></div>
+</body>
+
+</html>
