@@ -57,7 +57,7 @@ $(document).ready(function () {
     var eventSlug = $(this).data("event-slug");
     fetchEventDetails(eventSlug);
 
-    var newUrl = window.location.origin + "events.html" + eventSlug;
+    var newUrl = window.location.origin + "/events" + eventSlug;
     window.history.pushState({ path: newUrl }, "", newUrl);
   });
 

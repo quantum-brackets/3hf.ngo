@@ -66,7 +66,7 @@ async function handleFormSubmission(event) {
 contactUsForm.addEventListener("submit", handleFormSubmission);
 
 const sendContactMessageRequest = async () => {
-  const url = "contact.html";
+  const url = "/contact";
   const formData = {
     name: fullName.value,
     email: email.value,
