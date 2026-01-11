@@ -28,7 +28,7 @@ class EventsView(ListView):
             # Check if the upcoming event has a related concluded event
             if hasattr(event, 'concludedevents'):
                 concluded_event = event.concludedevents
-                print(f"Concluded cotent: {concluded_event.content}")
+                print(f"This event has concluded.")
             else:
                 print("This event has not concluded yet.")
         return events
